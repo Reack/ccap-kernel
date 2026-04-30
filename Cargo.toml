@@ -1,0 +1,34 @@
+[package]
+name = "ccap-kernel"
+version = "0.1.0"
+edition = "2021"
+description = "Industrial grade semantic compiler for 1M+ line codebases."
+
+[dependencies]
+# Core Analysis
+tree-sitter = "0.20"
+tree-sitter-tags = "0.20"
+tree-sitter-python = "0.20"
+ # Initial support for self-analysis
+tree-sitter-javascript = "0.20"
+
+# Math & Topology
+nalgebra = "0.32"
+petgraph = "0.6"
+
+# Data & Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Parallelism
+tokio = { version = "1", features = ["full"] }
+rayon = "1.7"
+
+# Utility
+clap = { version = "4.0", features = ["derive"] } # CLI arguments
+anyhow = "1.0" # Error handling
+walkdir = "2.3" # Efficient file scanning
+pathdiff = "0.2" # Relative path calculation
+log = "0.4"
+
+env_logger = "0.10"
