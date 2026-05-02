@@ -15,13 +15,13 @@ struct Cli {
 enum Commands {
     /// Initializes the project CCAP map.
     Init {
-        /// Repository root path (default: current directory)
+        /// Repository root path
         #[arg(default_value = ".")]
         path: String,
-        /// Force full deep scan of all modules
+        /// Force full deep scan
         #[arg(short, long)]
         deep: bool,
-        /// Encryption key for the semantic vault
+        /// Encryption key
         #[arg(short, long)]
         key: Option<String>,
     },
@@ -41,7 +41,8 @@ fn main() -> anyhow::Result<()> {
         }
         Commands::Analyze { path } => {
             let mut extractor = Extractor::new();
-            let features = extractor.analyze_python(path)?;
+            // In analyze mode, we treat path as the relative path too for ID generation
+            let features = extractor.analyze_file(path, path)?;
             let telegram = Mapper::to_telegram(path, &features);
             println!("{}", telegram);
         }
