@@ -60,11 +60,27 @@ AI 始終在「低維拓樸空間」導航，僅在執行手術級修改時，�
 
 ---
 
-## 第五章：形式化驗證與 Benchmarks
+## 第五章：形式化驗證與保真度基準 (Formal Verification)
 
-*   **壓縮率 ($C_R$)**: 目標 $\ge 20:1$ (相對於傳統地圖)。
-*   **路由精確度**: 在 0 原始碼閱讀下，AI 尋找 Bug 的命中率需高於文字地圖模式。
-*   **幻覺抑制**: 透過數學標籤的確定性，消除 90% 以上的無效修改提議。
+為確保 `ccap-kernel` 產出的地圖具備「工業級可信任度」，系統必須通過以下三重驗證：
+
+### 5.1 物理層：SCIP 等價性校驗 (SCIP Parity)
+*   **真值來源**: Sourcegraph 官方 SCIP 索引格式。
+*   **驗證屬性**: 
+    *   **FQN 唯一性**: 符號生成的 `scip-id` 必須符合 `Scheme + Package + Descriptors` 規範，且在全域符號表 (Global Symbol Table) 中無碰撞。
+    *   **圖同構 (Isomorphism)**: 透過 SCIP 引用鏈建立的 `BOND` 圖，必須與原始編譯器 (LSP) 的 AST 調用圖完全同構。
+*   **指標**: $Precision_{SCIP} = 1.0$, $Recall_{SCIP} \ge 0.98$。
+
+### 5.2 數學層：拓樸特徵保全 (Topological Preservation)
+*   **驗證方法**: 代數連通度比對 (Algebraic Connectivity)。
+*   **指標**: $\Delta \lambda_2 \le 0.05$。
+*   **目標**: 證明「語義室」塌陷後的圖譜，其譜間隙 (Spectral Gap) 與原始碼結構保持一致，確保壓縮不遺失架構層級的連通資訊。
+
+### 5.3 語義層：高熵電報預測力 (Predictive Precision)
+*   **驗證方法**: 零樣本 (Zero-shot) 盲測定位。
+*   **指標**: $Recall@3 \ge 0.95$。
+*   **目標**: 當 AI 僅讀取 `ST-AAAK` 電報時，鎖定特定功能模組（如 OAuth2 Flow）的正確率必須達到工業級水準。
 
 ---
 **[SPECIFICATION END]**
+

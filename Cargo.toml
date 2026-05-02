@@ -9,8 +9,15 @@ description = "Industrial grade semantic compiler for 1M+ line codebases."
 tree-sitter = "0.20"
 tree-sitter-tags = "0.20"
 tree-sitter-python = "0.20"
- # Initial support for self-analysis
 tree-sitter-javascript = "0.20"
+tree-sitter-c = "0.20"
+tree-sitter-cpp = "0.20"
+tree-sitter-rust = "0.20"
+tree-sitter-go = "0.20"
+tree-sitter-java = "0.20"
+tree-sitter-c-sharp = "0.20"
+
+
 
 # Math & Topology
 nalgebra = "0.32"
@@ -33,8 +40,12 @@ rayon = "1.7"
 # Utility
 clap = { version = "4.0", features = ["derive"] } # CLI arguments
 anyhow = "1.0" # Error handling
+regex = "1.10" # String pattern matching
 walkdir = "2.3" # Efficient file scanning
+
 pathdiff = "0.2" # Relative path calculation
+tiktoken-rs = "0.5" # Precise token counting
 log = "0.4"
+
 
 env_logger = "0.10"

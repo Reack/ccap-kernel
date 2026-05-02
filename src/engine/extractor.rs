@@ -33,20 +33,24 @@ impl Extractor {
         let extension = std::path::Path::new(file_path)
             .extension()
             .and_then(|s| s.to_str())
-            .unwrap_or("");
+            .unwrap_or("")
+            .to_lowercase();
 
-        let language = match extension {
+        let language = match extension.as_str() {
             "py" => tree_sitter_python::language(),
             "js" | "jsx" | "ts" | "tsx" => tree_sitter_javascript::language(),
+            "c" | "h" => tree_sitter_c::language(),
+            "cpp" | "hpp" | "cc" | "hh" => tree_sitter_cpp::language(),
+            "rs" => tree_sitter_rust::language(),
+            "go" => tree_sitter_go::language(),
+            "java" => tree_sitter_java::language(),
+            "cs" => tree_sitter_c_sharp::language(),
             _ => return Err(anyhow::anyhow!("Unsupported language: .{}", extension)),
         };
 
-        // Normalize module path (remove extensions for SCIP compatibility)
-        let mod_path = rel_path.replace("\\", "/")
-            .trim_end_matches(".py")
-            .trim_end_matches(".js")
-            .trim_end_matches(".ts")
-            .to_string();
+        // Normalize module path for SCIP
+        let mod_path = rel_path.replace("\\", "/");
+        let mod_path = mod_path.split('.').next().unwrap_or(&mod_path).to_string();
 
         self.parser.set_language(language)?;
         let code = fs::read_to_string(file_path)?;
@@ -56,7 +60,7 @@ impl Extractor {
         let mut raw_io_count = 0;
         let mut scope_stack = vec![mod_path];
 
-        self.traverse_node(tree.root_node(), &code, &mut f, &mut raw_io_count, extension, &mut scope_stack);
+        self.traverse_node(tree.root_node(), &code, &mut f, &mut raw_io_count, &extension, &mut scope_stack);
 
         f.io_density_score = (raw_io_count as f32 / 5.0).min(1.0);
         f.control_flow_score = (f.control_flow_score / 15.0).min(1.0);
@@ -69,51 +73,71 @@ impl Extractor {
         let kind = node.kind();
         let mut current_symbol = None;
 
+        // --- UNIVERSAL SEMANTIC MAPPING ENGINE ---
         match (ext, kind) {
-            (_, "class_definition") | ("js", "class_declaration") => {
+            // 1. DATA / CLASS DEFINITIONS
+            (_, "class_definition") | (_, "class_declaration") | (_, "struct_specifier") |
+            ("rs", "struct_item") | ("rs", "enum_item") | ("go", "type_declaration") => {
                 f.data_density_score += 1.0;
                 if let Some(name_node) = node.child_by_field_name("name") {
-                    let name = code[name_node.byte_range()].to_string();
-                    current_symbol = Some(name);
+                    current_symbol = Some(code[name_node.byte_range()].to_string());
                 }
             },
-            (_, "function_definition") | ("js", "function_declaration") | ("js", "method_definition") => {
+
+            // 2. LOGIC / FUNCTION DEFINITIONS
+            (_, "function_definition") | (_, "function_declaration") | (_, "method_definition") |
+            ("rs", "function_item") | ("go", "function_declaration") | ("cs", "method_declaration") => {
                 if let Some(name_node) = node.child_by_field_name("name") {
-                    let name = code[name_node.byte_range()].to_string();
-                    current_symbol = Some(name);
+                    current_symbol = Some(code[name_node.byte_range()].to_string());
                 }
                 f.symbol_count += 1;
             },
-            ("py", "import_statement") | ("py", "import_from_statement") => {
+
+            // 3. CONTROL FLOW
+            (_, "if_statement") | (_, "for_statement") | (_, "while_statement") | (_, "try_statement") |
+            ("rs", "if_expression") | ("rs", "for_expression") | ("rs", "match_expression") => {
+                f.control_flow_score += 1.0;
+            },
+
+            // 4. IMPORTS / REFERENCES (SCIP Normalization)
+            ("py", "import_statement") | ("py", "import_from_statement") |
+            ("rs", "use_declaration") | ("go", "import_declaration") | ("java", "import_declaration") => {
                 let mut cursor = node.walk();
                 for child in node.children(&mut cursor) {
-                    if child.kind() == "dotted_name" {
-                        let name = code[child.byte_range()].replace(".", "/");
-                        f.references.push(format!("ccap . . {}#", name));
+                    if child.kind().contains("name") || child.kind().contains("path") {
+                        let name = code[child.byte_range()].replace(".", "/").replace("::", "/");
+                        f.references.push(format!("ccap . . {}#", name.trim_matches(':')));
+                        break;
                     }
                 }
             },
-            ("js", "import_statement") => {
+            ("js", "import_statement") | ("ts", "import_statement") => {
                 if let Some(source) = node.child_by_field_name("source") {
-                    let path = code[source.byte_range()]
-                        .trim_matches(|c| c == '"' || c == '\'' || c == '.')
-                        .trim_start_matches('/')
-                        .to_string();
+                    let path = code[source.byte_range()].trim_matches(|c| c == '"' || c == '\'' || c == '.').to_string();
                     f.references.push(format!("ccap . . {}#", path));
                 }
             },
-            (_, "call") | ("js", "call_expression") => {
-                let text = &code[node.byte_range()];
-                if text.contains("open") || text.contains("print") || text.contains("fetch") {
+            ("c", "preproc_include") | ("cpp", "preproc_include") => {
+                if let Some(path) = node.child(1) {
+                    let name = code[path.byte_range()].trim_matches(|c| c == '<' || c == '>' || c == '"').to_string();
+                    f.references.push(format!("ccap . . {}#", name));
+                }
+            },
+
+            // 5. I/O HEURISTICS
+            (_, "call") | (_, "call_expression") | ("rs", "call_expression") => {
+                let text = &code[node.byte_range()].to_lowercase();
+                if text.contains("open") || text.contains("print") || text.contains("fetch") || 
+                   text.contains("socket") || text.contains("http") || text.contains("io") {
                     *io_count += 1;
                 }
             },
             _ => {}
         }
 
+        // --- SCOPE & SCIP ID GENERATION ---
         if let Some(name) = current_symbol {
             let scip_id = format!("ccap . . {}#{}#", scope.join("#"), name);
-            
             f.exports.push(ScipSymbol {
                 id: scip_id,
                 name: name.clone(),

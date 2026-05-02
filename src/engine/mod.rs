@@ -5,6 +5,8 @@ pub mod storage;
 pub mod linker;
 pub mod math;
 pub mod security;
+pub mod benchmark;
+pub mod verifier;
 
 pub use extractor::Extractor;
 pub use mapper::Mapper;
@@ -12,4 +14,6 @@ pub use scanner::Scanner;
 pub use storage::Storage;
 pub use linker::Linker;
 pub use math::MathEngine;
-// SecurityEngine is used internally by Storage
+pub use security::SecurityEngine;
+pub use benchmark::Benchmark;
+pub use verifier::Verifier;

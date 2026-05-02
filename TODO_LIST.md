@@ -21,8 +21,12 @@
 - [x] 實作符號混淆與特徵擾動 (Obfuscation)
 
 
-## Phase 4: 多語言 SDK 與 分發
+## Phase 4: 形式化驗證與 多語言 SDK
+- [ ] 實作 `ccap-kernel verify` 自我校驗指令
+    - [ ] SCIP ID 正規格式校驗
+    - [ ] 代數連通度 (Algebraic Connectivity) 保真度分析
 - [ ] 實作 PyO3 Python 綁定
 - [ ] 實作 N-API Node.js 綁定
 - [ ] 建立自動化 Benchmark 測試平台
 - [ ] 發佈至 PyPI 與 npm (Pre-release)
+
