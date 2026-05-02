@@ -145,7 +145,11 @@ enum Commands {
         path: String,
         /// Target file path to view
         target: String,
+        /// Generate and open HTML view
+        #[arg(short, long)]
+        html: bool,
     },
+
     /// Runs the physical proofs verification suite (Chapter 14).
     Prove {
         /// Repository root path
@@ -374,19 +378,28 @@ fn main() -> anyhow::Result<()> {
         Commands::Glossary { path, id, alias } => {
             crate::engine::GlossaryEngine::set_alias(path, id, alias)?;
         }
-        Commands::Wiki { path, target } => {
+        Commands::Wiki { path, target, html } => {
             let results = Scanner::scan_for_verification(path)?;
             let glossary = crate::engine::GlossaryEngine::load(path)?;
 
             for (p, feat) in results {
                 if p == *target {
-                    let wiki_page = crate::engine::WikiProxy::generate_page(path, &p, &feat, &glossary);
-                    println!("{}", wiki_page);
+                    let markdown = crate::engine::WikiProxy::generate_markdown(&p, &feat, &glossary);
+                    if *html {
+                        let html_content = crate::engine::WikiProxy::generate_html(&markdown);
+                        let tmp_path = std::env::temp_dir().join("ccap_wiki.html");
+                        fs::write(&tmp_path, html_content)?;
+                        println!("🌐  Wiki: Opening beautiful HTML view at {:?}", tmp_path);
+                        let _ = std::process::Command::new("cmd").args(["/c", "start", tmp_path.to_str().unwrap()]).spawn();
+                    } else {
+                        println!("{}", markdown);
+                    }
                     return Ok(());
                 }
             }
             println!("❌  Target '{}' not found in map.", target);
         }
+
         Commands::Prove { path } => {
             let results = Scanner::scan_for_verification(path)?;
             crate::engine::CCAPProver::run_physical_proofs(path, &results)?;

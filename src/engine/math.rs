@@ -6,12 +6,24 @@ pub struct MathEngine;
 
 impl MathEngine {
     /// Computes the algebraic connectivity (lambda 2) of a graph.
-    #[allow(dead_code)]
-#[allow(dead_code)]
-#[allow(dead_code)]
-pub fn compute_fiedler_value(n: usize, edges: &[(usize, usize, f32)]) -> f32 {
-    0.0 // Simplified for final regression
-}
+    pub fn compute_fiedler_value(n: usize, edges: &[(usize, usize, f32)]) -> f32 {
+        if n < 2 { return 1.0; }
+        
+        let mut laplacian: DMatrix<f32> = DMatrix::zeros(n, n);
+        for &(u, v, w) in edges {
+            if u >= n || v >= n { continue; }
+            laplacian[(u, u)] += w;
+            laplacian[(v, v)] += w;
+            laplacian[(u, v)] -= w;
+            laplacian[(v, u)] -= w;
+        }
+
+        let eig = laplacian.symmetric_eigen();
+        let mut values: Vec<f32> = eig.eigenvalues.iter().cloned().collect();
+        values.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        
+        *values.get(1).unwrap_or(&0.0)
+    }
 
     /// Simplified Spectral Clustering to partition files into strategic "rooms".
     pub fn spectral_cluster(
