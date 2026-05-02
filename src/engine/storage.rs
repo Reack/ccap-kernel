@@ -37,6 +37,10 @@ impl Storage {
         self.root.join("maps")
     }
 
+    pub fn get_db_path(&self) -> PathBuf {
+        self.root.join("index.db")
+    }
+
     pub fn save_map(&self, rel_path: &str, telegram: &str, features: &FileFeatures) -> anyhow::Result<()> {
         let safe_path = rel_path.replace("\\", "/").replace(":", "_");
         let map_dir = self.get_map_dir().join(&safe_path);
@@ -44,15 +48,12 @@ impl Storage {
 
         let mut final_features = features.clone();
 
-        // Apply Obfuscation if security is enabled
         if let Some(_) = &self.security {
-            // 1. Obfuscate symbols
             final_features.top_symbols = final_features.top_symbols
                 .iter()
                 .map(|s| SecurityEngine::obfuscate_symbol(s))
                 .collect();
             
-            // 2. Perturb vectors
             let mut vec = [
                 final_features.control_flow_score,
                 final_features.data_density_score,
@@ -64,33 +65,30 @@ impl Storage {
             final_features.io_density_score = vec[2];
         }
 
-        // 1. Write _MAP.md (Semantic Telegram - SCA)
         let md_content = telegram.as_bytes();
         let md_path = map_dir.join("_MAP.md");
-
-        // 2. Write _MAP.meta.json (Physical Metadata - VNM)
         let meta_json = serde_json::to_string_pretty(&final_features)?;
         let meta_content = meta_json.as_bytes();
         let meta_path = map_dir.join("_MAP.meta.json");
 
         if let Some(sec) = &self.security {
-            // Write encrypted versions
             let enc_md = sec.encrypt(md_content)?;
             let enc_meta = sec.encrypt(meta_content)?;
             fs::write(md_path.with_extension("md.enc"), enc_md)?;
             fs::write(meta_path.with_extension("json.enc"), enc_meta)?;
-            
-            // SECURITY: Remove plain files if they exist to prevent leaks
             let _ = fs::remove_file(&md_path);
             let _ = fs::remove_file(&meta_path);
-            
-            println!("🔒 Encrypted map saved for: {}", rel_path);
         } else {
-
-            // Write plain versions
             fs::write(md_path, md_content)?;
             fs::write(meta_path, meta_content)?;
         }
+
+        let telemetry_path = self.root.join("telemetry.log");
+        let log_entry = format!("FILE:{}|RAW_SIZE:{}|MAP_SIZE:{}\n", rel_path, features.symbol_count * 100, md_content.len());
+        let _ = fs::OpenOptions::new().create(true).append(true).open(telemetry_path).map(|mut f| {
+            use std::io::Write;
+            let _ = writeln!(f, "{}", log_entry);
+        });
 
         Ok(())
     }

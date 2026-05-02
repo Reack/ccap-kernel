@@ -127,27 +127,25 @@ AI 始終在「低維拓樸空間」導航，僅在執行手術級修改時，�
 
 ---
 
-## 第十章：科學評估與 ISO 25010 品質對標 (Scientific Evaluation)
+## 第十章：科學評估與全球標準對齊 (Scientific Evaluation & Standards)
 
-為確保系統具備「可重複驗證的工業信任」，CSK 實作符合 ISO 標準的自動化審計引擎。
+為確保「氛圍開發 (Vibe Coding)」能跨越 POC 成為正式產品，CSK 實作符合全球最新 AI 軟體開發規範的自動化審計。
 
-### 10.1 模組化與內聚度 (Modularity/Cohesion)
-*   **對標指標**: ISO/IEC 25010 - Modularity.
-*   **演算法**: 計算譜分群後的 **Cluster Cohesion Ratio (CCR)**。
-*   **公式**: $CCR = \frac{E_{intra}}{E_{total}}$ (內部連結佔總連結比例)。目標 $CCR \ge 0.7$。
+### 10.1 IEEE P3361：認知可解釋性與負荷 (Cognitive Load)
+*   **標準定義**: IEEE P3361 - AI 輔助開發中代碼結構的透明度與可理解性。
+*   **CCAP 實作**: 
+    *   **Analyzability Index**: 透過 Shannon Entropy 計算 ST-AAAK 電報的資訊增益。
+    *   **指標意義**: 證明 AI 助手是否能以「低認知負荷」快速吸收代碼結構而不產生幻覺。
 
-### 10.2 可分析性與語義熵 (Analyzability/Entropy)
-*   **對標指標**: ISO/IEC 25010 - Analysability.
-*   **演算法**: 測量 ST-AAAK 電報的 **Shannon Entropy (語義熵)**。
-*   **目標**: 證明標籤密度足以在 $O(1)$ 時間內區分 95% 以上的模組功能。
-
-### 10.3 修改穩定性與波紋效應 (Stability/Ripple Effect)
-*   **對標指標**: Ripple Effect Metric (傳統軟體工程指標)。
-*   **量化**: 計算全專案的平均爆炸半徑 $\bar{R}$。
-*   **目標**: 提供重構後的 $\Delta \bar{R}$ 變化，作為架構改進的科學證據。
+### 10.2 ISO/IEC 25059：AI 系統自適應性 (Adaptability)
+*   **標準定義**: 針對 AI 增強系統的自適應品質模型。
+*   **CCAP 實作**: 
+    *   **Impact Ripple Analysis**: 量化代碼在被 AI 修改後的架構擴展性。
+    *   **指標意義**: 衡量專案在不破壞核心拓樸的前提下，應對需求變動（氛圍變更）的韌性。
 
 ---
 **[MASTER SPECIFICATION END]**
+
 
 
 

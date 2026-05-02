@@ -62,20 +62,19 @@ enum Commands {
         #[arg(short, long)]
         code: String,
     },
-    /// Performs a scientific quality audit based on ISO 25010.
-    Audit {
-        /// Repository root path
-        #[arg(default_value = ".")]
-        path: String,
-    },
     /// Quotes the estimated token cost and risk for a modification.
-
     Quote {
         /// Repository root path
         #[arg(default_value = ".")]
         path: String,
         /// Target symbol/file to modify
         target: String,
+    },
+    /// Displays local token savings statistics.
+    Stats {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
     },
     /// Analyzes a single file.
     Analyze {
@@ -103,7 +102,6 @@ fn main() -> anyhow::Result<()> {
             Benchmark::run(path)?;
         }
         Commands::Verify { path } => {
-            println!("🔍  Verification: Initiating Formal Parity Check for: {}", path);
             let results = Scanner::scan_for_verification(path)?;
             let mut linker = Linker::new();
             linker.build_graph(&results);
@@ -161,31 +159,7 @@ fn main() -> anyhow::Result<()> {
             }
             println!("❌  Symbol ID not found for patching.");
         }
-        Commands::Audit { path } => {
-            println!("🔬  Audit: Initiating ISO 25010 Quality Assessment for: {}", path);
-            let results = Scanner::scan_for_verification(path)?;
-            let mut linker = Linker::new();
-            linker.build_graph(&results);
-            
-            let report = crate::engine::Evaluator::perform_audit(&linker, results.len());
-
-            println!("\n====================================================");
-            println!("🏛️   CCAP SCIENTIFIC AUDIT REPORT (ISO/IEC 25010)");
-            println!("====================================================");
-            println!("🧩  Modularity Score:      {:.4} (CCR)", report.modularity_score);
-            println!("👁️   Analyzability Index:   {:.4}", report.analyzability_index);
-            println!("🌊  Ripple Effect Avg:     {:.2} files", report.ripple_effect_avg);
-            
-            println!("\n--- [ISO CLASSIFICATION] ---");
-            if report.modularity_score > 0.1 {
-                println!("✅  Maintainability:       HIGH");
-            } else {
-                println!("⚠️   Maintainability:       MONOLITHIC / LOW");
-            }
-            println!("====================================================\n");
-        }
         Commands::Quote { path, target } => {
-
             let results = Scanner::scan_for_verification(path)?;
             let mut linker = Linker::new();
             linker.build_graph(&results);
@@ -201,8 +175,43 @@ fn main() -> anyhow::Result<()> {
                 println!("🔥  Fragility:    {:.2}", report.risk_score);
                 println!("🛠️   Complexity:   {} victims impacted.", report.dependents.len());
                 println!("====================================================\n");
+            }
+        }
+        Commands::Stats { path } => {
+            let storage = crate::engine::Storage::init(path)?;
+            let log_path = storage.get_db_path().parent().unwrap().join("telemetry.log");
+            
+            if log_path.exists() {
+                let content = fs::read_to_string(log_path)?;
+                let mut total_raw = 0;
+                let mut total_map = 0;
+                let mut file_count = 0;
+
+                for line in content.lines() {
+                    let parts: Vec<&str> = line.split('|').collect();
+                    if parts.len() == 3 {
+                        let raw: usize = parts[1].split(':').nth(1).unwrap_or("0").parse().unwrap_or(0);
+                        let map: usize = parts[2].split(':').nth(1).unwrap_or("0").parse().unwrap_or(0);
+                        total_raw += raw;
+                        total_map += map;
+                        file_count += 1;
+                    }
+                }
+
+                println!("\n====================================================");
+                println!("📈  CCAP TOKEN SAVINGS STATS (Local Audit)");
+                println!("====================================================");
+                println!("📂  Files Tracked:    {}", file_count);
+                println!("📄  Raw Size Est:     {} (Bytes)", total_raw);
+                println!("🛰️   CCAP Map Size:    {} (Bytes)", total_map);
+                
+                if total_raw > 0 {
+                    let savings = (1.0 - (total_map as f64 / total_raw as f64)) * 100.0;
+                    println!("💰  Total Savings:     {:.2}%", savings);
+                }
+                println!("====================================================\n");
             } else {
-                println!("❌  Target '{}' not found. Ensure the path is correct.", norm_target);
+                println!("⚠️   No telemetry data found. Perform an 'init' first.");
             }
         }
         Commands::Analyze { path } => {
