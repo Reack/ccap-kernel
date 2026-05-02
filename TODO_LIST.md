@@ -1,17 +1,19 @@
 # CCAP-Kernel 開發任務列表 (TODO)
 
 ## Phase 1: 核心引擎骨架 (Foundation)
-- [ ] 初始化 Cargo 專案架構 (Rust)
-- [ ] 整合 Tree-sitter 核心與多語言語法包
-- [ ] 實作基礎 AST 特徵提取器 (Feature Extractor)
-- [ ] 實作 ST-AAAK 語義電報映射邏輯 (Deterministic Mapping)
+- [x] 初始化 Cargo 專案架構 (Rust)
+- [x] 整合 Tree-sitter 核心與多語言語法包
+- [x] 實作基礎 AST 特徵提取器 (Feature Extractor) - **[Robust Version Done]**
+- [x] 實作 ST-AAAK 語義電報映射邏輯 (Deterministic Mapping)
 - [ ] 實作 CLI 基礎指令 (skeleton, brief)
 
+
 ## Phase 2: 數學導航與拓樸 (Math & Topology)
-- [ ] 整合 nalgebra 進行線性代數運算
-- [ ] 實作全專案依賴圖 (DAG) 生成引擎
-- [ ] 實作「譜分群」圖塌陷演算法 (Topological Squeezing)
+- [x] 整合 nalgebra 進行線性代數運算
+- [x] 實作全專案依賴圖 (DAG) 生成引擎
+- [x] 實作「譜分群」圖塌陷演算法 (Topological Squeezing)
 - [ ] 實作依賴權重 (BOND) 計算公式
+
 
 ## Phase 3: 影子系統與安全性 (Storage & Security)
 - [ ] 實作 `.ccap` 影子目錄管理邏輯 (VNM/SCA 分離)

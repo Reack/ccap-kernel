@@ -1,14 +1,15 @@
-use crate::engine::{Extractor, Storage, Linker, Mapper};
+use crate::engine::{Extractor, Storage, Linker, Mapper, MathEngine};
 use walkdir::WalkDir;
 use rayon::prelude::*;
 use std::sync::{Arc, Mutex};
 use std::time::Instant;
 use std::path::Path;
+use std::fs;
 
 pub struct Scanner;
 
 impl Scanner {
-    pub fn scan_project(root: &str, deep: bool) -> anyhow::Result<()> {
+    pub fn scan_project(root: &str, _deep: bool) -> anyhow::Result<()> {
         let start = Instant::now();
         let storage = Arc::new(Storage::init(root)?);
         
@@ -57,12 +58,31 @@ impl Scanner {
         
         println!("\n✅ Feature Extraction complete. Analyzed {} files.", analysis_results.len());
 
+        // 4. Phase 2: Math & Topology
         if !analysis_results.is_empty() {
             let mut linker = Linker::new();
             linker.build_graph(&analysis_results);
+
+            let edges = linker.export_edges();
+            let paths = linker.get_node_paths();
+            
+            // Execute Spectral Clustering (Example: group into 3 semantic rooms)
+            if let Ok(clusters) = MathEngine::spectral_cluster(&paths, &edges, 3) {
+                println!("📦  Semantic Clustering: Identified {} functional areas.", clusters.values().collect::<std::collections::HashSet<_>>().len());
+                
+                // 5. Generate AAAK Skeleton Index
+                let mut skeleton = format!("@ROOT[{}]\n", root);
+                for (path, cid) in clusters {
+                    skeleton.push_str(&format!("@ROOM[cluster_{}] NODE:{}\n", cid, path));
+                }
+                
+                let skeleton_path = storage.get_map_dir().join("root.st.aaak");
+                fs::write(skeleton_path, skeleton)?;
+                println!("🦴  AAAK Skeleton Index generated at root.st.aaak");
+            }
         }
 
-        println!("🛡️  All maps synchronized in .ccap/ (Duration: {:?})", duration);
+        println!("🛡️  All maps synchronized in .ccap/ (Total Duration: {:?})", duration);
 
         Ok(())
     }
