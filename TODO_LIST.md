@@ -16,9 +16,10 @@
 
 
 ## Phase 3: 影子系統與安全性 (Storage & Security)
-- [ ] 實作 `.ccap` 影子目錄管理邏輯 (VNM/SCA 分離)
-- [ ] 實作 AES-256-GCM 語義加密與 Side-channel 同步
-- [ ] 實作符號混淆與特徵擾動 (Obfuscation)
+- [x] 實作 `.ccap` 影子目錄管理邏輯 (VNM/SCA 分離)
+- [x] 實作 AES-256-GCM 語義加密與 Side-channel 同步
+- [x] 實作符號混淆與特徵擾動 (Obfuscation)
+
 
 ## Phase 4: 多語言 SDK 與 分發
 - [ ] 實作 PyO3 Python 綁定

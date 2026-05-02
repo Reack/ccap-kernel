@@ -21,6 +21,9 @@ enum Commands {
         /// Force full deep scan of all modules
         #[arg(short, long)]
         deep: bool,
+        /// Encryption key for the semantic vault
+        #[arg(short, long)]
+        key: Option<String>,
     },
     /// Analyzes a single file and outputs the ST-AAAK telegram.
     Analyze {
@@ -33,8 +36,8 @@ fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
 
     match &cli.command {
-        Commands::Init { path, deep } => {
-            Scanner::scan_project(path, *deep)?;
+        Commands::Init { path, deep, key } => {
+            Scanner::scan_project(path, *deep, key.as_deref())?;
         }
         Commands::Analyze { path } => {
             let mut extractor = Extractor::new();

@@ -1,9 +1,11 @@
 use std::fs;
 use std::path::{Path, PathBuf};
 use crate::engine::extractor::FileFeatures;
+use crate::engine::security::SecurityEngine;
 
 pub struct Storage {
     root: PathBuf,
+    security: Option<SecurityEngine>,
 }
 
 impl Storage {
@@ -23,7 +25,12 @@ impl Storage {
             fs::write(gitignore_path, "*\n!.gitignore")?;
         }
 
-        Ok(Self { root })
+        Ok(Self { root, security: None })
+    }
+
+    pub fn with_security(mut self, key: &str) -> Self {
+        self.security = Some(SecurityEngine::new(key));
+        self
     }
 
     pub fn get_map_dir(&self) -> PathBuf {
@@ -31,20 +38,59 @@ impl Storage {
     }
 
     pub fn save_map(&self, rel_path: &str, telegram: &str, features: &FileFeatures) -> anyhow::Result<()> {
-        // Create a safe directory name from the relative path
         let safe_path = rel_path.replace("\\", "/").replace(":", "_");
         let map_dir = self.get_map_dir().join(&safe_path);
-        
         fs::create_dir_all(&map_dir)?;
 
+        let mut final_features = features.clone();
+
+        // Apply Obfuscation if security is enabled
+        if let Some(_) = &self.security {
+            // 1. Obfuscate symbols
+            final_features.top_symbols = final_features.top_symbols
+                .iter()
+                .map(|s| SecurityEngine::obfuscate_symbol(s))
+                .collect();
+            
+            // 2. Perturb vectors
+            let mut vec = [
+                final_features.control_flow_score,
+                final_features.data_density_score,
+                final_features.io_density_score
+            ];
+            SecurityEngine::perturb_vector(&mut vec, 0.02);
+            final_features.control_flow_score = vec[0];
+            final_features.data_density_score = vec[1];
+            final_features.io_density_score = vec[2];
+        }
+
         // 1. Write _MAP.md (Semantic Telegram - SCA)
+        let md_content = telegram.as_bytes();
         let md_path = map_dir.join("_MAP.md");
-        fs::write(md_path, telegram)?;
 
         // 2. Write _MAP.meta.json (Physical Metadata - VNM)
+        let meta_json = serde_json::to_string_pretty(&final_features)?;
+        let meta_content = meta_json.as_bytes();
         let meta_path = map_dir.join("_MAP.meta.json");
-        let meta_json = serde_json::to_string_pretty(features)?;
-        fs::write(meta_path, meta_json)?;
+
+        if let Some(sec) = &self.security {
+            // Write encrypted versions
+            let enc_md = sec.encrypt(md_content)?;
+            let enc_meta = sec.encrypt(meta_content)?;
+            fs::write(md_path.with_extension("md.enc"), enc_md)?;
+            fs::write(meta_path.with_extension("json.enc"), enc_meta)?;
+            
+            // SECURITY: Remove plain files if they exist to prevent leaks
+            let _ = fs::remove_file(&md_path);
+            let _ = fs::remove_file(&meta_path);
+            
+            println!("🔒 Encrypted map saved for: {}", rel_path);
+        } else {
+
+            // Write plain versions
+            fs::write(md_path, md_content)?;
+            fs::write(meta_path, meta_content)?;
+        }
 
         Ok(())
     }
