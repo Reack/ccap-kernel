@@ -149,7 +149,14 @@ enum Commands {
         /// Generate and open HTML view
         #[arg(short, long)]
         html: bool,
+        /// Generate a high-entropy prompt for AI enrichment (Chapter 15)
+        #[arg(long)]
+        ai_enrich: bool,
+        /// Package the entire project's semantic data for global AI synthesis
+        #[arg(long)]
+        ai_enrich_all: bool,
     },
+
 
 
     /// Runs the physical proofs verification suite (Chapter 14).
@@ -380,21 +387,30 @@ fn main() -> anyhow::Result<()> {
         Commands::Glossary { path, id, alias } => {
             crate::engine::GlossaryEngine::set_alias(path, id, alias)?;
         }
-        Commands::Wiki { path, target, html } => {
+        Commands::Wiki { path, target, html, ai_enrich, ai_enrich_all } => {
             let results = Scanner::scan_for_verification(path)?;
             let glossary = crate::engine::GlossaryEngine::load(path)?;
+
+            if *ai_enrich_all {
+                let package = crate::engine::WikiProxy::generate_global_ai_package(&results);
+                println!("{}", package);
+                return Ok(());
+            }
 
             let markdown = if let Some(t) = target {
                 let mut found = None;
                 for (p, feat) in &results {
                     if p == t {
+                        if *ai_enrich {
+                            let prompt = crate::engine::WikiProxy::generate_ai_enrich_prompt(p, feat);
+                            println!("{}", prompt);
+                            return Ok(());
+                        }
                         found = Some(crate::engine::WikiProxy::generate_markdown(p, feat, &glossary));
                         break;
                     }
                 }
-                if let Some(md) = found {
-                    md
-                } else {
+                if let Some(md) = found { md } else {
                     println!("❌  Target '{}' not found in map.", t);
                     return Ok(());
                 }
@@ -403,6 +419,7 @@ fn main() -> anyhow::Result<()> {
                 linker.build_graph(&results);
                 crate::engine::WikiProxy::generate_project_index(path, &results, &linker, &glossary)
             };
+
 
             if *html {
                 let html_content = crate::engine::WikiProxy::generate_html(&markdown);
