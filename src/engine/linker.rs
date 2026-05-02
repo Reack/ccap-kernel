@@ -32,14 +32,23 @@ impl Linker {
             self.path_to_idx.insert(path.clone(), idx);
         }
 
-        // 2. Add edges based on SCIP references
+        // 2. Add edges based on SCIP references with SMART MAPPING
         for (path, features) in results {
             if let Some(&u) = self.path_to_idx.get(path) {
                 for ref_id in &features.references {
-                    // SCIP ID to module path mapping (heuristic)
-                    let target_mod = ref_id.split('#').nth(0).unwrap_or("").replace("ccap . . ", "");
-                    if let Some(&v) = self.path_to_idx.get(&target_mod) {
+                    let target_base = ref_id.split('#').nth(0).unwrap_or("").replace("ccap . . ", "");
+                    
+                    // TRY 1: Exact match
+                    if let Some(&v) = self.path_to_idx.get(&target_base) {
                         self.graph.add_edge(u, v, 1.0);
+                        continue;
+                    }
+
+                    // TRY 2: Fuzzy match with extensions (.py, .rs, etc)
+                    for (node_path, &v) in &self.path_to_idx {
+                        if node_path.starts_with(&target_base) && (node_path.ends_with(".py") || node_path.ends_with(".rs") || node_path.ends_with(".c")) {
+                            self.graph.add_edge(u, v, 1.0);
+                        }
                     }
                 }
             }
@@ -48,12 +57,10 @@ impl Linker {
 
     pub fn calculate_impact(&self, target_path: &str) -> Option<ImpactReport> {
         let root_idx = *self.path_to_idx.get(target_path)?;
-        
         let mut victims = HashSet::new();
         let mut current_layer = vec![root_idx];
         let mut radius = 0;
 
-        // BFS to find all incoming dependencies (who depends on me?)
         while !current_layer.is_empty() && radius < 5 {
             let mut next_layer = Vec::new();
             for &idx in &current_layer {
@@ -68,15 +75,8 @@ impl Linker {
             current_layer = next_layer;
         }
 
-        let dependents: Vec<String> = victims.iter()
-            .map(|&idx| self.graph[idx].clone())
-            .collect();
-
-        Some(ImpactReport {
-            radius,
-            dependents,
-            risk_score: (radius as f32 / 5.0).min(1.0),
-        })
+        let dependents: Vec<String> = victims.iter().map(|&idx| self.graph[idx].clone()).collect();
+        Some(ImpactReport { radius, dependents, risk_score: (radius as f32 / 5.0).min(1.0) })
     }
 
     pub fn export_edges(&self) -> Vec<(usize, usize, f32)> {
@@ -89,8 +89,6 @@ impl Linker {
     }
 
     pub fn get_node_paths(&self) -> Vec<String> {
-        (0..self.graph.node_count())
-            .map(|i| self.graph[NodeIndex::new(i)].clone())
-            .collect()
+        (0..self.graph.node_count()).map(|i| self.graph[NodeIndex::new(i)].clone()).collect()
     }
 }
