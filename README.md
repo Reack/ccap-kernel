@@ -42,15 +42,24 @@ This system is built upon rigorous engineering standards:
 3.  **Audit**: `ccap-kernel audit <project_path>`
 4.  **Trace Risk**: `ccap-kernel trace <project_path> <symbol> --impact`
 
----
-
 ## 🤖 重要的 AI 創作聲明 (AI Authoring Declaration)
 
 > **⚠️ WARNING & NOTICE:**
 > This entire project—including the core Rust engine, the mathematical models, the documentation, and this README—was **100% authored by an Autonomous AI Agent (Gemini CLI)** under the strategic guidance of a human partner. 
-> 
-> **No human directly modified a single line of code.** 
-> While the system has passed formal verification and full-matrix regression testing, please use with the caution appropriate for a system born entirely from the latent space of a Large Language Model.
+
+---
+
+## 🚧 目前限制與免責聲明 (Limitations & Disclaimer)
+
+**Experimental Alpha:** This project is currently in the experimental alpha stage. Please be aware of the following:
+
+1.  **Limited Stress Testing**: While verified on repositories like FastAPI and Redis, this system has **not undergone exhaustive stress testing** across all possible codebase configurations.
+2.  **Mapping Fidelity**: We **cannot guarantee 100% map accuracy** for all edge cases. The generated semantic rooms and relationships should be used as navigation guides, not absolute truths.
+3.  **Heuristic Clustering**: The current spectral clustering implementation is a **simplified heuristic**. A more robust K-means based vector clustering is planned for V1.1.
+4.  **No Human Audit**: **No human has directly modified or reviewed this code for production safety.** Use at your own risk in critical environments.
+
+---
 
 ## 📄 License
 This project is licensed under the **MIT License**.
+
