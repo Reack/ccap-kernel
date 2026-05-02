@@ -1,5 +1,6 @@
 use crate::engine::{extractor::FileFeatures, glossary::Glossary, Linker, MathEngine};
 use std::collections::HashMap;
+use serde_json::json;
 
 pub struct WikiProxy;
 
@@ -26,7 +27,7 @@ impl WikiProxy {
         wiki
     }
 
-    /// Generates a project-level index with Interactive Vis.js Graph.
+    /// Generates a project-level index with Interactive Graph.
     pub fn generate_project_index(
         repo_root: &str,
         results: &[(String, FileFeatures)],
@@ -40,27 +41,32 @@ impl WikiProxy {
         wiki.push_str(&format!("**總掃描檔案數**: `{}`\n\n", results.len()));
         
         wiki.push_str("### 🏗️ 互動式系統架構 (Interactive Topology)\n");
-        wiki.push_str("<div id='mynetwork' style='height: 600px; border: 1px solid lightgray; background-color: #fcfcfc; border-radius: 12px;'></div>\n\n");
+        wiki.push_str("<div id='mynetwork' style='height: 600px; border: 1px solid #AEB98F; background-color: #ffffff; border-radius: 12px; margin-bottom: 30px;'></div>\n\n");
 
-        // 1. Prepare Nodes and Edges for Vis.js
-        let mut nodes_json = String::from("[");
-        let mut edges_json = String::from("[");
-
+        // 1. Prepare Nodes and Edges using serde_json for safety
         let edges = linker.export_edges();
         let paths = linker.get_node_paths();
         
+        let mut nodes = Vec::new();
         for (idx, path) in paths.iter().enumerate() {
             let alias = glossary.aliases.get(path).unwrap_or(path);
-            let color = if results.iter().any(|(p, f)| p == path && f.symbol_count > 10) { "#AEB98F" } else { "#D3D3D3" };
-            nodes_json.push_str(&format!("{{ \"id\": {}, \"label\": \"{}\", \"color\": \"{}\" }},", idx, alias, color));
+            let is_hub = results.iter().any(|(p, f)| p == path && f.symbol_count > 10);
+            nodes.push(json!({
+                "id": idx,
+                "label": alias,
+                "color": if is_hub { "#AEB98F" } else { "#D3D3D3" },
+                "size": if is_hub { 25 } else { 10 }
+            }));
         }
-        for (u, v, _) in edges.iter().take(200) { // Limit for browser performance
-            edges_json.push_str(&format!("{{ \"from\": {}, \"to\": {}, \"arrows\": \"to\" }},", u, v));
-        }
-        nodes_json.push_str("]");
-        edges_json.push_str("]");
 
-        wiki.push_str(&format!("<script>const graphData = {{ nodes: {}, edges: {} }};</script>\n", nodes_json, edges_json));
+        let mut links = Vec::new();
+        for (u, v, _) in edges.iter().take(300) { // Limit for browser performance
+            links.push(json!({ "from": u, "to": v, "arrows": "to" }));
+        }
+
+        let graph_data_json = json!({ "nodes": nodes, "links": links }).to_string();
+        // Use a special marker that generate_html will catch
+        wiki.push_str(&format!("@GRAPH_DATA_START@{}@GRAPH_DATA_END@\n", graph_data_json));
 
         wiki.push_str("### 🏢 戰略語義分區 (Semantic Rooms)\n\n");
         let mut sym_data = HashMap::new();
@@ -105,22 +111,14 @@ impl WikiProxy {
 
     pub fn generate_html(markdown_content: &str) -> String {
         let mut wiki_html = String::new();
-        let mut script_buffer = String::new();
-        let mut in_script = false;
+        let mut graph_data = String::from("{}");
 
         for line in markdown_content.lines() {
             let trimmed = line.trim();
             if trimmed.is_empty() { continue; }
             
-            if trimmed.starts_with("<script>") {
-                in_script = true;
-                continue;
-            } else if trimmed == "</script>" {
-                in_script = false;
-                continue;
-            }
-            if in_script {
-                script_buffer.push_str(&format!("{}\n", trimmed));
+            if trimmed.starts_with("@GRAPH_DATA_START@") {
+                graph_data = trimmed.replace("@GRAPH_DATA_START@", "").replace("@GRAPH_DATA_END@", "");
                 continue;
             }
 
@@ -148,15 +146,14 @@ impl WikiProxy {
 <head>
     <meta charset="utf-8">
     <title>CCAP Architectural Dashboard</title>
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.9/standalone/umd/vis-network.min.js"></script>
     <style>
         body {{ font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #333; max-width: 1100px; margin: 40px auto; padding: 20px; background-color: #f0f2f5; }}
         #content {{ background: white; padding: 50px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 10px solid #AEB98F; }}
         h1 {{ color: #1a2a3a; font-size: 2.2em; margin-bottom: 30px; text-align: center; }}
         h3 {{ color: #2c3e50; border-left: 5px solid #AEB98F; padding-left: 15px; margin-top: 40px; }}
         h4 {{ color: #556b2f; margin-top: 20px; background: #f9fbf2; padding: 8px; border-radius: 4px; }}
-        li {{ background: #fff; margin: 8px 0; padding: 12px; border: 1px solid #eee; border-radius: 8px; transition: 0.3s; list-style: none; }}
-        li:hover {{ transform: translateX(5px); border-color: #AEB98F; }}
+        li {{ background: #fff; margin: 8px 0; padding: 12px; border: 1px solid #eee; border-radius: 8px; list-style: none; }}
         code {{ background: #eee; padding: 2px 5px; border-radius: 4px; color: #d63384; font-family: 'Consolas', monospace; }}
         .footer {{ margin-top: 50px; text-align: center; color: #999; font-size: 0.9em; }}
     </style>
@@ -165,18 +162,22 @@ impl WikiProxy {
     <div id="content">{}</div>
     <div class="footer">CCAP V6.0 Gold | The Semantic Operating System</div>
     <script type="text/javascript">
-        {}
+        const rawData = {};
         const container = document.getElementById('mynetwork');
+        const data = {{
+            nodes: new vis.DataSet(rawData.nodes),
+            edges: new vis.DataSet(rawData.links)
+        }};
         const options = {{
-            nodes: {{ shape: 'dot', size: 16, font: {{ size: 12, color: '#000' }}, borderWidth: 2 }},
+            nodes: {{ shape: 'dot', font: {{ size: 12, color: '#000' }}, borderWidth: 2 }},
             edges: {{ width: 2, color: {{ inherit: 'from' }}, smooth: {{ type: 'continuous' }} }},
             physics: {{ stabilization: true, barnesHut: {{ gravitationalConstant: -2000, centralGravity: 0.3, springLength: 95 }} }},
             interaction: {{ dragNodes: true, zoomView: true, dragView: true }}
         }};
-        const network = new vis.Network(container, graphData, options);
+        new vis.Network(container, data, options);
     </script>
 </body>
 </html>
-        "#, wiki_html, script_buffer)
+        "#, wiki_html, graph_data)
     }
 }
