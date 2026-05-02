@@ -62,6 +62,12 @@ enum Commands {
         #[arg(short, long)]
         code: String,
     },
+    /// Performs a scientific quality audit based on ISO 25010.
+    Audit {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
+    },
     /// Quotes the estimated token cost and risk for a modification.
     Quote {
         /// Repository root path
@@ -86,7 +92,6 @@ enum Commands {
         output: String,
     },
     /// Analyzes a single file.
-
     Analyze {
         /// Path to the file to analyze
         path: String,
@@ -109,8 +114,44 @@ enum Commands {
         #[arg(short, long, default_value = ".")]
         path: String,
     },
+    /// Validates a modification contract (shadow execution).
+    Contract {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
+        /// Target SCIP ID
+        target: String,
+        /// New code snippet for validation
+        #[arg(short, long)]
+        code: String,
+    },
+    /// Manages the semantic glossary (aliases).
+    Glossary {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
+        /// SCIP ID to alias
+        #[arg(short, long)]
+        id: String,
+        /// Alias name
+        #[arg(short, long)]
+        alias: String,
+    },
+    /// Generates a semantic Wiki page for a given target.
+    Wiki {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
+        /// Target file path to view
+        target: String,
+    },
+    /// Runs the physical proofs verification suite (Chapter 14).
+    Prove {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
+    },
 }
-
 
 fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
@@ -123,6 +164,7 @@ fn main() -> anyhow::Result<()> {
             Benchmark::run(path)?;
         }
         Commands::Verify { path } => {
+            println!("🔍  Verification: Initiating Formal Parity Check for: {}", path);
             let results = Scanner::scan_for_verification(path)?;
             let mut linker = Linker::new();
             linker.build_graph(&results);
@@ -173,12 +215,35 @@ fn main() -> anyhow::Result<()> {
             for (p, feat) in results {
                 if p == norm_file {
                     if let Some(sym) = feat.exports.iter().find(|s| s.id == *symbol_id) {
-                        Patcher::apply_patch(path, file, sym, code)?;
+                        crate::engine::Patcher::apply_patch(path, file, sym, code)?;
                         return Ok(());
                     }
                 }
             }
             println!("❌  Symbol ID not found for patching.");
+        }
+        Commands::Audit { path } => {
+            println!("🔬  Audit: Initiating Standards-Compliant Quality Assessment for: {}", path);
+            let results = Scanner::scan_for_verification(path)?;
+            let mut linker = Linker::new();
+            linker.build_graph(&results);
+            
+            let report = crate::engine::Evaluator::perform_audit(&linker, results.len());
+
+            println!("\n====================================================");
+            println!("🏛️   CCAP SCIENTIFIC AUDIT REPORT");
+            println!("====================================================");
+            println!("📘  IEEE P3361 Cognitive Index:  {:.4}", report.ieee_p3361_cognitive_load);
+            println!("📐  ISO 25059 Adaptability:     {:.4}", report.iso_25059_adaptability);
+            println!("📊  Structural Data Debt:       {}", report.structural_data_debt);
+            
+            println!("\n--- [V2P TRANSITION ANALYSIS] ---");
+            if report.ieee_p3361_cognitive_load > 0.8 && report.iso_25059_adaptability > 0.7 {
+                println!("✅  Product Ready: HIGH (Strong structure for AI scale-up)");
+            } else {
+                println!("⚠️   Vibe Only:     MEDIUM (Requires structural refactoring)");
+            }
+            println!("====================================================\n");
         }
         Commands::Quote { path, target } => {
             let results = Scanner::scan_for_verification(path)?;
@@ -199,7 +264,39 @@ fn main() -> anyhow::Result<()> {
             }
         }
         Commands::Stats { path } => {
-            // ... (Stats 邏輯保持不變)
+            let storage = crate::engine::Storage::init(path)?;
+            let log_path = storage.get_map_dir().parent().unwrap().join("telemetry.log");
+            
+            if log_path.exists() {
+                let content = fs::read_to_string(log_path)?;
+                let mut total_raw = 0;
+                let mut total_map = 0;
+                let mut file_count = 0;
+
+                for line in content.lines() {
+                    let parts: Vec<&str> = line.split('|').collect();
+                    if parts.len() == 3 {
+                        let raw: usize = parts[1].split(':').nth(1).unwrap_or("0").parse().unwrap_or(0);
+                        let map: usize = parts[2].split(':').nth(1).unwrap_or("0").parse().unwrap_or(0);
+                        total_raw += raw;
+                        total_map += map;
+                        file_count += 1;
+                    }
+                }
+
+                println!("\n====================================================");
+                println!("📈  CCAP TOKEN SAVINGS STATS (Local Audit)");
+                println!("====================================================");
+                println!("📂  Files Tracked:    {}", file_count);
+                println!("📄  Raw Size Est:     {} (Bytes)", total_raw);
+                println!("🛰️   CCAP Map Size:    {} (Bytes)", total_map);
+                
+                if total_raw > 0 {
+                    let savings = (1.0 - (total_map as f64 / total_raw as f64)) * 100.0;
+                    println!("💰  Total Savings:     {:.2}%", savings);
+                }
+                println!("====================================================\n");
+            }
         }
         Commands::Export { path, output } => {
             println!("📂  Export: Compiling Project Atlas for 3rd-party compatibility...");
@@ -211,7 +308,6 @@ fn main() -> anyhow::Result<()> {
             crate::engine::Exporter::save_to_file(&atlas, output)?;
         }
         Commands::Analyze { path } => {
-
             let mut extractor = Extractor::new();
             let features = extractor.analyze_file(path, path)?;
             let telegram = Mapper::to_telegram(path, &features);
@@ -226,7 +322,8 @@ fn main() -> anyhow::Result<()> {
             if let Some(members) = registry.get(room) {
                 println!("🏠  Room: [{}] | Total Files: {}", room, members.len());
                 for member in members {
-                    let map_path = storage.get_map_dir().join(member.replace("\\", "/").replace(":", "_")).join("_MAP.md");
+                    let safe_member = member.replace("\\", "/").replace(":", "_");
+                    let map_path = storage.get_map_dir().join(safe_member).join("_MAP.md");
                     if let Ok(telegram) = fs::read_to_string(map_path) {
                         println!("  {}", telegram);
                     }
@@ -237,7 +334,7 @@ fn main() -> anyhow::Result<()> {
             let actual_path = if path == "." {
                 std::env::current_dir()?.to_string_lossy().to_string()
             } else {
-                path
+                path.clone()
             };
 
             let output = std::process::Command::new(command)
@@ -249,9 +346,51 @@ fn main() -> anyhow::Result<()> {
             let cleaned = crate::engine::ProxyEngine::clean_output(&stdout, &actual_path);
             println!("{}", cleaned);
         }
+        Commands::Contract { path, target, code } => {
+            println!("📑  Contract: Initiating Shadow Execution for mutation on: {}", target);
+            let results = Scanner::scan_for_verification(path)?;
 
+            let contract = crate::engine::contract::ModificationContract {
+                target_id: target.clone(),
+                action: "PATCH".to_string(),
+                code_snippet: code.clone(),
+            };
+
+            match crate::engine::ContractGuard::verify_modification(&contract, &results) {
+                Ok(shadow_fidelity) => {
+                    println!("\n--- [CONTRACT VERIFICATION RESULT] ---");
+                    println!("✅  Integrity Check: PASSED");
+                    println!("🧮  Predicted Fidelity: {:.4}", shadow_fidelity);
+                    println!("🚀  Ready for Surgical Patch.");
+                },
+                Err(e) => {
+                    println!("\n--- [CONTRACT VERIFICATION RESULT] ---");
+                    println!("❌  Integrity Check: FAILED");
+                    println!("⚠️   Error: {}", e);
+                }
+            }
+        }
+        Commands::Glossary { path, id, alias } => {
+            crate::engine::GlossaryEngine::set_alias(path, id, alias)?;
+        }
+        Commands::Wiki { path, target } => {
+            let results = Scanner::scan_for_verification(path)?;
+            let glossary = crate::engine::GlossaryEngine::load(path)?;
+
+            for (p, feat) in results {
+                if p == *target {
+                    let wiki_page = crate::engine::WikiProxy::generate_page(path, &p, &feat, &glossary);
+                    println!("{}", wiki_page);
+                    return Ok(());
+                }
+            }
+            println!("❌  Target '{}' not found in map.", target);
+        }
+        Commands::Prove { path } => {
+            let results = Scanner::scan_for_verification(path)?;
+            crate::engine::CCAPProver::run_physical_proofs(path, &results)?;
+        }
     }
-
 
     Ok(())
 }

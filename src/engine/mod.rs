@@ -11,6 +11,10 @@ pub mod patcher;
 pub mod evaluator;
 pub mod exporter;
 pub mod proxy;
+pub mod contract;
+pub mod glossary;
+pub mod wiki_proxy;
+pub mod prover;
 
 pub use extractor::Extractor;
 pub use mapper::Mapper;
@@ -25,3 +29,7 @@ pub use patcher::Patcher;
 pub use evaluator::Evaluator;
 pub use exporter::Exporter;
 pub use proxy::ProxyEngine;
+pub use contract::ContractGuard;
+pub use glossary::GlossaryEngine;
+pub use wiki_proxy::WikiProxy;
+pub use prover::CCAPProver;
