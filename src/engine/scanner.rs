@@ -41,7 +41,9 @@ impl Scanner {
             let file_path = entry.path();
             let rel_path = pathdiff::diff_paths(file_path, &root_path)
                 .unwrap_or_else(|| file_path.to_path_buf());
-            let rel_path_str = rel_path.to_string_lossy().to_string();
+            
+            // PATH NORMALIZATION: Force forward slashes for internal consistency
+            let rel_path_str = rel_path.to_string_lossy().replace("\\", "/");
 
             if let Ok(features) = extractor.analyze_file(file_path.to_str().unwrap(), &rel_path_str) {
                 let telegram = Mapper::to_telegram(&rel_path_str, &features);
@@ -65,9 +67,12 @@ impl Scanner {
             let edges = linker.export_edges();
             let paths = linker.get_node_paths();
             
-            // Generate Semantic Clusters (3 main rooms for strategic view)
             if let Ok(clusters) = MathEngine::spectral_cluster(&paths, &edges, 3, &sym_data) {
-                let mut skeleton = format!("@ROOT[{}]\n", root);
+                let mut skeleton = String::from("# CCAP-ST 4.0 SEMANTIC SKELETON INDEX\n");
+                skeleton.push_str("# Protocol: Use 'ccap-kernel trace --impact' to assess risk before editing.\n");
+                skeleton.push_str("# Tags: ROLE[CORE:logic_center, HUB:joint], TYPE[ENGINE:logic, BRIDGE:io], V[c:control, d:data, i:io]\n");
+                skeleton.push_str(&format!("@ROOT[{}]\n", root));
+                
                 let mut room_registry = HashMap::new();
 
                 for cluster in clusters {
@@ -78,11 +83,9 @@ impl Scanner {
                     room_registry.insert(cluster.name, cluster.members);
                 }
                 
-                // Save high-level skeleton
                 let skeleton_path = storage.get_map_dir().join("root.st.aaak");
                 fs::write(skeleton_path, skeleton)?;
 
-                // Save detailed room registry for 'inspect-room'
                 let registry_path = storage.get_map_dir().join("room_registry.json");
                 fs::write(registry_path, serde_json::to_string_pretty(&room_registry)?)?;
                 
@@ -94,7 +97,6 @@ impl Scanner {
         Ok(())
     }
 
-    /// Scans the project specifically for verification purposes, returning raw results.
     pub fn scan_for_verification(root: &str) -> anyhow::Result<Vec<(String, crate::engine::extractor::FileFeatures)>> {
         let extensions = ["py", "js", "jsx", "ts", "tsx", "c", "h", "cpp", "hpp", "cc", "hh", "rs", "go", "java", "cs"];
         let files: Vec<_> = WalkDir::new(root)
@@ -116,7 +118,9 @@ impl Scanner {
             let file_path = entry.path();
             let rel_path = pathdiff::diff_paths(file_path, &root_path)
                 .unwrap_or_else(|| file_path.to_path_buf());
-            let rel_path_str = rel_path.to_string_lossy().to_string();
+            
+            // PATH NORMALIZATION: Must match scan_project logic
+            let rel_path_str = rel_path.to_string_lossy().replace("\\", "/");
 
             if let Ok(features) = extractor.analyze_file(file_path.to_str().unwrap(), &rel_path_str) {
                 let mut res = results.lock().unwrap();
@@ -128,5 +132,3 @@ impl Scanner {
         Ok(res)
     }
 }
-
-

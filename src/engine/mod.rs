@@ -7,6 +7,8 @@ pub mod math;
 pub mod security;
 pub mod benchmark;
 pub mod verifier;
+pub mod patcher;
+pub mod evaluator;
 
 pub use extractor::Extractor;
 pub use mapper::Mapper;
@@ -17,3 +19,5 @@ pub use math::MathEngine;
 pub use security::SecurityEngine;
 pub use benchmark::Benchmark;
 pub use verifier::Verifier;
+pub use patcher::Patcher;
+pub use evaluator::Evaluator;

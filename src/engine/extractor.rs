@@ -18,7 +18,9 @@ pub struct ScipSymbol {
     pub id: String,
     pub name: String,
     pub line: usize,
+    pub range: (usize, usize), // (start_byte, end_byte) for surgical patching
 }
+
 
 pub struct Extractor {
     parser: Parser,
@@ -138,11 +140,15 @@ impl Extractor {
         // --- SCOPE & SCIP ID GENERATION ---
         if let Some(name) = current_symbol {
             let scip_id = format!("ccap . . {}#{}#", scope.join("#"), name);
+            let range = node.byte_range();
+
             f.exports.push(ScipSymbol {
                 id: scip_id,
                 name: name.clone(),
                 line: node.start_position().row + 1,
+                range: (range.start, range.end),
             });
+
 
             if f.top_symbols.len() < 5 && !name.starts_with('_') {
                 f.top_symbols.push(name.clone());

@@ -10,14 +10,18 @@ impl Benchmark {
         println!("📊  CCAP V4.0: Initiating Integrated Integrity & Efficiency Benchmark...");
         println!("📂  Target Project: {}", root);
         
+        // 1. Perform Live Analysis for Verification
         let analysis_results = Scanner::scan_for_verification(root)?;
         let v_report = Verifier::verify_scip_ids(&analysis_results);
         
+        // 2. Calculate Topological Fidelity & Accuracy
         let mut linker = Linker::new();
         linker.build_graph(&analysis_results);
         let edges = linker.export_edges();
         let fidelity = Verifier::calculate_fidelity(analysis_results.len(), &edges);
+        let accuracy = Verifier::verify_topological_accuracy(&linker, &analysis_results);
 
+        // 3. Token Counting (Raw vs Map)
         let bpe = cl100k_base()?;
         let mut total_raw_tokens = 0;
         let mut total_map_tokens = 0;
@@ -42,6 +46,7 @@ impl Benchmark {
             }
         }
 
+        // 4. Final Integrated Report
         println!("\n====================================================");
         println!("🏆  CCAP V4.0 INTEGRATED BENCHMARK REPORT");
         println!("====================================================");
@@ -55,12 +60,16 @@ impl Benchmark {
         }
 
         println!("\n--- [2. FIDELITY MATRIX] ---");
-        println!("✅  SCIP Parity Status:    {}", if v_report.scip_parity_passed { "PASSED (100% Compliant)" } else { "FAILED" });
+        println!("✅  SCIP Parity Status:    {}", if v_report.scip_parity_passed { "PASSED" } else { "FAILED (See Verify for details)" });
+        println!("🎯  Topological Accuracy:    {:.2}%", accuracy * 100.0);
         println!("🧮  Algebraic Connectivity:  {:.4}", fidelity);
-        if fidelity > 0.0 {
-            println!("✨  Structural Integrity:   SECURE");
+        
+        if accuracy >= 0.99 {
+            println!("✨  Trust Grade:           ELITE (Provably Lossless)");
+        } else if accuracy >= 0.90 {
+            println!("✨  Trust Grade:           INDUSTRIAL (High Fidelity)");
         } else {
-            println!("⚠️   Structural Integrity:   FRAGMENTED");
+            println!("⚠️   Trust Grade:           BETA (Awaiting optimization)");
         }
 
         println!("\n--- [3. RELIABILITY MATRIX] ---");

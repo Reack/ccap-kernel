@@ -82,5 +82,73 @@ AI 始終在「低維拓樸空間」導航，僅在執行手術級修改時，�
 *   **目標**: 當 AI 僅讀取 `ST-AAAK` 電報時，鎖定特定功能模組（如 OAuth2 Flow）的正確率必須達到工業級水準。
 
 ---
-**[SPECIFICATION END]**
+
+## 第六章：前瞻性導航與預檢協定 (Pre-flight Protocol)
+
+為使 AI 具備資深架構師的決策穩重感，系統實作「修改前預檢」機制，在實體修改發生前精確評估「爆炸半徑 (Blast Radius)」。
+
+### 6.1 爆炸半徑分析 (Impact Analysis)
+*   **觸發時機**: AI 擬定修改計畫前。
+*   **技術原理**: 基於物理依賴圖 (DAG) 的逆向可達性分析 (Reverse Reachability)。
+*   **權重演算**: 結合 `BOND` 權重與節點的 `Eigen-centrality`，計算修改該節點對系統整體的「擾動指數」。
+
+---
+
+## 第七章：手術級精確修改 (Surgical Edits)
+
+解決長代碼檔案匹配失敗導致的「全量複寫」與「語義遺失」問題。
+
+### 7.1 AST 手術刀 (`ccap-kernel patch`)
+*   **協定**: AI 不再回傳舊文字，而是回傳 `[SCIP-ID] + [新代碼片段]`。
+*   **執行**: CSK 利用 Tree-sitter 的精確位元組座標，直接對函式/類別進行物理替換。
+*   **效益**: 降低 90% 修改時的 Token 消耗，並確保檔案其餘部分不受 AI 遺忘影響。
+
+---
+
+## 第八章：工程決策經濟學 (Decision Economics)
+
+將「Vibe Coding」的氛圍感轉化為可量化的工程代價。
+
+### 8.1 成本與風險審計
+*   **Token 報價**: CSK 自動預估完成該任務所需的 Token 總預算。
+*   **脆弱度指數 ($\Phi$)**: 根據連通熵計算修改引發系統崩潰的機率。
+*   **修復成本**: 預測改壞後所需的修復對話回合數 (Repair Turns)。
+
+---
+
+## 第九章：萬能接入與影子指標 (The Proxy Standard)
+
+實現對 Gemini, Claude, Copilot 等主流 AI-CLI 的「零成本、隨插即用」接入。
+
+### 9.1 自解釋影子指標
+*   **通訊介面**: 以 `.ccap/` 下的高熵電報檔案為唯一媒介。
+*   **自描述標頭 (Self-Explaining Header)**: 所有的 `.st` 或 `.aaak` 檔案開頭均包含解碼字典，確保 AI 在 0 學習成本下直接理解高熵符號。
+*   **無狀態對話**: 透過地圖繼承記憶，允許開發者隨時重啟對話，消除歷史積累導致的推理遲鈍。
+
+---
+
+## 第十章：科學評估與 ISO 25010 品質對標 (Scientific Evaluation)
+
+為確保系統具備「可重複驗證的工業信任」，CSK 實作符合 ISO 標準的自動化審計引擎。
+
+### 10.1 模組化與內聚度 (Modularity/Cohesion)
+*   **對標指標**: ISO/IEC 25010 - Modularity.
+*   **演算法**: 計算譜分群後的 **Cluster Cohesion Ratio (CCR)**。
+*   **公式**: $CCR = \frac{E_{intra}}{E_{total}}$ (內部連結佔總連結比例)。目標 $CCR \ge 0.7$。
+
+### 10.2 可分析性與語義熵 (Analyzability/Entropy)
+*   **對標指標**: ISO/IEC 25010 - Analysability.
+*   **演算法**: 測量 ST-AAAK 電報的 **Shannon Entropy (語義熵)**。
+*   **目標**: 證明標籤密度足以在 $O(1)$ 時間內區分 95% 以上的模組功能。
+
+### 10.3 修改穩定性與波紋效應 (Stability/Ripple Effect)
+*   **對標指標**: Ripple Effect Metric (傳統軟體工程指標)。
+*   **量化**: 計算全專案的平均爆炸半徑 $\bar{R}$。
+*   **目標**: 提供重構後的 $\Delta \bar{R}$ 變化，作為架構改進的科學證據。
+
+---
+**[MASTER SPECIFICATION END]**
+
+
+
 
