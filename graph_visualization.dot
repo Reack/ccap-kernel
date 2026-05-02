@@ -1,0 +1,2574 @@
+digraph CCAP_Atlas {
+  rankdir=LR;
+  node [shape=box, style=filled, color=lightblue, fontname="Helvetica"];
+  "docs_src_settings_app02_py310___init___py" [label="docs_src/settings/app02_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app03_an_py310_config_py" [label="docs_src/settings/app03_an_py310/config.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_python_types_tutorial009_py310_py" [label="docs_src/python_types/tutorial009_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "tests_test_callable_endpoint_py" [label="tests/test_callable_endpoint.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_python_types_tutorial010_py310_py" [label="docs_src/python_types/tutorial010_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_settings_app03_an_py310_main_py" [label="docs_src/settings/app03_an_py310/main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app03_an_py310___init___py" [label="docs_src/settings/app03_an_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app03_py310_config_py" [label="docs_src/settings/app03_py310/config.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_python_types_tutorial011_py310_py" [label="docs_src/python_types/tutorial011_py310.py
+[v:0.0, 0.3, 0.4]"];
+  "docs_src_python_types_tutorial013_py310_py" [label="docs_src/python_types/tutorial013_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app03_py310_main_py" [label="docs_src/settings/app03_py310/main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_python_types___init___py" [label="docs_src/python_types/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app03_py310___init___py" [label="docs_src/settings/app03_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_tutorial001_py310_py" [label="docs_src/query_params/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_tutorial001_py310_py" [label="docs_src/settings/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_settings___init___py" [label="docs_src/settings/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_tutorial002_py310_py" [label="docs_src/query_params/tutorial002_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_compat_py" [label="tests/test_compat.py
+[v:0.0, 1.0, 1.0]"];
+  "docs_src_query_params_tutorial003_py310_py" [label="docs_src/query_params/tutorial003_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_sql_databases_tutorial001_an_py310_py" [label="docs_src/sql_databases/tutorial001_an_py310.py
+[v:0.1, 0.3, 1.0]"];
+  "docs_src_query_params_tutorial004_py310_py" [label="docs_src/query_params/tutorial004_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_query_params_tutorial005_py310_py" [label="docs_src/query_params/tutorial005_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_tutorial006_py310_py" [label="docs_src/query_params/tutorial006_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params___init___py" [label="docs_src/query_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_computed_fields_py" [label="tests/test_computed_fields.py
+[v:0.0, 0.3, 0.4]"];
+  "docs_src_query_params_str_validations_tutorial001_py310_py" [label="docs_src/query_params_str_validations/tutorial001_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_en_docs_js_custom_js" [label="docs/en/docs/js/custom.js
+[v:1.0, 0.0, 1.0]"];
+  "docs_src_query_params_str_validations_tutorial002_an_py310_py" [label="docs_src/query_params_str_validations/tutorial002_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial002_py310_py" [label="docs_src/query_params_str_validations/tutorial002_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_en_docs_js_init_kapa_widget_js" [label="docs/en/docs/js/init_kapa_widget.js
+[v:0.0, 0.0, 1.0]"];
+  "docs_src_query_params_str_validations_tutorial003_an_py310_py" [label="docs_src/query_params_str_validations/tutorial003_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial003_py310_py" [label="docs_src/query_params_str_validations/tutorial003_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial004_an_py310_py" [label="docs_src/query_params_str_validations/tutorial004_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial004_py310_py" [label="docs_src/query_params_str_validations/tutorial004_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial005_an_py310_py" [label="docs_src/query_params_str_validations/tutorial005_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial005_py310_py" [label="docs_src/query_params_str_validations/tutorial005_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_custom_middleware_exception_py" [label="tests/test_custom_middleware_exception.py
+[v:0.2, 0.3, 0.8]"];
+  "docs_src_query_params_str_validations_tutorial006c_an_py310_py" [label="docs_src/query_params_str_validations/tutorial006c_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial006c_py310_py" [label="docs_src/query_params_str_validations/tutorial006c_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial006_an_py310_py" [label="docs_src/query_params_str_validations/tutorial006_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial006_py310_py" [label="docs_src/query_params_str_validations/tutorial006_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_custom_route_class_py" [label="tests/test_custom_route_class.py
+[v:0.1, 1.0, 0.4]"];
+  "docs_src_query_params_str_validations_tutorial007_an_py310_py" [label="docs_src/query_params_str_validations/tutorial007_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_sql_databases_tutorial001_py310_py" [label="docs_src/sql_databases/tutorial001_py310.py
+[v:0.1, 0.3, 1.0]"];
+  "docs_en_docs_js_termynal_js" [label="docs/en/docs/js/termynal.js
+[v:0.6, 0.3, 0.2]"];
+  "docs_src_query_params_str_validations_tutorial007_py310_py" [label="docs_src/query_params_str_validations/tutorial007_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_additional_responses_tutorial001_py310_py" [label="docs_src/additional_responses/tutorial001_py310.py
+[v:0.1, 0.7, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial008_an_py310_py" [label="docs_src/query_params_str_validations/tutorial008_an_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_additional_responses_tutorial002_py310_py" [label="docs_src/additional_responses/tutorial002_py310.py
+[v:0.1, 0.3, 0.2]"];
+  "tests_test_custom_schema_fields_py" [label="tests/test_custom_schema_fields.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_query_params_str_validations_tutorial008_py310_py" [label="docs_src/query_params_str_validations/tutorial008_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_query_params_str_validations_tutorial009_an_py310_py" [label="docs_src/query_params_str_validations/tutorial009_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_additional_responses_tutorial003_py310_py" [label="docs_src/additional_responses/tutorial003_py310.py
+[v:0.1, 0.7, 0.2]"];
+  "docs_src_sql_databases_tutorial002_an_py310_py" [label="docs_src/sql_databases/tutorial002_an_py310.py
+[v:0.2, 1.0, 1.0]"];
+  "docs_src_query_params_str_validations_tutorial009_py310_py" [label="docs_src/query_params_str_validations/tutorial009_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_custom_swagger_ui_redirect_py" [label="tests/test_custom_swagger_ui_redirect.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_additional_responses_tutorial004_py310_py" [label="docs_src/additional_responses/tutorial004_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_additional_responses___init___py" [label="docs_src/additional_responses/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial010_an_py310_py" [label="docs_src/query_params_str_validations/tutorial010_an_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_additional_status_codes_tutorial001_an_py310_py" [label="docs_src/additional_status_codes/tutorial001_an_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_query_params_str_validations_tutorial010_py310_py" [label="docs_src/query_params_str_validations/tutorial010_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_sql_databases_tutorial002_py310_py" [label="docs_src/sql_databases/tutorial002_py310.py
+[v:0.2, 1.0, 1.0]"];
+  "docs_src_sql_databases___init___py" [label="docs_src/sql_databases/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial011_an_py310_py" [label="docs_src/query_params_str_validations/tutorial011_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_additional_status_codes_tutorial001_py310_py" [label="docs_src/additional_status_codes/tutorial001_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_additional_status_codes___init___py" [label="docs_src/additional_status_codes/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_static_files_tutorial001_py310_py" [label="docs_src/static_files/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_static_files___init___py" [label="docs_src/static_files/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial011_py310_py" [label="docs_src/query_params_str_validations/tutorial011_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_advanced_middleware_tutorial001_py310_py" [label="docs_src/advanced_middleware/tutorial001_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_datastructures_py" [label="tests/test_datastructures.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_query_params_str_validations_tutorial012_an_py310_py" [label="docs_src/query_params_str_validations/tutorial012_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_advanced_middleware_tutorial002_py310_py" [label="docs_src/advanced_middleware/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial012_py310_py" [label="docs_src/query_params_str_validations/tutorial012_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_advanced_middleware_tutorial003_py310_py" [label="docs_src/advanced_middleware/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_advanced_middleware___init___py" [label="docs_src/advanced_middleware/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_stream_data_tutorial001_py310_py" [label="docs_src/stream_data/tutorial001_py310.py
+[v:0.5, 0.0, 0.8]"];
+  "docs_src_query_params_str_validations_tutorial013_an_py310_py" [label="docs_src/query_params_str_validations/tutorial013_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_app_testing_app_a_py310_main_py" [label="docs_src/app_testing/app_a_py310/main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_app_testing_app_a_py310_test_main_py" [label="docs_src/app_testing/app_a_py310/test_main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial013_py310_py" [label="docs_src/query_params_str_validations/tutorial013_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_datetime_custom_encoder_py" [label="tests/test_datetime_custom_encoder.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_app_testing_app_a_py310___init___py" [label="docs_src/app_testing/app_a_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial014_an_py310_py" [label="docs_src/query_params_str_validations/tutorial014_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_stream_data_tutorial002_py310_py" [label="docs_src/stream_data/tutorial002_py310.py
+[v:0.3, 0.3, 0.6]"];
+  "docs_src_stream_data___init___py" [label="docs_src/stream_data/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial014_py310_py" [label="docs_src/query_params_str_validations/tutorial014_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_app_testing_app_b_an_py310_main_py" [label="docs_src/app_testing/app_b_an_py310/main.py
+[v:0.3, 0.3, 0.8]"];
+  "docs_src_stream_json_lines_tutorial001_py310_py" [label="docs_src/stream_json_lines/tutorial001_py310.py
+[v:0.3, 0.3, 1.0]"];
+  "docs_src_stream_json_lines___init___py" [label="docs_src/stream_json_lines/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations_tutorial015_an_py310_py" [label="docs_src/query_params_str_validations/tutorial015_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_query_params_str_validations___init___py" [label="docs_src/query_params_str_validations/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_strict_content_type_tutorial001_py310_py" [label="docs_src/strict_content_type/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_strict_content_type___init___py" [label="docs_src/strict_content_type/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_sub_applications_tutorial001_py310_py" [label="docs_src/sub_applications/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_param_models_tutorial001_an_py310_py" [label="docs_src/query_param_models/tutorial001_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_app_testing_app_b_an_py310_test_main_py" [label="docs_src/app_testing/app_b_an_py310/test_main.py
+[v:0.0, 0.0, 0.6]"];
+  "docs_src_sub_applications___init___py" [label="docs_src/sub_applications/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_app_testing_app_b_an_py310___init___py" [label="docs_src/app_testing/app_b_an_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_templates_static___init___py" [label="docs_src/templates/static/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_templates_templates___init___py" [label="docs_src/templates/templates/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_param_models_tutorial001_py310_py" [label="docs_src/query_param_models/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_templates_tutorial001_py310_py" [label="docs_src/templates/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_templates___init___py" [label="docs_src/templates/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_app_testing_app_b_py310_main_py" [label="docs_src/app_testing/app_b_py310/main.py
+[v:0.3, 0.3, 0.8]"];
+  "docs_src_using_request_directly_tutorial001_py310_py" [label="docs_src/using_request_directly/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_using_request_directly___init___py" [label="docs_src/using_request_directly/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_query_param_models_tutorial002_an_py310_py" [label="docs_src/query_param_models/tutorial002_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_websockets__tutorial001_py310_py" [label="docs_src/websockets_/tutorial001_py310.py
+[v:0.1, 0.0, 0.8]"];
+  "docs_src_query_param_models_tutorial002_py310_py" [label="docs_src/query_param_models/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_query_param_models___init___py" [label="docs_src/query_param_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_app_testing_app_b_py310_test_main_py" [label="docs_src/app_testing/app_b_py310/test_main.py
+[v:0.0, 0.0, 0.6]"];
+  "docs_src_app_testing_app_b_py310___init___py" [label="docs_src/app_testing/app_b_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial001_02_an_py310_py" [label="docs_src/request_files/tutorial001_02_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_websockets__tutorial002_an_py310_py" [label="docs_src/websockets_/tutorial002_an_py310.py
+[v:0.2, 0.0, 1.0]"];
+  "docs_src_app_testing_tutorial001_py310_py" [label="docs_src/app_testing/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial001_02_py310_py" [label="docs_src/request_files/tutorial001_02_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_app_testing_tutorial002_py310_py" [label="docs_src/app_testing/tutorial002_py310.py
+[v:0.0, 0.0, 1.0]"];
+  "docs_src_websockets__tutorial002_py310_py" [label="docs_src/websockets_/tutorial002_py310.py
+[v:0.2, 0.0, 1.0]"];
+  "docs_src_request_files_tutorial001_03_an_py310_py" [label="docs_src/request_files/tutorial001_03_an_py310.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_app_testing_tutorial003_py310_py" [label="docs_src/app_testing/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial001_03_py310_py" [label="docs_src/request_files/tutorial001_03_py310.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_websockets__tutorial003_py310_py" [label="docs_src/websockets_/tutorial003_py310.py
+[v:0.2, 0.3, 1.0]"];
+  "docs_src_websockets____init___py" [label="docs_src/websockets_/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial001_an_py310_py" [label="docs_src/request_files/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_wsgi_tutorial001_py310_py" [label="docs_src/wsgi/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_app_testing_tutorial004_py310_py" [label="docs_src/app_testing/tutorial004_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial001_py310_py" [label="docs_src/request_files/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_wsgi___init___py" [label="docs_src/wsgi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_app_testing___init___py" [label="docs_src/app_testing/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_async_tests_app_a_py310_main_py" [label="docs_src/async_tests/app_a_py310/main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial002_an_py310_py" [label="docs_src/request_files/tutorial002_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_async_tests_app_a_py310_test_main_py" [label="docs_src/async_tests/app_a_py310/test_main.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_async_tests_app_a_py310___init___py" [label="docs_src/async_tests/app_a_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_async_tests___init___py" [label="docs_src/async_tests/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial002_py310_py" [label="docs_src/request_files/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_authentication_error_status_code_tutorial001_an_py310_py" [label="docs_src/authentication_error_status_code/tutorial001_an_py310.py
+[v:0.0, 0.3, 0.6]"];
+  "docs_src_authentication_error_status_code___init___py" [label="docs_src/authentication_error_status_code/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_files_tutorial003_an_py310_py" [label="docs_src/request_files/tutorial003_an_py310.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_background_tasks_tutorial001_py310_py" [label="docs_src/background_tasks/tutorial001_py310.py
+[v:0.0, 0.0, 0.6]"];
+  "docs_src_request_files_tutorial003_py310_py" [label="docs_src/request_files/tutorial003_py310.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_request_files___init___py" [label="docs_src/request_files/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_forms_tutorial001_an_py310_py" [label="docs_src/request_forms/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_background_tasks_tutorial002_an_py310_py" [label="docs_src/background_tasks/tutorial002_an_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_request_forms_tutorial001_py310_py" [label="docs_src/request_forms/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_forms___init___py" [label="docs_src/request_forms/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_background_tasks_tutorial002_py310_py" [label="docs_src/background_tasks/tutorial002_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_request_forms_and_files_tutorial001_an_py310_py" [label="docs_src/request_forms_and_files/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_background_tasks___init___py" [label="docs_src/background_tasks/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_forms_and_files_tutorial001_py310_py" [label="docs_src/request_forms_and_files/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_behind_a_proxy_tutorial001_01_py310_py" [label="docs_src/behind_a_proxy/tutorial001_01_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_forms_and_files___init___py" [label="docs_src/request_forms_and_files/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_behind_a_proxy_tutorial001_py310_py" [label="docs_src/behind_a_proxy/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_form_models_tutorial001_an_py310_py" [label="docs_src/request_form_models/tutorial001_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_behind_a_proxy_tutorial002_py310_py" [label="docs_src/behind_a_proxy/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_behind_a_proxy_tutorial003_py310_py" [label="docs_src/behind_a_proxy/tutorial003_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_request_form_models_tutorial001_py310_py" [label="docs_src/request_form_models/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_behind_a_proxy_tutorial004_py310_py" [label="docs_src/behind_a_proxy/tutorial004_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_behind_a_proxy___init___py" [label="docs_src/behind_a_proxy/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_request_form_models_tutorial002_an_py310_py" [label="docs_src/request_form_models/tutorial002_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_bigger_applications_app_an_py310_dependencies_py" [label="docs_src/bigger_applications/app_an_py310/dependencies.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_request_form_models_tutorial002_py310_py" [label="docs_src/request_form_models/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_request_form_models___init___py" [label="docs_src/request_form_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_bigger_applications_app_an_py310_internal_admin_py" [label="docs_src/bigger_applications/app_an_py310/internal/admin.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_bigger_applications_app_an_py310_internal___init___py" [label="docs_src/bigger_applications/app_an_py310/internal/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_response_change_status_code_tutorial001_py310_py" [label="docs_src/response_change_status_code/tutorial001_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_response_change_status_code___init___py" [label="docs_src/response_change_status_code/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_bigger_applications_app_an_py310_main_py" [label="docs_src/bigger_applications/app_an_py310/main.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_response_cookies_tutorial001_py310_py" [label="docs_src/response_cookies/tutorial001_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_response_cookies_tutorial002_py310_py" [label="docs_src/response_cookies/tutorial002_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_response_cookies___init___py" [label="docs_src/response_cookies/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_bigger_applications_app_an_py310_routers_items_py" [label="docs_src/bigger_applications/app_an_py310/routers/items.py
+[v:0.1, 0.0, 0.8]"];
+  "docs_src_response_directly_tutorial001_py310_py" [label="docs_src/response_directly/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_response_directly_tutorial002_py310_py" [label="docs_src/response_directly/tutorial002_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_bigger_applications_app_an_py310_routers_users_py" [label="docs_src/bigger_applications/app_an_py310/routers/users.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_response_directly___init___py" [label="docs_src/response_directly/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_bigger_applications_app_an_py310_routers___init___py" [label="docs_src/bigger_applications/app_an_py310/routers/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_bigger_applications_app_an_py310___init___py" [label="docs_src/bigger_applications/app_an_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_bigger_applications___init___py" [label="docs_src/bigger_applications/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_response_headers_tutorial001_py310_py" [label="docs_src/response_headers/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_body_tutorial001_py310_py" [label="docs_src/body/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_response_headers_tutorial002_py310_py" [label="docs_src/response_headers/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_response_headers___init___py" [label="docs_src/response_headers/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_body_tutorial002_py310_py" [label="docs_src/body/tutorial002_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_response_model_tutorial001_01_py310_py" [label="docs_src/response_model/tutorial001_01_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_tutorial003_py310_py" [label="docs_src/body/tutorial003_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_response_model_tutorial001_py310_py" [label="docs_src/response_model/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_tutorial004_py310_py" [label="docs_src/body/tutorial004_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_body___init___py" [label="docs_src/body/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_response_model_tutorial002_py310_py" [label="docs_src/response_model/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_fields_tutorial001_an_py310_py" [label="docs_src/body_fields/tutorial001_an_py310.py
+[v:0.0, 0.3, 0.4]"];
+  "docs_src_response_model_tutorial003_01_py310_py" [label="docs_src/response_model/tutorial003_01_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_response_model_tutorial003_02_py310_py" [label="docs_src/response_model/tutorial003_02_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_body_fields_tutorial001_py310_py" [label="docs_src/body_fields/tutorial001_py310.py
+[v:0.0, 0.3, 0.4]"];
+  "docs_src_body_fields___init___py" [label="docs_src/body_fields/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_response_model_tutorial003_03_py310_py" [label="docs_src/response_model/tutorial003_03_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_body_multiple_params_tutorial001_an_py310_py" [label="docs_src/body_multiple_params/tutorial001_an_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_response_model_tutorial003_04_py310_py" [label="docs_src/response_model/tutorial003_04_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_response_model_tutorial003_05_py310_py" [label="docs_src/response_model/tutorial003_05_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_body_multiple_params_tutorial001_py310_py" [label="docs_src/body_multiple_params/tutorial001_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_body_multiple_params_tutorial002_py310_py" [label="docs_src/body_multiple_params/tutorial002_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_response_model_tutorial003_py310_py" [label="docs_src/response_model/tutorial003_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_body_multiple_params_tutorial003_an_py310_py" [label="docs_src/body_multiple_params/tutorial003_an_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_response_model_tutorial004_py310_py" [label="docs_src/response_model/tutorial004_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_multiple_params_tutorial003_py310_py" [label="docs_src/body_multiple_params/tutorial003_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_response_model_tutorial005_py310_py" [label="docs_src/response_model/tutorial005_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_body_multiple_params_tutorial004_an_py310_py" [label="docs_src/body_multiple_params/tutorial004_an_py310.py
+[v:0.1, 0.7, 0.0]"];
+  "docs_src_body_multiple_params_tutorial004_py310_py" [label="docs_src/body_multiple_params/tutorial004_py310.py
+[v:0.1, 0.7, 0.0]"];
+  "docs_src_response_model_tutorial006_py310_py" [label="docs_src/response_model/tutorial006_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_response_model___init___py" [label="docs_src/response_model/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_body_multiple_params_tutorial005_an_py310_py" [label="docs_src/body_multiple_params/tutorial005_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_response_status_code_tutorial001_py310_py" [label="docs_src/response_status_code/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_response_status_code_tutorial002_py310_py" [label="docs_src/response_status_code/tutorial002_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_body_multiple_params_tutorial005_py310_py" [label="docs_src/body_multiple_params/tutorial005_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_default_response_class_py" [label="tests/test_default_response_class.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_response_status_code___init___py" [label="docs_src/response_status_code/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_body_multiple_params___init___py" [label="docs_src/body_multiple_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_body_nested_models_tutorial001_py310_py" [label="docs_src/body_nested_models/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_schema_extra_example_tutorial001_py310_py" [label="docs_src/schema_extra_example/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_nested_models_tutorial002_py310_py" [label="docs_src/body_nested_models/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_schema_extra_example_tutorial002_py310_py" [label="docs_src/schema_extra_example/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_nested_models_tutorial003_py310_py" [label="docs_src/body_nested_models/tutorial003_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_schema_extra_example_tutorial003_an_py310_py" [label="docs_src/schema_extra_example/tutorial003_an_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_body_nested_models_tutorial004_py310_py" [label="docs_src/body_nested_models/tutorial004_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_schema_extra_example_tutorial003_py310_py" [label="docs_src/schema_extra_example/tutorial003_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_body_nested_models_tutorial005_py310_py" [label="docs_src/body_nested_models/tutorial005_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_body_nested_models_tutorial006_py310_py" [label="docs_src/body_nested_models/tutorial006_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_schema_extra_example_tutorial004_an_py310_py" [label="docs_src/schema_extra_example/tutorial004_an_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_body_nested_models_tutorial007_py310_py" [label="docs_src/body_nested_models/tutorial007_py310.py
+[v:0.0, 1.0, 0.0]"];
+  "docs_src_schema_extra_example_tutorial004_py310_py" [label="docs_src/schema_extra_example/tutorial004_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "tests_test_default_response_class_router_py" [label="tests/test_default_response_class_router.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_nested_models_tutorial008_py310_py" [label="docs_src/body_nested_models/tutorial008_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_nested_models_tutorial009_py310_py" [label="docs_src/body_nested_models/tutorial009_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_dependencies_utils_py" [label="tests/test_dependencies_utils.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_body_nested_models___init___py" [label="docs_src/body_nested_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_schema_extra_example_tutorial005_an_py310_py" [label="docs_src/schema_extra_example/tutorial005_an_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_body_updates_tutorial001_py310_py" [label="docs_src/body_updates/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_schema_extra_example_tutorial005_py310_py" [label="docs_src/schema_extra_example/tutorial005_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "tests_test_dependency_after_yield_raise_py" [label="tests/test_dependency_after_yield_raise.py
+[v:0.1, 0.3, 0.6]"];
+  "docs_src_schema_extra_example___init___py" [label="docs_src/schema_extra_example/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_body_updates_tutorial002_py310_py" [label="docs_src/body_updates/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_body_updates___init___py" [label="docs_src/body_updates/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_security_tutorial001_an_py310_py" [label="docs_src/security/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_conditional_openapi_tutorial001_py310_py" [label="docs_src/conditional_openapi/tutorial001_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_security_tutorial001_py310_py" [label="docs_src/security/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_conditional_openapi___init___py" [label="docs_src/conditional_openapi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_configure_swagger_ui_tutorial001_py310_py" [label="docs_src/configure_swagger_ui/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_security_tutorial002_an_py310_py" [label="docs_src/security/tutorial002_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_configure_swagger_ui_tutorial002_py310_py" [label="docs_src/configure_swagger_ui/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_configure_swagger_ui_tutorial003_py310_py" [label="docs_src/configure_swagger_ui/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_configure_swagger_ui___init___py" [label="docs_src/configure_swagger_ui/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_security_tutorial002_py310_py" [label="docs_src/security/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_dependency_after_yield_streaming_py" [label="tests/test_dependency_after_yield_streaming.py
+[v:0.2, 0.3, 1.0]"];
+  "docs_src_cookie_params_tutorial001_an_py310_py" [label="docs_src/cookie_params/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_cookie_params_tutorial001_py310_py" [label="docs_src/cookie_params/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_cookie_params___init___py" [label="docs_src/cookie_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_cookie_param_models_tutorial001_an_py310_py" [label="docs_src/cookie_param_models/tutorial001_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_security_tutorial003_an_py310_py" [label="docs_src/security/tutorial003_an_py310.py
+[v:0.3, 0.7, 0.8]"];
+  "docs_src_cookie_param_models_tutorial001_py310_py" [label="docs_src/cookie_param_models/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_dependency_after_yield_websockets_py" [label="tests/test_dependency_after_yield_websockets.py
+[v:0.3, 0.3, 1.0]"];
+  "docs_src_cookie_param_models_tutorial002_an_py310_py" [label="docs_src/cookie_param_models/tutorial002_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_cookie_param_models_tutorial002_py310_py" [label="docs_src/cookie_param_models/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_cookie_param_models___init___py" [label="docs_src/cookie_param_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_cors_tutorial001_py310_py" [label="docs_src/cors/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_security_tutorial003_py310_py" [label="docs_src/security/tutorial003_py310.py
+[v:0.3, 0.7, 0.8]"];
+  "docs_src_cors___init___py" [label="docs_src/cors/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_docs_ui_tutorial001_py310_py" [label="docs_src/custom_docs_ui/tutorial001_py310.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_dependency_cache_py" [label="tests/test_dependency_cache.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_docs_ui_tutorial002_py310_py" [label="docs_src/custom_docs_ui/tutorial002_py310.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_custom_docs_ui___init___py" [label="docs_src/custom_docs_ui/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_request_and_route_tutorial001_an_py310_py" [label="docs_src/custom_request_and_route/tutorial001_an_py310.py
+[v:0.1, 0.7, 0.0]"];
+  "docs_src_security_tutorial004_an_py310_py" [label="docs_src/security/tutorial004_an_py310.py
+[v:0.6, 1.0, 0.6]"];
+  "docs_src_custom_request_and_route_tutorial001_py310_py" [label="docs_src/custom_request_and_route/tutorial001_py310.py
+[v:0.1, 0.7, 0.0]"];
+  "docs_src_custom_request_and_route_tutorial002_an_py310_py" [label="docs_src/custom_request_and_route/tutorial002_an_py310.py
+[v:0.1, 0.3, 0.2]"];
+  "docs_src_custom_request_and_route_tutorial002_py310_py" [label="docs_src/custom_request_and_route/tutorial002_py310.py
+[v:0.1, 0.3, 0.2]"];
+  "docs_src_security_tutorial004_py310_py" [label="docs_src/security/tutorial004_py310.py
+[v:0.6, 1.0, 0.6]"];
+  "fastapi_applications_py" [label="fastapi/applications.py
+[v:0.9, 0.3, 1.0]"];
+  "fastapi_background_py" [label="fastapi/background.py
+[v:0.0, 0.3, 0.2]"];
+  "fastapi_cli_py" [label="fastapi/cli.py
+[v:0.1, 0.0, 0.2]"];
+  "fastapi_concurrency_py" [label="fastapi/concurrency.py
+[v:0.1, 0.0, 0.6]"];
+  "tests_test_dependency_class_py" [label="tests/test_dependency_class.py
+[v:0.0, 1.0, 0.0]"];
+  "docs_src_security_tutorial005_an_py310_py" [label="docs_src/security/tutorial005_an_py310.py
+[v:0.8, 1.0, 1.0]"];
+  "fastapi_datastructures_py" [label="fastapi/datastructures.py
+[v:0.1, 0.7, 0.4]"];
+  "docs_src_security_tutorial005_py310_py" [label="docs_src/security/tutorial005_py310.py
+[v:0.8, 1.0, 1.0]"];
+  "docs_src_security_tutorial006_an_py310_py" [label="docs_src/security/tutorial006_an_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_security_tutorial006_py310_py" [label="docs_src/security/tutorial006_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "fastapi_dependencies_models_py" [label="fastapi/dependencies/models.py
+[v:1.0, 0.3, 1.0]"];
+  "docs_src_security_tutorial007_an_py310_py" [label="docs_src/security/tutorial007_an_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_security_tutorial007_py310_py" [label="docs_src/security/tutorial007_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_security___init___py" [label="docs_src/security/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_separate_openapi_schemas_tutorial001_py310_py" [label="docs_src/separate_openapi_schemas/tutorial001_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_separate_openapi_schemas_tutorial002_py310_py" [label="docs_src/separate_openapi_schemas/tutorial002_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_separate_openapi_schemas___init___py" [label="docs_src/separate_openapi_schemas/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_dependency_contextmanager_py" [label="tests/test_dependency_contextmanager.py
+[v:0.3, 1.0, 1.0]"];
+  "docs_src_server_sent_events_tutorial001_py310_py" [label="docs_src/server_sent_events/tutorial001_py310.py
+[v:0.3, 0.3, 1.0]"];
+  "docs_src_server_sent_events_tutorial002_py310_py" [label="docs_src/server_sent_events/tutorial002_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "tests_test_dependency_contextvars_py" [label="tests/test_dependency_contextvars.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_server_sent_events_tutorial003_py310_py" [label="docs_src/server_sent_events/tutorial003_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_custom_request_and_route_tutorial003_py310_py" [label="docs_src/custom_request_and_route/tutorial003_py310.py
+[v:0.0, 0.3, 0.8]"];
+  "docs_src_custom_request_and_route___init___py" [label="docs_src/custom_request_and_route/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_server_sent_events_tutorial004_py310_py" [label="docs_src/server_sent_events/tutorial004_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_custom_response_tutorial001b_py310_py" [label="docs_src/custom_response/tutorial001b_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_server_sent_events_tutorial005_py310_py" [label="docs_src/server_sent_events/tutorial005_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_server_sent_events___init___py" [label="docs_src/server_sent_events/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial001_py310_py" [label="docs_src/custom_response/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app01_py310_config_py" [label="docs_src/settings/app01_py310/config.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_settings_app01_py310_main_py" [label="docs_src/settings/app01_py310/main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial002_py310_py" [label="docs_src/custom_response/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app01_py310___init___py" [label="docs_src/settings/app01_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app02_an_py310_config_py" [label="docs_src/settings/app02_an_py310/config.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_custom_response_tutorial003_py310_py" [label="docs_src/custom_response/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app02_an_py310_main_py" [label="docs_src/settings/app02_an_py310/main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial004_py310_py" [label="docs_src/custom_response/tutorial004_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial005_py310_py" [label="docs_src/custom_response/tutorial005_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app02_an_py310_test_main_py" [label="docs_src/settings/app02_an_py310/test_main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app02_an_py310___init___py" [label="docs_src/settings/app02_an_py310/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial006b_py310_py" [label="docs_src/custom_response/tutorial006b_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_settings_app02_py310_config_py" [label="docs_src/settings/app02_py310/config.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_custom_response_tutorial006c_py310_py" [label="docs_src/custom_response/tutorial006c_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial006_py310_py" [label="docs_src/custom_response/tutorial006_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_settings_app02_py310_main_py" [label="docs_src/settings/app02_py310/main.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial007_py310_py" [label="docs_src/custom_response/tutorial007_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_settings_app02_py310_test_main_py" [label="docs_src/settings/app02_py310/test_main.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_dependency_duplicates_py" [label="tests/test_dependency_duplicates.py
+[v:0.0, 0.3, 0.4]"];
+  "fastapi_security_oauth2_py" [label="fastapi/security/oauth2.py
+[v:0.5, 1.0, 1.0]"];
+  "fastapi_security_open_id_connect_url_py" [label="fastapi/security/open_id_connect_url.py
+[v:0.1, 0.3, 1.0]"];
+  "fastapi_security_utils_py" [label="fastapi/security/utils.py
+[v:0.1, 0.0, 0.2]"];
+  "fastapi_security___init___py" [label="fastapi/security/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_dependency_overrides_py" [label="tests/test_dependency_overrides.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_sse_py" [label="fastapi/sse.py
+[v:0.6, 0.7, 1.0]"];
+  "fastapi_staticfiles_py" [label="fastapi/staticfiles.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_templating_py" [label="fastapi/templating.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_testclient_py" [label="fastapi/testclient.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_dependency_paramless_py" [label="tests/test_dependency_paramless.py
+[v:0.1, 0.0, 0.8]"];
+  "fastapi_types_py" [label="fastapi/types.py
+[v:0.0, 0.0, 0.2]"];
+  "fastapi_utils_py" [label="fastapi/utils.py
+[v:0.6, 0.0, 1.0]"];
+  "fastapi_websockets_py" [label="fastapi/websockets.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial008_py310_py" [label="docs_src/custom_response/tutorial008_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_dependency_partial_py" [label="tests/test_dependency_partial.py
+[v:0.0, 1.0, 1.0]"];
+  "docs_src_custom_response_tutorial009b_py310_py" [label="docs_src/custom_response/tutorial009b_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial009c_py310_py" [label="docs_src/custom_response/tutorial009c_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "tests_test_dependency_pep695_py" [label="tests/test_dependency_pep695.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial009_py310_py" [label="docs_src/custom_response/tutorial009_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response_tutorial010_py310_py" [label="docs_src/custom_response/tutorial010_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_custom_response___init___py" [label="docs_src/custom_response/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dataclasses__tutorial001_py310_py" [label="docs_src/dataclasses_/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_dataclasses__tutorial002_py310_py" [label="docs_src/dataclasses_/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "fastapi__compat_shared_py" [label="fastapi/_compat/shared.py
+[v:1.0, 0.0, 1.0]"];
+  "docs_src_dataclasses__tutorial003_py310_py" [label="docs_src/dataclasses_/tutorial003_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_dataclasses____init___py" [label="docs_src/dataclasses_/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_debugging_tutorial001_py310_py" [label="docs_src/debugging/tutorial001_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_debugging___init___py" [label="docs_src/debugging/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial001_02_an_py310_py" [label="docs_src/dependencies/tutorial001_02_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial001_an_py310_py" [label="docs_src/dependencies/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial001_py310_py" [label="docs_src/dependencies/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial002_an_py310_py" [label="docs_src/dependencies/tutorial002_an_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_dependencies_tutorial002_py310_py" [label="docs_src/dependencies/tutorial002_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_dependencies_tutorial003_an_py310_py" [label="docs_src/dependencies/tutorial003_an_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_dependencies_tutorial003_py310_py" [label="docs_src/dependencies/tutorial003_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_dependencies_tutorial004_an_py310_py" [label="docs_src/dependencies/tutorial004_an_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_dependencies_tutorial004_py310_py" [label="docs_src/dependencies/tutorial004_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "fastapi__compat_v2_py" [label="fastapi/_compat/v2.py
+[v:1.0, 0.7, 1.0]"];
+  "docs_src_dependencies_tutorial005_an_py310_py" [label="docs_src/dependencies/tutorial005_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "fastapi__compat___init___py" [label="fastapi/_compat/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial005_py310_py" [label="docs_src/dependencies/tutorial005_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "fastapi___init___py" [label="fastapi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi___main___py" [label="fastapi/__main__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial006_an_py310_py" [label="docs_src/dependencies/tutorial006_an_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_dependencies_tutorial006_py310_py" [label="docs_src/dependencies/tutorial006_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "scripts_add_latest_release_date_py" [label="scripts/add_latest_release_date.py
+[v:0.3, 0.0, 1.0]"];
+  "docs_src_dependencies_tutorial007_py310_py" [label="docs_src/dependencies/tutorial007_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_dependencies_tutorial008b_an_py310_py" [label="docs_src/dependencies/tutorial008b_an_py310.py
+[v:0.2, 0.3, 0.4]"];
+  "docs_src_dependencies_tutorial008b_py310_py" [label="docs_src/dependencies/tutorial008b_py310.py
+[v:0.2, 0.3, 0.4]"];
+  "fastapi_dependencies_utils_py" [label="fastapi/dependencies/utils.py
+[v:1.0, 0.7, 1.0]"];
+  "fastapi_dependencies___init___py" [label="fastapi/dependencies/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial008c_an_py310_py" [label="docs_src/dependencies/tutorial008c_an_py310.py
+[v:0.2, 0.3, 0.4]"];
+  "docs_src_dependencies_tutorial008c_py310_py" [label="docs_src/dependencies/tutorial008c_py310.py
+[v:0.2, 0.3, 0.4]"];
+  "docs_src_dependencies_tutorial008d_an_py310_py" [label="docs_src/dependencies/tutorial008d_an_py310.py
+[v:0.2, 0.3, 0.4]"];
+  "docs_src_dependencies_tutorial008d_py310_py" [label="docs_src/dependencies/tutorial008d_py310.py
+[v:0.2, 0.3, 0.4]"];
+  "docs_src_dependencies_tutorial008e_an_py310_py" [label="docs_src/dependencies/tutorial008e_an_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "scripts_contributors_py" [label="scripts/contributors.py
+[v:1.0, 1.0, 1.0]"];
+  "docs_src_dependencies_tutorial008e_py310_py" [label="docs_src/dependencies/tutorial008e_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_dependencies_tutorial008_an_py310_py" [label="docs_src/dependencies/tutorial008_an_py310.py
+[v:0.2, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial008_py310_py" [label="docs_src/dependencies/tutorial008_py310.py
+[v:0.2, 0.0, 0.0]"];
+  "docs_src_dependencies_tutorial010_py310_py" [label="docs_src/dependencies/tutorial010_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_dependencies_tutorial011_an_py310_py" [label="docs_src/dependencies/tutorial011_an_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "fastapi_encoders_py" [label="fastapi/encoders.py
+[v:1.0, 0.7, 0.0]"];
+  "scripts_deploy_docs_status_py" [label="scripts/deploy_docs_status.py
+[v:1.0, 0.7, 1.0]"];
+  "docs_src_dependencies_tutorial011_py310_py" [label="docs_src/dependencies/tutorial011_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_dependencies_tutorial012_an_py310_py" [label="docs_src/dependencies/tutorial012_an_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_dependencies_tutorial012_py310_py" [label="docs_src/dependencies/tutorial012_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "docs_src_dependencies_tutorial013_an_py310_py" [label="docs_src/dependencies/tutorial013_an_py310.py
+[v:0.1, 0.3, 0.8]"];
+  "fastapi_exceptions_py" [label="fastapi/exceptions.py
+[v:0.3, 1.0, 1.0]"];
+  "docs_src_dependencies_tutorial014_an_py310_py" [label="docs_src/dependencies/tutorial014_an_py310.py
+[v:0.1, 0.3, 1.0]"];
+  "fastapi_exception_handlers_py" [label="fastapi/exception_handlers.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_dependencies___init___py" [label="docs_src/dependencies/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependency_testing_tutorial001_an_py310_py" [label="docs_src/dependency_testing/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_logger_py" [label="fastapi/logger.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_middleware_asyncexitstack_py" [label="fastapi/middleware/asyncexitstack.py
+[v:0.0, 0.3, 0.0]"];
+  "fastapi_middleware_cors_py" [label="fastapi/middleware/cors.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependency_testing_tutorial001_py310_py" [label="docs_src/dependency_testing/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_middleware_gzip_py" [label="fastapi/middleware/gzip.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_middleware_httpsredirect_py" [label="fastapi/middleware/httpsredirect.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_dependency_testing___init___py" [label="docs_src/dependency_testing/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_middleware_trustedhost_py" [label="fastapi/middleware/trustedhost.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_dependency_security_overrides_py" [label="tests/test_dependency_security_overrides.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_middleware_wsgi_py" [label="fastapi/middleware/wsgi.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_middleware___init___py" [label="fastapi/middleware/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_encoder_tutorial001_py310_py" [label="docs_src/encoder/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "fastapi_openapi_constants_py" [label="fastapi/openapi/constants.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_encoder___init___py" [label="docs_src/encoder/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_events_tutorial001_py310_py" [label="docs_src/events/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_events_tutorial002_py310_py" [label="docs_src/events/tutorial002_py310.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_events_tutorial003_py310_py" [label="docs_src/events/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_events___init___py" [label="docs_src/events/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_openapi_docs_py" [label="fastapi/openapi/docs.py
+[v:0.3, 0.0, 1.0]"];
+  "docs_src_extending_openapi_tutorial001_py310_py" [label="docs_src/extending_openapi/tutorial001_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_extending_openapi___init___py" [label="docs_src/extending_openapi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_extra_data_types_tutorial001_an_py310_py" [label="docs_src/extra_data_types/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_extra_data_types_tutorial001_py310_py" [label="docs_src/extra_data_types/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_extra_data_types___init___py" [label="docs_src/extra_data_types/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_extra_models_tutorial001_py310_py" [label="docs_src/extra_models/tutorial001_py310.py
+[v:0.0, 1.0, 0.2]"];
+  "docs_src_extra_models_tutorial002_py310_py" [label="docs_src/extra_models/tutorial002_py310.py
+[v:0.0, 1.0, 0.2]"];
+  "tests_test_dependency_wrapped_py" [label="tests/test_dependency_wrapped.py
+[v:0.5, 1.0, 0.8]"];
+  "tests_test_dependency_yield_except_httpexception_py" [label="tests/test_dependency_yield_except_httpexception.py
+[v:0.1, 0.0, 0.2]"];
+  "scripts_docs_py" [label="scripts/docs.py
+[v:1.0, 0.3, 1.0]"];
+  "fastapi_openapi_models_py" [label="fastapi/openapi/models.py
+[v:0.1, 1.0, 1.0]"];
+  "tests_test_dependency_yield_scope_py" [label="tests/test_dependency_yield_scope.py
+[v:0.0, 0.7, 1.0]"];
+  "tests_test_dependency_yield_scope_websockets_py" [label="tests/test_dependency_yield_scope_websockets.py
+[v:0.0, 0.7, 1.0]"];
+  "tests_test_depends_hashable_py" [label="tests/test_depends_hashable.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_deprecated_openapi_prefix_py" [label="tests/test_deprecated_openapi_prefix.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_deprecated_responses_py" [label="tests/test_deprecated_responses.py
+[v:0.0, 0.3, 1.0]"];
+  "fastapi_openapi_utils_py" [label="fastapi/openapi/utils.py
+[v:1.0, 0.0, 1.0]"];
+  "fastapi_openapi___init___py" [label="fastapi/openapi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_dump_json_fast_path_py" [label="tests/test_dump_json_fast_path.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_duplicate_models_openapi_py" [label="tests/test_duplicate_models_openapi.py
+[v:0.0, 1.0, 0.4]"];
+  "tests_test_empty_router_py" [label="tests/test_empty_router.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_doc_parsing_utils_py" [label="scripts/doc_parsing_utils.py
+[v:1.0, 1.0, 1.0]"];
+  "tests_test_enforce_once_required_parameter_py" [label="tests/test_enforce_once_required_parameter.py
+[v:0.1, 0.0, 0.4]"];
+  "scripts_label_approved_py" [label="scripts/label_approved.py
+[v:0.6, 0.7, 0.2]"];
+  "tests_test_exception_handlers_py" [label="tests/test_exception_handlers.py
+[v:0.0, 0.0, 1.0]"];
+  "docs_src_extra_models_tutorial003_py310_py" [label="docs_src/extra_models/tutorial003_py310.py
+[v:0.0, 1.0, 0.0]"];
+  "docs_src_extra_models_tutorial004_py310_py" [label="docs_src/extra_models/tutorial004_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_extra_models_tutorial005_py310_py" [label="docs_src/extra_models/tutorial005_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_extra_models___init___py" [label="docs_src/extra_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_params_py" [label="fastapi/params.py
+[v:0.7, 1.0, 1.0]"];
+  "docs_src_first_steps_tutorial001_py310_py" [label="docs_src/first_steps/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_first_steps_tutorial003_py310_py" [label="docs_src/first_steps/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_mkdocs_hooks_py" [label="scripts/mkdocs_hooks.py
+[v:1.0, 0.3, 1.0]"];
+  "docs_src_first_steps___init___py" [label="docs_src/first_steps/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_generate_clients_tutorial001_py310_py" [label="docs_src/generate_clients/tutorial001_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "tests_test_extra_routes_py" [label="tests/test_extra_routes.py
+[v:0.0, 0.3, 1.0]"];
+  "tests_test_fastapi_cli_py" [label="tests/test_fastapi_cli.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_generate_clients_tutorial002_py310_py" [label="docs_src/generate_clients/tutorial002_py310.py
+[v:0.0, 1.0, 0.0]"];
+  "tests_test_file_and_form_order_issue_9116_py" [label="tests/test_file_and_form_order_issue_9116.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_generate_clients_tutorial003_py310_py" [label="docs_src/generate_clients/tutorial003_py310.py
+[v:0.0, 1.0, 0.2]"];
+  "docs_src_generate_clients_tutorial004_js" [label="docs_src/generate_clients/tutorial004.js
+[v:0.2, 0.0, 1.0]"];
+  "tests_test_filter_pydantic_sub_model_pv2_py" [label="tests/test_filter_pydantic_sub_model_pv2.py
+[v:0.1, 1.0, 0.6]"];
+  "docs_src_generate_clients_tutorial004_py310_py" [label="docs_src/generate_clients/tutorial004_py310.py
+[v:0.1, 0.0, 0.8]"];
+  "docs_src_generate_clients___init___py" [label="docs_src/generate_clients/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_notify_translations_py" [label="scripts/notify_translations.py
+[v:1.0, 1.0, 1.0]"];
+  "docs_src_graphql__tutorial001_py310_py" [label="docs_src/graphql_/tutorial001_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "tests_test_forms_from_non_typing_sequences_py" [label="tests/test_forms_from_non_typing_sequences.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_graphql____init___py" [label="docs_src/graphql_/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_handling_errors_tutorial001_py310_py" [label="docs_src/handling_errors/tutorial001_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_handling_errors_tutorial002_py310_py" [label="docs_src/handling_errors/tutorial002_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_handling_errors_tutorial003_py310_py" [label="docs_src/handling_errors/tutorial003_py310.py
+[v:0.1, 0.3, 0.4]"];
+  "tests_test_forms_single_model_py" [label="tests/test_forms_single_model.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_handling_errors_tutorial004_py310_py" [label="docs_src/handling_errors/tutorial004_py310.py
+[v:0.1, 0.0, 0.6]"];
+  "docs_src_handling_errors_tutorial005_py310_py" [label="docs_src/handling_errors/tutorial005_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_handling_errors_tutorial006_py310_py" [label="docs_src/handling_errors/tutorial006_py310.py
+[v:0.1, 0.0, 1.0]"];
+  "docs_src_handling_errors___init___py" [label="docs_src/handling_errors/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_forms_single_param_py" [label="tests/test_forms_single_param.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_header_params_tutorial001_an_py310_py" [label="docs_src/header_params/tutorial001_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_header_params_tutorial001_py310_py" [label="docs_src/header_params/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_form_default_py" [label="tests/test_form_default.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_header_params_tutorial002_an_py310_py" [label="docs_src/header_params/tutorial002_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_header_params_tutorial002_py310_py" [label="docs_src/header_params/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_header_params_tutorial003_an_py310_py" [label="docs_src/header_params/tutorial003_an_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_header_params_tutorial003_py310_py" [label="docs_src/header_params/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_header_params___init___py" [label="docs_src/header_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_header_param_models_tutorial001_an_py310_py" [label="docs_src/header_param_models/tutorial001_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_header_param_models_tutorial001_py310_py" [label="docs_src/header_param_models/tutorial001_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_header_param_models_tutorial002_an_py310_py" [label="docs_src/header_param_models/tutorial002_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_header_param_models_tutorial002_py310_py" [label="docs_src/header_param_models/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_header_param_models_tutorial003_an_py310_py" [label="docs_src/header_param_models/tutorial003_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_header_param_models_tutorial003_py310_py" [label="docs_src/header_param_models/tutorial003_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "scripts_people_py" [label="scripts/people.py
+[v:1.0, 1.0, 1.0]"];
+  "docs_src_header_param_models___init___py" [label="docs_src/header_param_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_json_base64_bytes_tutorial001_py310_py" [label="docs_src/json_base64_bytes/tutorial001_py310.py
+[v:0.0, 1.0, 0.2]"];
+  "docs_src_json_base64_bytes___init___py" [label="docs_src/json_base64_bytes/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_playwright_cookie_param_models_image01_py" [label="scripts/playwright/cookie_param_models/image01.py
+[v:0.2, 0.0, 0.6]"];
+  "docs_src_metadata_tutorial001_1_py310_py" [label="docs_src/metadata/tutorial001_1_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_metadata_tutorial001_py310_py" [label="docs_src/metadata/tutorial001_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "scripts_playwright_header_param_models_image01_py" [label="scripts/playwright/header_param_models/image01.py
+[v:0.2, 0.0, 0.6]"];
+  "scripts_playwright_json_base64_bytes_image01_py" [label="scripts/playwright/json_base64_bytes/image01.py
+[v:0.2, 0.0, 0.6]"];
+  "scripts_playwright_query_param_models_image01_py" [label="scripts/playwright/query_param_models/image01.py
+[v:0.2, 0.0, 0.6]"];
+  "scripts_playwright_request_form_models_image01_py" [label="scripts/playwright/request_form_models/image01.py
+[v:0.2, 0.0, 0.6]"];
+  "scripts_playwright_separate_openapi_schemas_image01_py" [label="scripts/playwright/separate_openapi_schemas/image01.py
+[v:0.1, 0.0, 0.6]"];
+  "docs_src_metadata_tutorial002_py310_py" [label="docs_src/metadata/tutorial002_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_metadata_tutorial003_py310_py" [label="docs_src/metadata/tutorial003_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "scripts_playwright_separate_openapi_schemas_image02_py" [label="scripts/playwright/separate_openapi_schemas/image02.py
+[v:0.1, 0.0, 0.6]"];
+  "docs_src_metadata_tutorial004_py310_py" [label="docs_src/metadata/tutorial004_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_metadata___init___py" [label="docs_src/metadata/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_playwright_separate_openapi_schemas_image03_py" [label="scripts/playwright/separate_openapi_schemas/image03.py
+[v:0.1, 0.0, 0.6]"];
+  "docs_src_middleware_tutorial001_py310_py" [label="docs_src/middleware/tutorial001_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_middleware___init___py" [label="docs_src/middleware/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_openapi_callbacks_tutorial001_py310_py" [label="docs_src/openapi_callbacks/tutorial001_py310.py
+[v:0.0, 1.0, 0.0]"];
+  "scripts_playwright_separate_openapi_schemas_image04_py" [label="scripts/playwright/separate_openapi_schemas/image04.py
+[v:0.1, 0.0, 0.6]"];
+  "docs_src_openapi_callbacks___init___py" [label="docs_src/openapi_callbacks/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_openapi_webhooks_tutorial001_py310_py" [label="docs_src/openapi_webhooks/tutorial001_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_openapi_webhooks___init___py" [label="docs_src/openapi_webhooks/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_playwright_separate_openapi_schemas_image05_py" [label="scripts/playwright/separate_openapi_schemas/image05.py
+[v:0.1, 0.0, 0.6]"];
+  "docs_src_path_operation_advanced_configuration_tutorial001_py310_py" [label="docs_src/path_operation_advanced_configuration/tutorial001_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_path_operation_advanced_configuration_tutorial002_py310_py" [label="docs_src/path_operation_advanced_configuration/tutorial002_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_path_operation_advanced_configuration_tutorial003_py310_py" [label="docs_src/path_operation_advanced_configuration/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_playwright_sql_databases_image01_py" [label="scripts/playwright/sql_databases/image01.py
+[v:0.2, 0.0, 0.6]"];
+  "docs_src_path_operation_advanced_configuration_tutorial004_py310_py" [label="docs_src/path_operation_advanced_configuration/tutorial004_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_path_operation_advanced_configuration_tutorial005_py310_py" [label="docs_src/path_operation_advanced_configuration/tutorial005_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "scripts_playwright_sql_databases_image02_py" [label="scripts/playwright/sql_databases/image02.py
+[v:0.2, 0.0, 0.6]"];
+  "docs_src_path_operation_advanced_configuration_tutorial006_py310_py" [label="docs_src/path_operation_advanced_configuration/tutorial006_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_path_operation_advanced_configuration_tutorial007_py310_py" [label="docs_src/path_operation_advanced_configuration/tutorial007_py310.py
+[v:0.1, 0.3, 0.6]"];
+  "docs_src_path_operation_advanced_configuration___init___py" [label="docs_src/path_operation_advanced_configuration/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_operation_configuration_tutorial001_py310_py" [label="docs_src/path_operation_configuration/tutorial001_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_path_operation_configuration_tutorial002b_py310_py" [label="docs_src/path_operation_configuration/tutorial002b_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_path_operation_configuration_tutorial002_py310_py" [label="docs_src/path_operation_configuration/tutorial002_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_path_operation_configuration_tutorial003_py310_py" [label="docs_src/path_operation_configuration/tutorial003_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "docs_src_path_operation_configuration_tutorial004_py310_py" [label="docs_src/path_operation_configuration/tutorial004_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "fastapi_param_functions_py" [label="fastapi/param_functions.py
+[v:0.0, 0.0, 1.0]"];
+  "docs_src_path_operation_configuration_tutorial005_py310_py" [label="docs_src/path_operation_configuration/tutorial005_py310.py
+[v:0.0, 0.3, 0.2]"];
+  "fastapi_requests_py" [label="fastapi/requests.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_operation_configuration_tutorial006_py310_py" [label="docs_src/path_operation_configuration/tutorial006_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_operation_configuration___init___py" [label="docs_src/path_operation_configuration/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_params_tutorial001_py310_py" [label="docs_src/path_params/tutorial001_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_params_tutorial002_py310_py" [label="docs_src/path_params/tutorial002_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "fastapi_responses_py" [label="fastapi/responses.py
+[v:0.1, 1.0, 0.6]"];
+  "docs_src_path_params_tutorial003b_py310_py" [label="docs_src/path_params/tutorial003b_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_params_tutorial003_py310_py" [label="docs_src/path_params/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_params_tutorial004_py310_py" [label="docs_src/path_params/tutorial004_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_sponsors_py" [label="scripts/sponsors.py
+[v:0.7, 1.0, 0.8]"];
+  "docs_src_path_params_tutorial005_py310_py" [label="docs_src/path_params/tutorial005_py310.py
+[v:0.1, 0.3, 0.0]"];
+  "docs_src_path_params___init___py" [label="docs_src/path_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial001_an_py310_py" [label="docs_src/path_params_numeric_validations/tutorial001_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "scripts_tests_test_translation_fixer_conftest_py" [label="scripts/tests/test_translation_fixer/conftest.py
+[v:0.2, 0.0, 0.4]"];
+  "docs_src_path_params_numeric_validations_tutorial001_py310_py" [label="docs_src/path_params_numeric_validations/tutorial001_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial002_an_py310_py" [label="docs_src/path_params_numeric_validations/tutorial002_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial002_py310_py" [label="docs_src/path_params_numeric_validations/tutorial002_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_lines_number_mismatch_py" [label="scripts/tests/test_translation_fixer/test_code_blocks/test_code_blocks_lines_number_mismatch.py
+[v:0.0, 0.0, 0.4]"];
+  "docs_src_path_params_numeric_validations_tutorial003_an_py310_py" [label="docs_src/path_params_numeric_validations/tutorial003_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial003_py310_py" [label="docs_src/path_params_numeric_validations/tutorial003_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial004_an_py310_py" [label="docs_src/path_params_numeric_validations/tutorial004_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial004_py310_py" [label="docs_src/path_params_numeric_validations/tutorial004_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial005_an_py310_py" [label="docs_src/path_params_numeric_validations/tutorial005_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial005_py310_py" [label="docs_src/path_params_numeric_validations/tutorial005_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial006_an_py310_py" [label="docs_src/path_params_numeric_validations/tutorial006_an_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations_tutorial006_py310_py" [label="docs_src/path_params_numeric_validations/tutorial006_py310.py
+[v:0.1, 0.0, 0.0]"];
+  "docs_src_path_params_numeric_validations___init___py" [label="docs_src/path_params_numeric_validations/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_pydantic_v1_in_v2_tutorial001_an_py310_py" [label="docs_src/pydantic_v1_in_v2/tutorial001_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_pydantic_v1_in_v2_tutorial002_an_py310_py" [label="docs_src/pydantic_v1_in_v2/tutorial002_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_pydantic_v1_in_v2_tutorial003_an_py310_py" [label="docs_src/pydantic_v1_in_v2/tutorial003_an_py310.py
+[v:0.0, 0.7, 0.0]"];
+  "docs_src_pydantic_v1_in_v2_tutorial004_an_py310_py" [label="docs_src/pydantic_v1_in_v2/tutorial004_an_py310.py
+[v:0.0, 0.3, 0.0]"];
+  "docs_src_pydantic_v1_in_v2___init___py" [label="docs_src/pydantic_v1_in_v2/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_python_types_tutorial001_py310_py" [label="docs_src/python_types/tutorial001_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_python_types_tutorial002_py310_py" [label="docs_src/python_types/tutorial002_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_python_types_tutorial003_py310_py" [label="docs_src/python_types/tutorial003_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_python_types_tutorial004_py310_py" [label="docs_src/python_types/tutorial004_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_python_types_tutorial005_py310_py" [label="docs_src/python_types/tutorial005_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_python_types_tutorial006_py310_py" [label="docs_src/python_types/tutorial006_py310.py
+[v:0.1, 0.0, 0.2]"];
+  "docs_src_python_types_tutorial007_py310_py" [label="docs_src/python_types/tutorial007_py310.py
+[v:0.0, 0.0, 0.0]"];
+  "docs_src_python_types_tutorial008b_py310_py" [label="docs_src/python_types/tutorial008b_py310.py
+[v:0.0, 0.0, 0.2]"];
+  "docs_src_python_types_tutorial008_py310_py" [label="docs_src/python_types/tutorial008_py310.py
+[v:0.1, 0.0, 0.4]"];
+  "tests_test_tutorial_test_cors___init___py" [label="tests/test_tutorial/test_cors/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_generate_unique_id_function_py" [label="tests/test_generate_unique_id_function.py
+[v:0.0, 0.7, 1.0]"];
+  "tests_test_tutorial_test_custom_docs_ui_test_tutorial001_py" [label="tests/test_tutorial/test_custom_docs_ui/test_tutorial001.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_generic_parameterless_depends_py" [label="tests/test_generic_parameterless_depends.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_tutorial_test_custom_docs_ui_test_tutorial002_py" [label="tests/test_tutorial/test_custom_docs_ui/test_tutorial002.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_custom_docs_ui___init___py" [label="tests/test_tutorial/test_custom_docs_ui/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_request_and_route_test_tutorial001_py" [label="tests/test_tutorial/test_custom_request_and_route/test_tutorial001.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_get_model_definitions_formfeed_escape_py" [label="tests/test_get_model_definitions_formfeed_escape.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_tutorial_test_custom_request_and_route_test_tutorial002_py" [label="tests/test_tutorial/test_custom_request_and_route/test_tutorial002.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_request_and_route_test_tutorial003_py" [label="tests/test_tutorial/test_custom_request_and_route/test_tutorial003.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_request_and_route___init___py" [label="tests/test_tutorial/test_custom_request_and_route/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_get_request_body_py" [label="tests/test_get_request_body.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial001_py" [label="tests/test_tutorial/test_custom_response/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_http_connection_injection_py" [label="tests/test_http_connection_injection.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_include_route_py" [label="tests/test_include_route.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial001b_py" [label="tests/test_tutorial/test_custom_response/test_tutorial001b.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial002_tutorial003_tutorial004_py" [label="tests/test_tutorial/test_custom_response/test_tutorial002_tutorial003_tutorial004.py
+[v:0.1, 0.0, 0.4]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial005_py" [label="tests/test_tutorial/test_custom_response/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial006_py" [label="tests/test_tutorial/test_custom_response/test_tutorial006.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial006b_py" [label="tests/test_tutorial/test_custom_response/test_tutorial006b.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial006c_py" [label="tests/test_tutorial/test_custom_response/test_tutorial006c.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial007_py" [label="tests/test_tutorial/test_custom_response/test_tutorial007.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial008_py" [label="tests/test_tutorial/test_custom_response/test_tutorial008.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial009_py" [label="tests/test_tutorial/test_custom_response/test_tutorial009.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial009b_py" [label="tests/test_tutorial/test_custom_response/test_tutorial009b.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial009c_py" [label="tests/test_tutorial/test_custom_response/test_tutorial009c.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_custom_response_test_tutorial010_py" [label="tests/test_tutorial/test_custom_response/test_tutorial010.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_custom_response___init___py" [label="tests/test_tutorial/test_custom_response/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_dataclasses_test_tutorial001_py" [label="tests/test_tutorial/test_dataclasses/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_dataclasses_test_tutorial002_py" [label="tests/test_tutorial/test_dataclasses/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_dataclasses_test_tutorial003_py" [label="tests/test_tutorial/test_dataclasses/test_tutorial003.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_dataclasses___init___py" [label="tests/test_tutorial/test_dataclasses/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_debugging_test_tutorial001_py" [label="tests/test_tutorial/test_debugging/test_tutorial001.py
+[v:0.1, 0.0, 0.4]"];
+  "tests_test_tutorial_test_debugging___init___py" [label="tests/test_tutorial/test_debugging/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_mermaid_py" [label="scripts/tests/test_translation_fixer/test_code_blocks/test_code_blocks_mermaid.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial001_tutorial001_02_py" [label="tests/test_tutorial/test_dependencies/test_tutorial001_tutorial001_02.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_number_mismatch_py" [label="scripts/tests/test_translation_fixer/test_code_blocks/test_code_blocks_number_mismatch.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_wrong_lang_code_py" [label="scripts/tests/test_translation_fixer/test_code_blocks/test_code_blocks_wrong_lang_code.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial002_tutorial003_tutorial004_py" [label="tests/test_tutorial/test_dependencies/test_tutorial002_tutorial003_tutorial004.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_code_includes_test_number_mismatch_py" [label="scripts/tests/test_translation_fixer/test_code_includes/test_number_mismatch.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_complex_doc_test_compex_doc_py" [label="scripts/tests/test_translation_fixer/test_complex_doc/test_compex_doc.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_header_permalinks_test_header_level_mismatch_py" [label="scripts/tests/test_translation_fixer/test_header_permalinks/test_header_level_mismatch.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial005_py" [label="tests/test_tutorial/test_dependencies/test_tutorial005.py
+[v:0.1, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_header_permalinks_test_header_number_mismatch_py" [label="scripts/tests/test_translation_fixer/test_header_permalinks/test_header_number_mismatch.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_html_links_test_html_links_number_mismatch_py" [label="scripts/tests/test_translation_fixer/test_html_links/test_html_links_number_mismatch.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_tests_test_translation_fixer_test_markdown_links_test_mkd_links_number_mismatch_py" [label="scripts/tests/test_translation_fixer/test_markdown_links/test_mkd_links_number_mismatch.py
+[v:0.0, 0.0, 0.4]"];
+  "scripts_topic_repos_py" [label="scripts/topic_repos.py
+[v:0.3, 0.7, 0.6]"];
+  "scripts_translate_py" [label="scripts/translate.py
+[v:1.0, 0.0, 1.0]"];
+  "scripts_translation_fixer_py" [label="scripts/translation_fixer.py
+[v:0.9, 0.0, 0.8]"];
+  "tests_benchmarks_test_general_performance_py" [label="tests/benchmarks/test_general_performance.py
+[v:0.1, 1.0, 0.0]"];
+  "fastapi_routing_py" [label="fastapi/routing.py
+[v:1.0, 1.0, 1.0]"];
+  "tests_benchmarks___init___py" [label="tests/benchmarks/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_forward_reference_type_py" [label="tests/forward_reference_type.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial006_py" [label="tests/test_tutorial/test_dependencies/test_tutorial006.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial007_py" [label="tests/test_tutorial/test_dependencies/test_tutorial007.py
+[v:0.0, 0.0, 0.6]"];
+  "fastapi_security_api_key_py" [label="fastapi/security/api_key.py
+[v:0.1, 1.0, 1.0]"];
+  "fastapi_security_base_py" [label="fastapi/security/base.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial008_py" [label="tests/test_tutorial/test_dependencies/test_tutorial008.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_main_py" [label="tests/main.py
+[v:0.2, 0.0, 0.8]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial008b_py" [label="tests/test_tutorial/test_dependencies/test_tutorial008b.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_additional_properties_py" [label="tests/test_additional_properties.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial008c_py" [label="tests/test_tutorial/test_dependencies/test_tutorial008c.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial008d_py" [label="tests/test_tutorial/test_dependencies/test_tutorial008d.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_additional_properties_bool_py" [label="tests/test_additional_properties_bool.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_additional_responses_bad_py" [label="tests/test_additional_responses_bad.py
+[v:0.0, 0.0, 0.4]"];
+  "fastapi_security_http_py" [label="fastapi/security/http.py
+[v:1.0, 0.7, 1.0]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial008e_py" [label="tests/test_tutorial/test_dependencies/test_tutorial008e.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial010_py" [label="tests/test_tutorial/test_dependencies/test_tutorial010.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_test_tutorial005_py" [label="tests/test_tutorial/test_query_params/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_additional_responses_custom_model_in_callback_py" [label="tests/test_additional_responses_custom_model_in_callback.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_additional_responses_custom_validationerror_py" [label="tests/test_additional_responses_custom_validationerror.py
+[v:0.0, 1.0, 0.6]"];
+  "tests_test_tutorial_test_query_params_test_tutorial006_py" [label="tests/test_tutorial/test_query_params/test_tutorial006.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params___init___py" [label="tests/test_tutorial/test_query_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_additional_responses_default_validationerror_py" [label="tests/test_additional_responses_default_validationerror.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial001_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial011_py" [label="tests/test_tutorial/test_dependencies/test_tutorial011.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_additional_responses_response_class_py" [label="tests/test_additional_responses_response_class.py
+[v:0.0, 1.0, 0.8]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial002_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_additional_responses_router_py" [label="tests/test_additional_responses_router.py
+[v:0.0, 0.3, 1.0]"];
+  "tests_test_tutorial_test_dependencies_test_tutorial012_py" [label="tests/test_tutorial/test_dependencies/test_tutorial012.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_dependencies___init___py" [label="tests/test_tutorial/test_dependencies/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial003_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial003.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_additional_responses_union_duplicate_anyof_py" [label="tests/test_additional_responses_union_duplicate_anyof.py
+[v:0.0, 0.7, 0.6]"];
+  "tests_test_additional_response_extra_py" [label="tests/test_additional_response_extra.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial004_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_allow_inf_nan_in_enforcing_py" [label="tests/test_allow_inf_nan_in_enforcing.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_encoder_test_tutorial001_py" [label="tests/test_tutorial/test_encoder/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_encoder___init___py" [label="tests/test_tutorial/test_encoder/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_ambiguous_params_py" [label="tests/test_ambiguous_params.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial005_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial005.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_events_test_tutorial001_py" [label="tests/test_tutorial/test_events/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_events_test_tutorial002_py" [label="tests/test_tutorial/test_events/test_tutorial002.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial006_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial006.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_events_test_tutorial003_py" [label="tests/test_tutorial/test_events/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_events___init___py" [label="tests/test_tutorial/test_events/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_extending_openapi_test_tutorial001_py" [label="tests/test_tutorial/test_extending_openapi/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_extending_openapi___init___py" [label="tests/test_tutorial/test_extending_openapi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial006c_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial006c.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_extra_data_types_test_tutorial001_py" [label="tests/test_tutorial/test_extra_data_types/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_extra_data_types___init___py" [label="tests/test_tutorial/test_extra_data_types/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial007_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial007.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial008_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial008.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_extra_models_test_tutorial001_tutorial002_py" [label="tests/test_tutorial/test_extra_models/test_tutorial001_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial009_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial009.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_extra_models_test_tutorial003_py" [label="tests/test_tutorial/test_extra_models/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_extra_models_test_tutorial004_py" [label="tests/test_tutorial/test_extra_models/test_tutorial004.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial010_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial010.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_extra_models_test_tutorial005_py" [label="tests/test_tutorial/test_extra_models/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial011_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial011.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial012_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial012.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_extra_models___init___py" [label="tests/test_tutorial/test_extra_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_first_steps_test_tutorial001_tutorial002_tutorial003_py" [label="tests/test_tutorial/test_first_steps/test_tutorial001_tutorial002_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_first_steps___init___py" [label="tests/test_tutorial/test_first_steps/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial013_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial013.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_generate_clients_test_tutorial001_py" [label="tests/test_tutorial/test_generate_clients/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial014_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial014.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_generate_clients_test_tutorial002_py" [label="tests/test_tutorial/test_generate_clients/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_annotated_py" [label="tests/test_annotated.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations_test_tutorial015_py" [label="tests/test_tutorial/test_query_params_str_validations/test_tutorial015.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_generate_clients_test_tutorial003_py" [label="tests/test_tutorial/test_generate_clients/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_params_str_validations___init___py" [label="tests/test_tutorial/test_query_params_str_validations/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_generate_clients_test_tutorial004_py" [label="tests/test_tutorial/test_generate_clients/test_tutorial004.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_generate_clients___init___py" [label="tests/test_tutorial/test_generate_clients/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_query_param_models_test_tutorial001_py" [label="tests/test_tutorial/test_query_param_models/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_graphql_test_tutorial001_py" [label="tests/test_tutorial/test_graphql/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_graphql___init___py" [label="tests/test_tutorial/test_graphql/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial001_py" [label="tests/test_tutorial/test_handling_errors/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_param_models_test_tutorial002_py" [label="tests/test_tutorial/test_query_param_models/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_query_param_models___init___py" [label="tests/test_tutorial/test_query_param_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial002_py" [label="tests/test_tutorial/test_handling_errors/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial003_py" [label="tests/test_tutorial/test_handling_errors/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_request_files_test_tutorial001_py" [label="tests/test_tutorial/test_request_files/test_tutorial001.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial004_py" [label="tests/test_tutorial/test_handling_errors/test_tutorial004.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_request_files_test_tutorial001_02_py" [label="tests/test_tutorial/test_request_files/test_tutorial001_02.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_request_files_test_tutorial001_03_py" [label="tests/test_tutorial/test_request_files/test_tutorial001_03.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_application_py" [label="tests/test_application.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_request_files_test_tutorial002_py" [label="tests/test_tutorial/test_request_files/test_tutorial002.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_arbitrary_types_py" [label="tests/test_arbitrary_types.py
+[v:0.0, 1.0, 0.4]"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial005_py" [label="tests/test_tutorial/test_handling_errors/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_request_files_test_tutorial003_py" [label="tests/test_tutorial/test_request_files/test_tutorial003.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_request_files___init___py" [label="tests/test_tutorial/test_request_files/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial006_py" [label="tests/test_tutorial/test_handling_errors/test_tutorial006.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_handling_errors___init___py" [label="tests/test_tutorial/test_handling_errors/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_request_forms_test_tutorial001_py" [label="tests/test_tutorial/test_request_forms/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_request_forms___init___py" [label="tests/test_tutorial/test_request_forms/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_header_params_test_tutorial001_py" [label="tests/test_tutorial/test_header_params/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_security_test_tutorial004_py" [label="tests/test_tutorial/test_security/test_tutorial004.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_header_params_test_tutorial002_py" [label="tests/test_tutorial/test_header_params/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_request_forms_and_files_test_tutorial001_py" [label="tests/test_tutorial/test_request_forms_and_files/test_tutorial001.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_request_forms_and_files___init___py" [label="tests/test_tutorial/test_request_forms_and_files/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_request_form_models_test_tutorial001_py" [label="tests/test_tutorial/test_request_form_models/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_security_test_tutorial005_py" [label="tests/test_tutorial/test_security/test_tutorial005.py
+[v:0.1, 0.0, 1.0]"];
+  "tests_test_tutorial_test_security_test_tutorial006_py" [label="tests/test_tutorial/test_security/test_tutorial006.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_request_form_models_test_tutorial002_py" [label="tests/test_tutorial/test_request_form_models/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_request_form_models___init___py" [label="tests/test_tutorial/test_request_form_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_change_status_code_test_tutorial001_py" [label="tests/test_tutorial/test_response_change_status_code/test_tutorial001.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_response_change_status_code___init___py" [label="tests/test_tutorial/test_response_change_status_code/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_cookies_test_tutorial001_py" [label="tests/test_tutorial/test_response_cookies/test_tutorial001.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_cookies_test_tutorial002_py" [label="tests/test_tutorial/test_response_cookies/test_tutorial002.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_cookies___init___py" [label="tests/test_tutorial/test_response_cookies/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_security_test_tutorial007_py" [label="tests/test_tutorial/test_security/test_tutorial007.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_security___init___py" [label="tests/test_tutorial/test_security/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_directly_test_tutorial001_py" [label="tests/test_tutorial/test_response_directly/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_separate_openapi_schemas_test_tutorial001_py" [label="tests/test_tutorial/test_separate_openapi_schemas/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_response_directly_test_tutorial002_py" [label="tests/test_tutorial/test_response_directly/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_header_params_test_tutorial003_py" [label="tests/test_tutorial/test_header_params/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_response_directly___init___py" [label="tests/test_tutorial/test_response_directly/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_header_params___init___py" [label="tests/test_tutorial/test_header_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_headers_test_tutorial001_py" [label="tests/test_tutorial/test_response_headers/test_tutorial001.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_headers_test_tutorial002_py" [label="tests/test_tutorial/test_response_headers/test_tutorial002.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_headers___init___py" [label="tests/test_tutorial/test_response_headers/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_separate_openapi_schemas_test_tutorial002_py" [label="tests/test_tutorial/test_separate_openapi_schemas/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_separate_openapi_schemas___init___py" [label="tests/test_tutorial/test_separate_openapi_schemas/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_header_param_models_test_tutorial001_py" [label="tests/test_tutorial/test_header_param_models/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_response_model_test_tutorial001_tutorial001_01_py" [label="tests/test_tutorial/test_response_model/test_tutorial001_tutorial001_01.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_server_sent_events_test_tutorial001_py" [label="tests/test_tutorial/test_server_sent_events/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_response_model_test_tutorial002_py" [label="tests/test_tutorial/test_response_model/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_server_sent_events_test_tutorial002_py" [label="tests/test_tutorial/test_server_sent_events/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_header_param_models_test_tutorial002_py" [label="tests/test_tutorial/test_header_param_models/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_server_sent_events_test_tutorial003_py" [label="tests/test_tutorial/test_server_sent_events/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_py" [label="tests/test_tutorial/test_response_model/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_server_sent_events_test_tutorial004_py" [label="tests/test_tutorial/test_server_sent_events/test_tutorial004.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_01_py" [label="tests/test_tutorial/test_response_model/test_tutorial003_01.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_header_param_models_test_tutorial003_py" [label="tests/test_tutorial/test_header_param_models/test_tutorial003.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_header_param_models___init___py" [label="tests/test_tutorial/test_header_param_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_server_sent_events_test_tutorial005_py" [label="tests/test_tutorial/test_server_sent_events/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_server_sent_events___init___py" [label="tests/test_tutorial/test_server_sent_events/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_02_py" [label="tests/test_tutorial/test_response_model/test_tutorial003_02.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_settings_test_app01_py" [label="tests/test_tutorial/test_settings/test_app01.py
+[v:0.1, 0.0, 0.6]"];
+  "tests_test_tutorial_test_json_base64_bytes_test_tutorial001_py" [label="tests/test_tutorial/test_json_base64_bytes/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_json_base64_bytes___init___py" [label="tests/test_tutorial/test_json_base64_bytes/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_settings_test_app02_py" [label="tests/test_tutorial/test_settings/test_app02.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_03_py" [label="tests/test_tutorial/test_response_model/test_tutorial003_03.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_metadata_test_tutorial001_py" [label="tests/test_tutorial/test_metadata/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_04_py" [label="tests/test_tutorial/test_response_model/test_tutorial003_04.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_settings_test_app03_py" [label="tests/test_tutorial/test_settings/test_app03.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_metadata_test_tutorial001_1_py" [label="tests/test_tutorial/test_metadata/test_tutorial001_1.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_settings_test_tutorial001_py" [label="tests/test_tutorial/test_settings/test_tutorial001.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_settings___init___py" [label="tests/test_tutorial/test_settings/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_metadata_test_tutorial002_py" [label="tests/test_tutorial/test_metadata/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_05_py" [label="tests/test_tutorial/test_response_model/test_tutorial003_05.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_metadata_test_tutorial003_py" [label="tests/test_tutorial/test_metadata/test_tutorial003.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_metadata_test_tutorial004_py" [label="tests/test_tutorial/test_metadata/test_tutorial004.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_metadata___init___py" [label="tests/test_tutorial/test_metadata/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_include_router_defaults_overrides_py" [label="tests/test_include_router_defaults_overrides.py
+[v:0.5, 1.0, 1.0]"];
+  "tests_test_tutorial_test_middleware_test_tutorial001_py" [label="tests/test_tutorial/test_middleware/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_middleware___init___py" [label="tests/test_tutorial/test_middleware/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_response_model_test_tutorial004_py" [label="tests/test_tutorial/test_response_model/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_response_model_test_tutorial005_py" [label="tests/test_tutorial/test_response_model/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_openapi_callbacks_test_tutorial001_py" [label="tests/test_tutorial/test_openapi_callbacks/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_openapi_callbacks___init___py" [label="tests/test_tutorial/test_openapi_callbacks/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_infer_param_optionality_py" [label="tests/test_infer_param_optionality.py
+[v:0.1, 0.0, 0.4]"];
+  "tests_test_inherited_custom_class_py" [label="tests/test_inherited_custom_class.py
+[v:0.0, 0.7, 0.0]"];
+  "tests_test_tutorial_test_response_model_test_tutorial006_py" [label="tests/test_tutorial/test_response_model/test_tutorial006.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_response_model___init___py" [label="tests/test_tutorial/test_response_model/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_openapi_webhooks_test_tutorial001_py" [label="tests/test_tutorial/test_openapi_webhooks/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_openapi_webhooks___init___py" [label="tests/test_tutorial/test_openapi_webhooks/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_invalid_path_param_py" [label="tests/test_invalid_path_param.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial001_py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_response_status_code_test_tutorial001_tutorial002_py" [label="tests/test_tutorial/test_response_status_code/test_tutorial001_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_invalid_sequence_param_py" [label="tests/test_invalid_sequence_param.py
+[v:0.0, 1.0, 0.8]"];
+  "tests_test_tutorial_test_response_status_code___init___py" [label="tests/test_tutorial/test_response_status_code/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial002_py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial003_py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_schema_extra_example_test_tutorial001_py" [label="tests/test_tutorial/test_schema_extra_example/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial004_py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_schema_extra_example_test_tutorial002_py" [label="tests/test_tutorial/test_schema_extra_example/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial005_py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_sql_databases_test_tutorial001_py" [label="tests/test_tutorial/test_sql_databases/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial006_py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial006.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_jsonable_encoder_py" [label="tests/test_jsonable_encoder.py
+[v:0.1, 1.0, 0.4]"];
+  "tests_test_tutorial_test_schema_extra_example_test_tutorial003_py" [label="tests/test_tutorial/test_schema_extra_example/test_tutorial003.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_json_type_py" [label="tests/test_json_type.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial007_py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial007.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations___init___py" [label="tests/test_tutorial/test_path_operation_advanced_configurations/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_list_bytes_file_order_preserved_issue_14811_py" [label="tests/test_list_bytes_file_order_preserved_issue_14811.py
+[v:0.1, 0.0, 0.2]"];
+  "tests_test_tutorial_test_schema_extra_example_test_tutorial004_py" [label="tests/test_tutorial/test_schema_extra_example/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_local_docs_py" [label="tests/test_local_docs.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_modules_same_name_body_app_a_py" [label="tests/test_modules_same_name_body/app/a.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial001_py" [label="tests/test_tutorial/test_path_operation_configurations/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_modules_same_name_body_app_b_py" [label="tests/test_modules_same_name_body/app/b.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_modules_same_name_body_app_main_py" [label="tests/test_modules_same_name_body/app/main.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_modules_same_name_body_app___init___py" [label="tests/test_modules_same_name_body/app/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_schema_extra_example_test_tutorial005_py" [label="tests/test_tutorial/test_schema_extra_example/test_tutorial005.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_schema_extra_example___init___py" [label="tests/test_tutorial/test_schema_extra_example/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_sql_databases_test_tutorial002_py" [label="tests/test_tutorial/test_sql_databases/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_sql_databases___init___py" [label="tests/test_tutorial/test_sql_databases/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial002_py" [label="tests/test_tutorial/test_path_operation_configurations/test_tutorial002.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_modules_same_name_body_test_main_py" [label="tests/test_modules_same_name_body/test_main.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_modules_same_name_body___init___py" [label="tests/test_modules_same_name_body/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_static_files_test_tutorial001_py" [label="tests/test_tutorial/test_static_files/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial002b_py" [label="tests/test_tutorial/test_path_operation_configurations/test_tutorial002b.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_static_files___init___py" [label="tests/test_tutorial/test_static_files/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_multipart_installation_py" [label="tests/test_multipart_installation.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_stream_data_test_tutorial001_py" [label="tests/test_tutorial/test_stream_data/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial003_tutorial004_py" [label="tests/test_tutorial/test_path_operation_configurations/test_tutorial003_tutorial004.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_stream_data_test_tutorial002_py" [label="tests/test_tutorial/test_stream_data/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_stream_data___init___py" [label="tests/test_tutorial/test_stream_data/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_multi_body_errors_py" [label="tests/test_multi_body_errors.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_tutorial_test_stream_json_lines_test_tutorial001_py" [label="tests/test_tutorial/test_stream_json_lines/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_stream_json_lines___init___py" [label="tests/test_tutorial/test_stream_json_lines/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_strict_content_type_test_tutorial001_py" [label="tests/test_tutorial/test_strict_content_type/test_tutorial001.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_strict_content_type___init___py" [label="tests/test_tutorial/test_strict_content_type/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_multi_query_errors_py" [label="tests/test_multi_query_errors.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_sub_applications_test_tutorial001_py" [label="tests/test_tutorial/test_sub_applications/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_sub_applications___init___py" [label="tests/test_tutorial/test_sub_applications/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_templates_test_tutorial001_py" [label="tests/test_tutorial/test_templates/test_tutorial001.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_tutorial_test_templates___init___py" [label="tests/test_tutorial/test_templates/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_no_schema_split_py" [label="tests/test_no_schema_split.py
+[v:0.0, 1.0, 0.6]"];
+  "tests_test_tutorial_test_testing_test_main_a_py" [label="tests/test_tutorial/test_testing/test_main_a.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_testing_test_main_b_py" [label="tests/test_tutorial/test_testing/test_main_b.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_no_swagger_ui_redirect_py" [label="tests/test_no_swagger_ui_redirect.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_testing_test_tutorial001_py" [label="tests/test_tutorial/test_testing/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_testing_test_tutorial002_py" [label="tests/test_tutorial/test_testing/test_tutorial002.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_testing_test_tutorial003_py" [label="tests/test_tutorial/test_testing/test_tutorial003.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_testing_test_tutorial004_py" [label="tests/test_tutorial/test_testing/test_tutorial004.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_testing___init___py" [label="tests/test_tutorial/test_testing/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_openapi_cache_root_path_py" [label="tests/test_openapi_cache_root_path.py
+[v:0.1, 0.0, 1.0]"];
+  "tests_test_tutorial_test_testing_dependencies_test_tutorial001_py" [label="tests/test_tutorial/test_testing_dependencies/test_tutorial001.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_testing_dependencies___init___py" [label="tests/test_tutorial/test_testing_dependencies/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_using_request_directly_test_tutorial001_py" [label="tests/test_tutorial/test_using_request_directly/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_using_request_directly___init___py" [label="tests/test_tutorial/test_using_request_directly/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_security_test_tutorial001_py" [label="tests/test_tutorial/test_security/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_websockets_test_tutorial001_py" [label="tests/test_tutorial/test_websockets/test_tutorial001.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_security_test_tutorial002_py" [label="tests/test_tutorial/test_security/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_websockets_test_tutorial002_py" [label="tests/test_tutorial/test_websockets/test_tutorial002.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_openapi_examples_py" [label="tests/test_openapi_examples.py
+[v:0.0, 0.3, 1.0]"];
+  "tests_test_openapi_model_description_trim_on_formfeed_py" [label="tests/test_openapi_model_description_trim_on_formfeed.py
+[v:0.0, 0.3, 0.2]"];
+  "tests_test_tutorial_test_websockets_test_tutorial003_py" [label="tests/test_tutorial/test_websockets/test_tutorial003.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_websockets___init___py" [label="tests/test_tutorial/test_websockets/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_wsgi_test_tutorial001_py" [label="tests/test_tutorial/test_wsgi/test_tutorial001.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_wsgi___init___py" [label="tests/test_tutorial/test_wsgi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial___init___py" [label="tests/test_tutorial/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_typing_python39_py" [label="tests/test_typing_python39.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_openapi_query_parameter_extension_py" [label="tests/test_openapi_query_parameter_extension.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_security_test_tutorial003_py" [label="tests/test_tutorial/test_security/test_tutorial003.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_openapi_route_extensions_py" [label="tests/test_openapi_route_extensions.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_path_params_numeric_validations___init___py" [label="tests/test_tutorial/test_path_params_numeric_validations/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_openapi_schema_type_py" [label="tests/test_openapi_schema_type.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_python_types_test_tutorial001_tutorial002_py" [label="tests/test_tutorial/test_python_types/test_tutorial001_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_union_body_py" [label="tests/test_union_body.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_tutorial_test_python_types_test_tutorial003_py" [label="tests/test_tutorial/test_python_types/test_tutorial003.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_python_types_test_tutorial004_py" [label="tests/test_tutorial/test_python_types/test_tutorial004.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_python_types_test_tutorial005_py" [label="tests/test_tutorial/test_python_types/test_tutorial005.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_python_types_test_tutorial006_py" [label="tests/test_tutorial/test_python_types/test_tutorial006.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_python_types_test_tutorial007_py" [label="tests/test_tutorial/test_python_types/test_tutorial007.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_python_types_test_tutorial008_py" [label="tests/test_tutorial/test_python_types/test_tutorial008.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_python_types_test_tutorial008b_py" [label="tests/test_tutorial/test_python_types/test_tutorial008b.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_union_body_discriminator_py" [label="tests/test_union_body_discriminator.py
+[v:0.0, 0.7, 0.8]"];
+  "tests_test_tutorial_test_python_types_test_tutorial009_tutorial009b_py" [label="tests/test_tutorial/test_python_types/test_tutorial009_tutorial009b.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_python_types_test_tutorial010_py" [label="tests/test_tutorial/test_python_types/test_tutorial010.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_python_types_test_tutorial011_py" [label="tests/test_tutorial/test_python_types/test_tutorial011.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_python_types_test_tutorial013_py" [label="tests/test_tutorial/test_python_types/test_tutorial013.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_python_types___init___py" [label="tests/test_tutorial/test_python_types/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial005_py" [label="tests/test_tutorial/test_path_operation_configurations/test_tutorial005.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_union_body_discriminator_annotated_py" [label="tests/test_union_body_discriminator_annotated.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_tutorial_test_query_params_test_tutorial001_py" [label="tests/test_tutorial/test_query_params/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial006_py" [label="tests/test_tutorial/test_path_operation_configurations/test_tutorial006.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_operation_configurations___init___py" [label="tests/test_tutorial/test_path_operation_configurations/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_union_forms_py" [label="tests/test_union_forms.py
+[v:0.0, 0.7, 1.0]"];
+  "tests_test_tutorial_test_query_params_test_tutorial002_py" [label="tests/test_tutorial/test_query_params/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_params_test_tutorial001_py" [label="tests/test_tutorial/test_path_params/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_union_inherited_body_py" [label="tests/test_union_inherited_body.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_tutorial_test_query_params_test_tutorial003_py" [label="tests/test_tutorial/test_query_params/test_tutorial003.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_path_params_test_tutorial002_py" [label="tests/test_tutorial/test_path_params/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_validate_response_py" [label="tests/test_validate_response.py
+[v:0.1, 0.3, 0.8]"];
+  "tests_test_validate_response_dataclass_py" [label="tests/test_validate_response_dataclass.py
+[v:0.0, 0.3, 0.6]"];
+  "tests_test_tutorial_test_query_params_test_tutorial004_py" [label="tests/test_tutorial/test_query_params/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_validate_response_recursive_test_validate_response_recursive_py" [label="tests/test_validate_response_recursive/test_validate_response_recursive.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_validate_response_recursive___init___py" [label="tests/test_validate_response_recursive/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_params_test_tutorial003_py" [label="tests/test_tutorial/test_path_params/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_params_test_tutorial003b_py" [label="tests/test_tutorial/test_path_params/test_tutorial003b.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_validation_error_context_py" [label="tests/test_validation_error_context.py
+[v:0.3, 0.7, 1.0]"];
+  "tests_test_tutorial_test_path_params_test_tutorial004_py" [label="tests/test_tutorial/test_path_params/test_tutorial004.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_webhooks_security_py" [label="tests/test_webhooks_security.py
+[v:0.0, 0.3, 1.0]"];
+  "tests_test_wrapped_method_forward_reference_py" [label="tests/test_wrapped_method_forward_reference.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_params_test_tutorial005_py" [label="tests/test_tutorial/test_path_params/test_tutorial005.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_params___init___py" [label="tests/test_tutorial/test_path_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_ws_dependencies_py" [label="tests/test_ws_dependencies.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_path_params_numeric_validations_test_tutorial001_py" [label="tests/test_tutorial/test_path_params_numeric_validations/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_openapi_separate_input_output_schemas_py" [label="tests/test_openapi_separate_input_output_schemas.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_validate_response_recursive_app_py" [label="tests/test_validate_response_recursive/app.py
+[v:0.0, 1.0, 0.0]"];
+  "tests_test_required_noneable_py" [label="tests/test_required_noneable.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_path_params_numeric_validations_test_tutorial002_tutorial003_py" [label="tests/test_tutorial/test_path_params_numeric_validations/test_tutorial002_tutorial003.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_path_params_numeric_validations_test_tutorial004_py" [label="tests/test_tutorial/test_path_params_numeric_validations/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_response_by_alias_py" [label="tests/test_response_by_alias.py
+[v:0.0, 0.7, 0.6]"];
+  "tests_test_response_change_status_code_py" [label="tests/test_response_change_status_code.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_openapi_servers_py" [label="tests/test_openapi_servers.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_operations_signatures_py" [label="tests/test_operations_signatures.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_response_class_no_mediatype_py" [label="tests/test_response_class_no_mediatype.py
+[v:0.0, 1.0, 0.8]"];
+  "tests_test_optional_file_list_py" [label="tests/test_optional_file_list.py
+[v:0.1, 0.0, 0.0]"];
+  "tests_test_orjson_response_class_py" [label="tests/test_orjson_response_class.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_response_code_no_body_py" [label="tests/test_response_code_no_body.py
+[v:0.0, 1.0, 0.8]"];
+  "tests_test_params_repr_py" [label="tests/test_params_repr.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_param_class_py" [label="tests/test_param_class.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_response_dependency_py" [label="tests/test_response_dependency.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_param_include_in_schema_py" [label="tests/test_param_include_in_schema.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_param_in_path_and_dependency_py" [label="tests/test_param_in_path_and_dependency.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_params_numeric_validations_test_tutorial005_py" [label="tests/test_tutorial/test_path_params_numeric_validations/test_tutorial005.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_path_py" [label="tests/test_path.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_response_model_as_return_annotation_py" [label="tests/test_response_model_as_return_annotation.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_put_no_body_py" [label="tests/test_put_no_body.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_path_params_numeric_validations_test_tutorial006_py" [label="tests/test_tutorial/test_path_params_numeric_validations/test_tutorial006.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_response_model_data_filter_py" [label="tests/test_response_model_data_filter.py
+[v:0.0, 1.0, 0.0]"];
+  "tests_test_pydanticv2_dataclasses_uuid_stringified_annotations_py" [label="tests/test_pydanticv2_dataclasses_uuid_stringified_annotations.py
+[v:0.0, 0.3, 0.2]"];
+  "tests_utils_py" [label="tests/utils.py
+[v:0.1, 0.0, 0.4]"];
+  "tests___init___py" [label="tests/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_strict_content_type_router_level_py" [label="tests/test_strict_content_type_router_level.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_response_model_data_filter_no_inheritance_py" [label="tests/test_response_model_data_filter_no_inheritance.py
+[v:0.0, 1.0, 0.0]"];
+  "tests_test_pydantic_v1_error_py" [label="tests/test_pydantic_v1_error.py
+[v:0.1, 1.0, 0.2]"];
+  "tests_test_stringified_annotations_simple_py" [label="tests/test_stringified_annotations_simple.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_response_model_default_factory_py" [label="tests/test_response_model_default_factory.py
+[v:0.0, 0.3, 0.2]"];
+  "tests_test_stringified_annotation_dependency_py" [label="tests/test_stringified_annotation_dependency.py
+[v:0.1, 0.3, 0.4]"];
+  "tests_test_stringified_annotation_dependency_py314_py" [label="tests/test_stringified_annotation_dependency_py314.py
+[v:0.1, 0.3, 0.0]"];
+  "tests_test_response_model_include_exclude_py" [label="tests/test_response_model_include_exclude.py
+[v:0.0, 1.0, 0.0]"];
+  "tests_test_response_model_invalid_py" [label="tests/test_response_model_invalid.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_query_py" [label="tests/test_query.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_response_model_sub_types_py" [label="tests/test_response_model_sub_types.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_sub_callbacks_py" [label="tests/test_sub_callbacks.py
+[v:0.0, 1.0, 0.4]"];
+  "tests_test_query_cookie_header_model_extra_params_py" [label="tests/test_query_cookie_header_model_extra_params.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_return_none_stringified_annotations_py" [label="tests/test_return_none_stringified_annotations.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_swagger_ui_escape_py" [label="tests/test_swagger_ui_escape.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_read_with_orm_mode_py" [label="tests/test_read_with_orm_mode.py
+[v:0.0, 1.0, 0.0]"];
+  "tests_test_swagger_ui_init_oauth_py" [label="tests/test_swagger_ui_init_oauth.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_regex_deprecated_body_py" [label="tests/test_regex_deprecated_body.py
+[v:0.1, 0.0, 0.6]"];
+  "tests_test_top_level_security_scheme_in_openapi_py" [label="tests/test_top_level_security_scheme_in_openapi.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_regex_deprecated_params_py" [label="tests/test_regex_deprecated_params.py
+[v:0.1, 0.0, 0.6]"];
+  "tests_test_repeated_cookie_headers_py" [label="tests/test_repeated_cookie_headers.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_router_circular_import_py" [label="tests/test_router_circular_import.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_repeated_dependency_schema_py" [label="tests/test_repeated_dependency_schema.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tuples_py" [label="tests/test_tuples.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_repeated_parameter_alias_py" [label="tests/test_repeated_parameter_alias.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial001_py" [label="tests/test_tutorial/test_additional_responses/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_reponse_set_reponse_code_empty_py" [label="tests/test_reponse_set_reponse_code_empty.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_router_events_py" [label="tests/test_router_events.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_router_prefix_with_template_py" [label="tests/test_router_prefix_with_template.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial002_py" [label="tests/test_tutorial/test_additional_responses/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_router_redirect_slashes_py" [label="tests/test_router_redirect_slashes.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_body_parameters_media_type_py" [label="tests/test_request_body_parameters_media_type.py
+[v:0.0, 0.7, 0.4]"];
+  "tests_test_route_scope_py" [label="tests/test_route_scope.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial003_py" [label="tests/test_tutorial/test_additional_responses/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_schema_compat_pydantic_v2_py" [label="tests/test_schema_compat_pydantic_v2.py
+[v:0.0, 1.0, 0.4]"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial004_py" [label="tests/test_tutorial/test_additional_responses/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_additional_responses___init___py" [label="tests/test_tutorial/test_additional_responses/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_additional_status_codes_test_tutorial001_py" [label="tests/test_tutorial/test_additional_status_codes/test_tutorial001.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_additional_status_codes___init___py" [label="tests/test_tutorial/test_additional_status_codes/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_advanced_middleware_test_tutorial001_py" [label="tests/test_tutorial/test_advanced_middleware/test_tutorial001.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_advanced_middleware_test_tutorial002_py" [label="tests/test_tutorial/test_advanced_middleware/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_advanced_middleware_test_tutorial003_py" [label="tests/test_tutorial/test_advanced_middleware/test_tutorial003.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_advanced_middleware___init___py" [label="tests/test_tutorial/test_advanced_middleware/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_async_tests_test_main_a_py" [label="tests/test_tutorial/test_async_tests/test_main_a.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_async_tests___init___py" [label="tests/test_tutorial/test_async_tests/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_ws_router_py" [label="tests/test_ws_router.py
+[v:0.2, 0.3, 1.0]"];
+  "tests_test_tutorial_test_body_test_tutorial001_py" [label="tests/test_tutorial/test_body/test_tutorial001.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_request_params_test_body_test_list_py" [label="tests/test_request_params/test_body/test_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_tutorial_test_body_test_tutorial002_py" [label="tests/test_tutorial/test_body/test_tutorial002.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_body_test_tutorial003_py" [label="tests/test_tutorial/test_body/test_tutorial003.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_authentication_error_status_code_test_tutorial001_py" [label="tests/test_tutorial/test_authentication_error_status_code/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_authentication_error_status_code___init___py" [label="tests/test_tutorial/test_authentication_error_status_code/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_body_test_optional_list_py" [label="tests/test_request_params/test_body/test_optional_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_tutorial_test_background_tasks_test_tutorial001_py" [label="tests/test_tutorial/test_background_tasks/test_tutorial001.py
+[v:0.1, 0.0, 0.4]"];
+  "tests_test_tutorial_test_body_test_tutorial004_py" [label="tests/test_tutorial/test_body/test_tutorial004.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_body___init___py" [label="tests/test_tutorial/test_body/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_background_tasks_test_tutorial002_py" [label="tests/test_tutorial/test_background_tasks/test_tutorial002.py
+[v:0.1, 0.0, 0.4]"];
+  "tests_test_tutorial_test_background_tasks___init___py" [label="tests/test_tutorial/test_background_tasks/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial001_py" [label="tests/test_tutorial/test_behind_a_proxy/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial001_01_py" [label="tests/test_tutorial/test_behind_a_proxy/test_tutorial001_01.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial002_py" [label="tests/test_tutorial/test_behind_a_proxy/test_tutorial002.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_body_fields_test_tutorial001_py" [label="tests/test_tutorial/test_body_fields/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_body_fields___init___py" [label="tests/test_tutorial/test_body_fields/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial003_py" [label="tests/test_tutorial/test_behind_a_proxy/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial004_py" [label="tests/test_tutorial/test_behind_a_proxy/test_tutorial004.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_behind_a_proxy___init___py" [label="tests/test_tutorial/test_behind_a_proxy/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_body_test_optional_str_py" [label="tests/test_request_params/test_body/test_optional_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_tutorial_test_body_multiple_params_test_tutorial001_py" [label="tests/test_tutorial/test_body_multiple_params/test_tutorial001.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_request_params_test_body_test_required_str_py" [label="tests/test_request_params/test_body/test_required_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_body_utils_py" [label="tests/test_request_params/test_body/utils.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_schema_extra_examples_py" [label="tests/test_schema_extra_examples.py
+[v:0.0, 0.3, 1.0]"];
+  "tests_test_request_params_test_body___init___py" [label="tests/test_request_params/test_body/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_body_multiple_params_test_tutorial002_py" [label="tests/test_tutorial/test_body_multiple_params/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_request_params_test_cookie_test_list_py" [label="tests/test_request_params/test_cookie/test_list.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_cookie_test_optional_list_py" [label="tests/test_request_params/test_cookie/test_optional_list.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_body_multiple_params_test_tutorial003_py" [label="tests/test_tutorial/test_body_multiple_params/test_tutorial003.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_bigger_applications_test_main_py" [label="tests/test_tutorial/test_bigger_applications/test_main.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_bigger_applications___init___py" [label="tests/test_tutorial/test_bigger_applications/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_cookie_test_optional_str_py" [label="tests/test_request_params/test_cookie/test_optional_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_security_http_basic_realm_py" [label="tests/test_security_http_basic_realm.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_http_basic_realm_description_py" [label="tests/test_security_http_basic_realm_description.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_body_multiple_params_test_tutorial004_py" [label="tests/test_tutorial/test_body_multiple_params/test_tutorial004.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_security_http_bearer_py" [label="tests/test_security_http_bearer.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_http_bearer_description_py" [label="tests/test_security_http_bearer_description.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_http_bearer_optional_py" [label="tests/test_security_http_bearer_optional.py
+[v:0.1, 0.0, 1.0]"];
+  "tests_test_request_params_test_cookie_test_required_str_py" [label="tests/test_request_params/test_cookie/test_required_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_cookie___init___py" [label="tests/test_request_params/test_cookie/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_security_http_digest_py" [label="tests/test_security_http_digest.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_http_digest_description_py" [label="tests/test_security_http_digest_description.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_http_digest_optional_py" [label="tests/test_security_http_digest_optional.py
+[v:0.1, 0.0, 1.0]"];
+  "tests_test_tutorial_test_body_multiple_params_test_tutorial005_py" [label="tests/test_tutorial/test_body_multiple_params/test_tutorial005.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_body_multiple_params___init___py" [label="tests/test_tutorial/test_body_multiple_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_file_test_list_py" [label="tests/test_request_params/test_file/test_list.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_oauth2_py" [label="tests/test_security_oauth2.py
+[v:0.0, 0.3, 0.8]"];
+  "tests_test_security_oauth2_authorization_code_bearer_py" [label="tests/test_security_oauth2_authorization_code_bearer.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_body_nested_models_test_tutorial001_tutorial002_tutorial003_py" [label="tests/test_tutorial/test_body_nested_models/test_tutorial001_tutorial002_tutorial003.py
+[v:0.1, 0.0, 0.8]"];
+  "tests_test_security_oauth2_authorization_code_bearer_description_py" [label="tests/test_security_oauth2_authorization_code_bearer_description.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_request_params_test_file_test_optional_py" [label="tests/test_request_params/test_file/test_optional.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_oauth2_authorization_code_bearer_scopes_openapi_py" [label="tests/test_security_oauth2_authorization_code_bearer_scopes_openapi.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_body_nested_models_test_tutorial004_py" [label="tests/test_tutorial/test_body_nested_models/test_tutorial004.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_oauth2_authorization_code_bearer_scopes_openapi_simple_py" [label="tests/test_security_oauth2_authorization_code_bearer_scopes_openapi_simple.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_body_nested_models_test_tutorial005_py" [label="tests/test_tutorial/test_body_nested_models/test_tutorial005.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_oauth2_optional_py" [label="tests/test_security_oauth2_optional.py
+[v:0.1, 0.3, 0.8]"];
+  "tests_test_request_params_test_file_test_optional_list_py" [label="tests/test_request_params/test_file/test_optional_list.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_security_oauth2_optional_description_py" [label="tests/test_security_oauth2_optional_description.py
+[v:0.1, 0.3, 1.0]"];
+  "tests_test_schema_ref_pydantic_v2_py" [label="tests/test_schema_ref_pydantic_v2.py
+[v:0.0, 0.3, 0.6]"];
+  "tests_test_security_oauth2_password_bearer_optional_py" [label="tests/test_security_oauth2_password_bearer_optional.py
+[v:0.1, 0.0, 0.8]"];
+  "tests_test_security_api_key_cookie_py" [label="tests/test_security_api_key_cookie.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_security_api_key_cookie_description_py" [label="tests/test_security_api_key_cookie_description.py
+[v:0.0, 0.3, 0.6]"];
+  "tests_test_security_oauth2_password_bearer_optional_description_py" [label="tests/test_security_oauth2_password_bearer_optional_description.py
+[v:0.1, 0.0, 1.0]"];
+  "tests_test_security_api_key_cookie_optional_py" [label="tests/test_security_api_key_cookie_optional.py
+[v:0.1, 0.3, 0.4]"];
+  "tests_test_security_api_key_header_py" [label="tests/test_security_api_key_header.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_tutorial_test_body_nested_models_test_tutorial006_py" [label="tests/test_tutorial/test_body_nested_models/test_tutorial006.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_security_api_key_header_description_py" [label="tests/test_security_api_key_header_description.py
+[v:0.0, 0.3, 0.6]"];
+  "tests_test_security_api_key_header_optional_py" [label="tests/test_security_api_key_header_optional.py
+[v:0.1, 0.3, 0.4]"];
+  "tests_test_security_api_key_query_py" [label="tests/test_security_api_key_query.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_security_api_key_query_description_py" [label="tests/test_security_api_key_query_description.py
+[v:0.0, 0.3, 0.6]"];
+  "tests_test_tutorial_test_body_nested_models_test_tutorial007_py" [label="tests/test_tutorial/test_body_nested_models/test_tutorial007.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_security_api_key_query_optional_py" [label="tests/test_security_api_key_query_optional.py
+[v:0.1, 0.3, 0.4]"];
+  "tests_test_security_http_base_py" [label="tests/test_security_http_base.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_body_nested_models_test_tutorial008_py" [label="tests/test_tutorial/test_body_nested_models/test_tutorial008.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_security_http_base_description_py" [label="tests/test_security_http_base_description.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_security_http_base_optional_py" [label="tests/test_security_http_base_optional.py
+[v:0.1, 0.0, 0.8]"];
+  "tests_test_tutorial_test_body_nested_models_test_tutorial009_py" [label="tests/test_tutorial/test_body_nested_models/test_tutorial009.py
+[v:0.0, 0.0, 0.4]"];
+  "tests_test_tutorial_test_body_nested_models___init___py" [label="tests/test_tutorial/test_body_nested_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_security_http_basic_optional_py" [label="tests/test_security_http_basic_optional.py
+[v:0.1, 0.0, 1.0]"];
+  "tests_test_tutorial_test_body_updates_test_tutorial001_py" [label="tests/test_tutorial/test_body_updates/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_skip_defaults_py" [label="tests/test_skip_defaults.py
+[v:0.0, 1.0, 0.0]"];
+  "tests_test_tutorial_test_body_updates_test_tutorial002_py" [label="tests/test_tutorial/test_body_updates/test_tutorial002.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_body_updates___init___py" [label="tests/test_tutorial/test_body_updates/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_conditional_openapi_test_tutorial001_py" [label="tests/test_tutorial/test_conditional_openapi/test_tutorial001.py
+[v:0.0, 0.0, 0.8]"];
+  "tests_test_tutorial_test_conditional_openapi___init___py" [label="tests/test_tutorial/test_conditional_openapi/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_configure_swagger_ui_test_tutorial001_py" [label="tests/test_tutorial/test_configure_swagger_ui/test_tutorial001.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_sse_py" [label="tests/test_sse.py
+[v:0.3, 0.3, 1.0]"];
+  "tests_test_tutorial_test_configure_swagger_ui_test_tutorial002_py" [label="tests/test_tutorial/test_configure_swagger_ui/test_tutorial002.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_configure_swagger_ui_test_tutorial003_py" [label="tests/test_tutorial/test_configure_swagger_ui/test_tutorial003.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_configure_swagger_ui___init___py" [label="tests/test_tutorial/test_configure_swagger_ui/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_file_test_required_py" [label="tests/test_request_params/test_file/test_required.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_request_params_test_file_utils_py" [label="tests/test_request_params/test_file/utils.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_file___init___py" [label="tests/test_request_params/test_file/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_starlette_exception_py" [label="tests/test_starlette_exception.py
+[v:0.1, 0.0, 1.0]"];
+  "tests_test_tutorial_test_cookie_params_test_tutorial001_py" [label="tests/test_tutorial/test_cookie_params/test_tutorial001.py
+[v:0.0, 0.0, 0.6]"];
+  "tests_test_tutorial_test_cookie_params___init___py" [label="tests/test_tutorial/test_cookie_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_starlette_urlconvertors_py" [label="tests/test_starlette_urlconvertors.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_stream_bare_type_py" [label="tests/test_stream_bare_type.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_tutorial_test_cookie_param_models_test_tutorial001_py" [label="tests/test_tutorial/test_cookie_param_models/test_tutorial001.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_stream_cancellation_py" [label="tests/test_stream_cancellation.py
+[v:0.2, 0.0, 0.6]"];
+  "tests_test_stream_json_validation_error_py" [label="tests/test_stream_json_validation_error.py
+[v:0.0, 0.3, 0.4]"];
+  "tests_test_strict_content_type_app_level_py" [label="tests/test_strict_content_type_app_level.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_form_test_list_py" [label="tests/test_request_params/test_form/test_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_tutorial_test_cookie_param_models_test_tutorial002_py" [label="tests/test_tutorial/test_cookie_param_models/test_tutorial002.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_tutorial_test_cookie_param_models___init___py" [label="tests/test_tutorial/test_cookie_param_models/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_strict_content_type_nested_py" [label="tests/test_strict_content_type_nested.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_tutorial_test_cors_test_tutorial001_py" [label="tests/test_tutorial/test_cors/test_tutorial001.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_security_scopes_dont_propagate_py" [label="tests/test_security_scopes_dont_propagate.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_security_openid_connect_optional_py" [label="tests/test_security_openid_connect_optional.py
+[v:0.1, 0.3, 1.0]"];
+  "tests_test_security_scopes_sub_dependency_py" [label="tests/test_security_scopes_sub_dependency.py
+[v:0.0, 0.0, 0.2]"];
+  "tests_test_security_scopes_py" [label="tests/test_security_scopes.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_serialize_response_py" [label="tests/test_serialize_response.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_request_params_test_form_test_optional_list_py" [label="tests/test_request_params/test_form/test_optional_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_serialize_response_dataclass_py" [label="tests/test_serialize_response_dataclass.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_serialize_response_model_py" [label="tests/test_serialize_response_model.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_security_openid_connect_py" [label="tests/test_security_openid_connect.py
+[v:0.0, 0.3, 1.0]"];
+  "tests_test_security_openid_connect_description_py" [label="tests/test_security_openid_connect_description.py
+[v:0.0, 0.3, 1.0]"];
+  "tests_test_request_params_test_form_test_optional_str_py" [label="tests/test_request_params/test_form/test_optional_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_form_test_required_str_py" [label="tests/test_request_params/test_form/test_required_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_form_utils_py" [label="tests/test_request_params/test_form/utils.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_form___init___py" [label="tests/test_request_params/test_form/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_header_test_list_py" [label="tests/test_request_params/test_header/test_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_header_test_optional_list_py" [label="tests/test_request_params/test_header/test_optional_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_header_test_optional_str_py" [label="tests/test_request_params/test_header/test_optional_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_header_test_required_str_py" [label="tests/test_request_params/test_header/test_required_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_header___init___py" [label="tests/test_request_params/test_header/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_path_test_list_py" [label="tests/test_request_params/test_path/test_list.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_path_test_optional_list_py" [label="tests/test_request_params/test_path/test_optional_list.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_path_test_optional_str_py" [label="tests/test_request_params/test_path/test_optional_str.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_path_test_required_str_py" [label="tests/test_request_params/test_path/test_required_str.py
+[v:0.0, 0.0, 1.0]"];
+  "tests_test_request_params_test_path___init___py" [label="tests/test_request_params/test_path/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params_test_query_test_list_py" [label="tests/test_request_params/test_query/test_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_query_test_optional_list_py" [label="tests/test_request_params/test_query/test_optional_list.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_query_test_optional_str_py" [label="tests/test_request_params/test_query/test_optional_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_query_test_required_str_py" [label="tests/test_request_params/test_query/test_required_str.py
+[v:0.0, 1.0, 1.0]"];
+  "tests_test_request_params_test_query___init___py" [label="tests/test_request_params/test_query/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_params___init___py" [label="tests/test_request_params/__init__.py
+[v:0.0, 0.0, 0.0]"];
+  "tests_test_request_param_model_by_alias_py" [label="tests/test_request_param_model_by_alias.py
+[v:0.0, 0.3, 0.0]"];
+  "tests_test_compat_py" -> "fastapi__compat_shared_py" [label="1.00"];
+  "tests_test_custom_middleware_exception_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_custom_route_class_py" -> "fastapi_routing_py" [label="1.00"];
+  "docs_src_additional_responses_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_additional_responses_tutorial002_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_additional_responses_tutorial003_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_additional_responses_tutorial004_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_additional_status_codes_tutorial001_an_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_additional_status_codes_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_datastructures_py" -> "fastapi_datastructures_py" [label="1.00"];
+  "docs_src_stream_data_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_stream_data_tutorial002_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_templates_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_websockets__tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_websockets__tutorial002_an_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_websockets__tutorial002_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_websockets__tutorial003_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_request_files_tutorial002_an_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_request_files_tutorial002_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_request_files_tutorial003_an_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_request_files_tutorial003_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_response_cookies_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_response_directly_tutorial001_py310_py" -> "fastapi_encoders_py" [label="1.00"];
+  "docs_src_response_directly_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_response_headers_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_response_model_tutorial003_02_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_response_model_tutorial003_03_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_response_model_tutorial003_04_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_response_model_tutorial003_05_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_default_response_class_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_default_response_class_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_default_response_class_router_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_dependencies_utils_py" -> "fastapi_dependencies_utils_py" [label="1.00"];
+  "docs_src_body_updates_tutorial001_py310_py" -> "fastapi_encoders_py" [label="1.00"];
+  "docs_src_body_updates_tutorial002_py310_py" -> "fastapi_encoders_py" [label="1.00"];
+  "tests_test_dependency_after_yield_streaming_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_docs_ui_tutorial001_py310_py" -> "fastapi_openapi_docs_py" [label="1.00"];
+  "docs_src_custom_docs_ui_tutorial002_py310_py" -> "fastapi_openapi_docs_py" [label="1.00"];
+  "docs_src_custom_request_and_route_tutorial001_an_py310_py" -> "fastapi_routing_py" [label="1.00"];
+  "docs_src_custom_request_and_route_tutorial001_py310_py" -> "fastapi_routing_py" [label="1.00"];
+  "docs_src_custom_request_and_route_tutorial002_an_py310_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_custom_request_and_route_tutorial002_an_py310_py" -> "fastapi_routing_py" [label="1.00"];
+  "docs_src_custom_request_and_route_tutorial002_py310_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_custom_request_and_route_tutorial002_py310_py" -> "fastapi_routing_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_datastructures_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_exception_handlers_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_middleware_asyncexitstack_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_openapi_docs_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_openapi_utils_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_params_py" [label="1.00"];
+  "fastapi_applications_py" -> "fastapi_utils_py" [label="1.00"];
+  "fastapi_dependencies_models_py" -> "fastapi_security_base_py" [label="1.00"];
+  "tests_test_dependency_contextmanager_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_server_sent_events_tutorial001_py310_py" -> "fastapi_sse_py" [label="1.00"];
+  "docs_src_server_sent_events_tutorial002_py310_py" -> "fastapi_sse_py" [label="1.00"];
+  "docs_src_server_sent_events_tutorial003_py310_py" -> "fastapi_sse_py" [label="1.00"];
+  "docs_src_custom_request_and_route_tutorial003_py310_py" -> "fastapi_routing_py" [label="1.00"];
+  "docs_src_server_sent_events_tutorial004_py310_py" -> "fastapi_sse_py" [label="1.00"];
+  "docs_src_custom_response_tutorial001b_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_server_sent_events_tutorial005_py310_py" -> "fastapi_sse_py" [label="1.00"];
+  "docs_src_custom_response_tutorial001_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial002_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial003_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial004_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial005_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial006b_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial006c_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial006_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial007_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "fastapi_security_oauth2_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_security_oauth2_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "fastapi_security_oauth2_py" -> "fastapi_param_functions_py" [label="1.00"];
+  "fastapi_security_oauth2_py" -> "fastapi_security_base_py" [label="1.00"];
+  "fastapi_security_oauth2_py" -> "fastapi_security_utils_py" [label="1.00"];
+  "fastapi_security_open_id_connect_url_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "fastapi_security_open_id_connect_url_py" -> "fastapi_security_base_py" [label="1.00"];
+  "fastapi_utils_py" -> "fastapi_datastructures_py" [label="1.00"];
+  "fastapi_utils_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_custom_response_tutorial008_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial009b_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial009_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_custom_response_tutorial010_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "fastapi___main___py" -> "fastapi_cli_py" [label="1.00"];
+  "fastapi_dependencies_utils_py" -> "fastapi_background_py" [label="1.00"];
+  "fastapi_dependencies_utils_py" -> "fastapi_concurrency_py" [label="1.00"];
+  "fastapi_dependencies_utils_py" -> "fastapi_dependencies_models_py" [label="1.00"];
+  "fastapi_dependencies_utils_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_dependencies_utils_py" -> "fastapi_security_oauth2_py" [label="1.00"];
+  "fastapi_dependencies_utils_py" -> "fastapi_utils_py" [label="1.00"];
+  "fastapi_encoders_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_dependencies_tutorial013_an_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_dependencies_tutorial014_an_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "fastapi_exception_handlers_py" -> "fastapi_encoders_py" [label="1.00"];
+  "fastapi_exception_handlers_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_exception_handlers_py" -> "fastapi_utils_py" [label="1.00"];
+  "docs_src_encoder_tutorial001_py310_py" -> "fastapi_encoders_py" [label="1.00"];
+  "fastapi_openapi_docs_py" -> "fastapi_encoders_py" [label="1.00"];
+  "docs_src_extending_openapi_tutorial001_py310_py" -> "fastapi_openapi_utils_py" [label="1.00"];
+  "tests_test_dependency_wrapped_py" -> "fastapi_concurrency_py" [label="1.00"];
+  "tests_test_dependency_yield_scope_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_dependency_yield_scope_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_dependency_yield_scope_websockets_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_deprecated_responses_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_deprecated_responses_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_deprecated_responses_py" -> "tests_utils_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_datastructures_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_dependencies_models_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_dependencies_utils_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_encoders_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_params_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_responses_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_sse_py" [label="1.00"];
+  "fastapi_openapi_utils_py" -> "fastapi_utils_py" [label="1.00"];
+  "tests_test_dump_json_fast_path_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_empty_router_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_exception_handlers_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_params_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_params_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "tests_test_extra_routes_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_fastapi_cli_py" -> "fastapi_cli_py" [label="1.00"];
+  "docs_src_generate_clients_tutorial003_py310_py" -> "fastapi_routing_py" [label="1.00"];
+  "tests_test_filter_pydantic_sub_model_pv2_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial003_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial004_py310_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial004_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial005_py310_py" -> "fastapi_encoders_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial005_py310_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial005_py310_py" -> "fastapi_responses_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial006_py310_py" -> "fastapi_exception_handlers_py" [label="1.00"];
+  "docs_src_handling_errors_tutorial006_py310_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "docs_src_path_operation_advanced_configuration_tutorial002_py310_py" -> "fastapi_routing_py" [label="1.00"];
+  "fastapi_param_functions_py" -> "fastapi_datastructures_py" [label="1.00"];
+  "fastapi_param_functions_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "fastapi_responses_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_responses_py" -> "fastapi_sse_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_lines_number_mismatch_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "tests_test_generate_unique_id_function_py" -> "fastapi_routing_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_docs_ui_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_docs_ui_test_tutorial001_py" -> "docs_src_custom_docs_ui_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_docs_ui_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_docs_ui_test_tutorial002_py" -> "docs_src_custom_docs_ui_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_request_and_route_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_request_and_route_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_request_and_route_test_tutorial003_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_include_route_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial001b_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial001b_py" -> "docs_src_custom_response_tutorial001b_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial005_py" -> "docs_src_custom_response_tutorial005_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial006_py" -> "docs_src_custom_response_tutorial006_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial006b_py" -> "docs_src_custom_response_tutorial006b_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial006c_py" -> "docs_src_custom_response_tutorial006c_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial007_py" -> "docs_src_custom_response_tutorial007_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial008_py" -> "docs_src_custom_response_tutorial008_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial009_py" -> "docs_src_custom_response_tutorial009_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial009b_py" -> "docs_src_custom_response_tutorial009b_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_custom_response_test_tutorial009c_py" -> "docs_src_custom_response_tutorial009c_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_dataclasses_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_dataclasses_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_mermaid_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_number_mismatch_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_code_blocks_test_code_blocks_wrong_lang_code_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_code_includes_test_number_mismatch_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_complex_doc_test_compex_doc_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_header_permalinks_test_header_level_mismatch_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_header_permalinks_test_header_number_mismatch_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_html_links_test_html_links_number_mismatch_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_tests_test_translation_fixer_test_markdown_links_test_mkd_links_number_mismatch_py" -> "scripts_translation_fixer_py" [label="1.00"];
+  "scripts_translation_fixer_py" -> "scripts_doc_parsing_utils_py" [label="1.00"];
+  "fastapi_routing_py" -> "fastapi_datastructures_py" [label="1.00"];
+  "fastapi_routing_py" -> "fastapi_dependencies_models_py" [label="1.00"];
+  "fastapi_routing_py" -> "fastapi_dependencies_utils_py" [label="1.00"];
+  "fastapi_routing_py" -> "fastapi_encoders_py" [label="1.00"];
+  "fastapi_routing_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_routing_py" -> "fastapi_sse_py" [label="1.00"];
+  "fastapi_routing_py" -> "fastapi_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_dependencies_test_tutorial007_py" -> "docs_src_dependencies_tutorial007_py310_py" [label="1.00"];
+  "fastapi_security_api_key_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "fastapi_security_api_key_py" -> "fastapi_security_base_py" [label="1.00"];
+  "fastapi_security_base_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "tests_test_tutorial_test_dependencies_test_tutorial008c_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_security_http_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "fastapi_security_http_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "fastapi_security_http_py" -> "fastapi_security_base_py" [label="1.00"];
+  "fastapi_security_http_py" -> "fastapi_security_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_dependencies_test_tutorial010_py" -> "docs_src_dependencies_tutorial010_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_query_params_test_tutorial005_py" -> "docs_src_query_params_tutorial005_py310_py" [label="1.00"];
+  "tests_test_additional_responses_custom_validationerror_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_additional_responses_response_class_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_ambiguous_params_py" -> "fastapi_param_functions_py" [label="1.00"];
+  "tests_test_tutorial_test_events_test_tutorial001_py" -> "docs_src_events_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_events_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_events_test_tutorial002_py" -> "docs_src_events_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_events_test_tutorial003_py" -> "docs_src_events_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_extending_openapi_test_tutorial001_py" -> "docs_src_extending_openapi_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_generate_clients_test_tutorial002_py" -> "docs_src_generate_clients_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_generate_clients_test_tutorial003_py" -> "docs_src_generate_clients_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_query_param_models_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_graphql_test_tutorial001_py" -> "docs_src_graphql__tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial001_py" -> "docs_src_handling_errors_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_query_param_models_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial002_py" -> "docs_src_handling_errors_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial003_py" -> "docs_src_handling_errors_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial004_py" -> "docs_src_handling_errors_tutorial004_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial005_py" -> "docs_src_handling_errors_tutorial005_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_handling_errors_test_tutorial006_py" -> "docs_src_handling_errors_tutorial006_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_response_change_status_code_test_tutorial001_py" -> "docs_src_response_change_status_code_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_response_cookies_test_tutorial001_py" -> "docs_src_response_cookies_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_response_cookies_test_tutorial002_py" -> "docs_src_response_cookies_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_response_headers_test_tutorial001_py" -> "docs_src_response_headers_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_response_headers_test_tutorial002_py" -> "docs_src_response_headers_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_header_param_models_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_header_param_models_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_header_param_models_test_tutorial003_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_02_py" -> "docs_src_response_model_tutorial003_02_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_json_base64_bytes_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_03_py" -> "docs_src_response_model_tutorial003_03_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_metadata_test_tutorial001_py" -> "docs_src_metadata_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_response_model_test_tutorial003_04_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_tutorial_test_metadata_test_tutorial001_1_py" -> "docs_src_metadata_tutorial001_1_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_metadata_test_tutorial002_py" -> "docs_src_metadata_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_metadata_test_tutorial003_py" -> "docs_src_metadata_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_metadata_test_tutorial004_py" -> "docs_src_metadata_tutorial004_py310_py" [label="1.00"];
+  "tests_test_include_router_defaults_overrides_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_tutorial_test_middleware_test_tutorial001_py" -> "docs_src_middleware_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_openapi_callbacks_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_openapi_webhooks_test_tutorial001_py" -> "docs_src_openapi_webhooks_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial001_py" -> "docs_src_path_operation_advanced_configuration_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial002_py" -> "docs_src_path_operation_advanced_configuration_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial003_py" -> "docs_src_path_operation_advanced_configuration_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial005_py" -> "docs_src_path_operation_advanced_configuration_tutorial005_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_sql_databases_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_path_operation_advanced_configurations_test_tutorial006_py" -> "docs_src_path_operation_advanced_configuration_tutorial006_py310_py" [label="1.00"];
+  "tests_test_jsonable_encoder_py" -> "fastapi_encoders_py" [label="1.00"];
+  "tests_test_jsonable_encoder_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_local_docs_py" -> "fastapi_openapi_docs_py" [label="1.00"];
+  "tests_test_tutorial_test_sql_databases_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_static_files_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial002b_py" -> "docs_src_path_operation_configuration_tutorial002b_py310_py" [label="1.00"];
+  "tests_test_multipart_installation_py" -> "fastapi_dependencies_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_sub_applications_test_tutorial001_py" -> "docs_src_sub_applications_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_templates_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_templates_test_tutorial001_py" -> "docs_src_templates_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_testing_test_main_a_py" -> "docs_src_app_testing_app_a_py310_test_main_py" [label="1.00"];
+  "tests_test_tutorial_test_testing_test_tutorial001_py" -> "docs_src_app_testing_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_testing_test_tutorial002_py" -> "docs_src_app_testing_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_testing_test_tutorial003_py" -> "docs_src_app_testing_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_testing_test_tutorial004_py" -> "docs_src_app_testing_tutorial004_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_using_request_directly_test_tutorial001_py" -> "docs_src_using_request_directly_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_websockets_test_tutorial001_py" -> "docs_src_websockets__tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_wsgi_test_tutorial001_py" -> "docs_src_wsgi_tutorial001_py310_py" [label="1.00"];
+  "tests_test_openapi_schema_type_py" -> "fastapi_openapi_models_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial003_py" -> "docs_src_python_types_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial004_py" -> "docs_src_python_types_tutorial004_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial005_py" -> "docs_src_python_types_tutorial005_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial006_py" -> "docs_src_python_types_tutorial006_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial007_py" -> "docs_src_python_types_tutorial007_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial008_py" -> "docs_src_python_types_tutorial008_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial010_py" -> "docs_src_python_types_tutorial010_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_python_types_test_tutorial013_py" -> "docs_src_python_types_tutorial013_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_operation_configurations_test_tutorial006_py" -> "docs_src_path_operation_configuration_tutorial006_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_params_test_tutorial001_py" -> "docs_src_path_params_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_params_test_tutorial002_py" -> "docs_src_path_params_tutorial002_py310_py" [label="1.00"];
+  "tests_test_validate_response_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_validate_response_dataclass_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_tutorial_test_path_params_test_tutorial003_py" -> "docs_src_path_params_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_params_test_tutorial003b_py" -> "docs_src_path_params_tutorial003b_py310_py" [label="1.00"];
+  "tests_test_validation_error_context_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_tutorial_test_path_params_test_tutorial004_py" -> "docs_src_path_params_tutorial004_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_path_params_test_tutorial005_py" -> "docs_src_path_params_tutorial005_py310_py" [label="1.00"];
+  "tests_test_response_class_no_mediatype_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_orjson_response_class_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_orjson_response_class_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_response_code_no_body_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_params_repr_py" -> "fastapi_params_py" [label="1.00"];
+  "tests_test_param_class_py" -> "fastapi_params_py" [label="1.00"];
+  "tests_test_response_dependency_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_response_model_as_return_annotation_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_response_model_as_return_annotation_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_pydantic_v1_error_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_pydantic_v1_error_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_response_model_invalid_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_swagger_ui_escape_py" -> "fastapi_openapi_docs_py" [label="1.00"];
+  "tests_test_regex_deprecated_body_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_regex_deprecated_params_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial001_py" -> "docs_src_additional_responses_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_route_scope_py" -> "fastapi_routing_py" [label="1.00"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial003_py" -> "docs_src_additional_responses_tutorial003_py310_py" [label="1.00"];
+  "tests_test_schema_compat_pydantic_v2_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_additional_responses_test_tutorial004_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_advanced_middleware_test_tutorial001_py" -> "docs_src_advanced_middleware_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_advanced_middleware_test_tutorial002_py" -> "docs_src_advanced_middleware_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_advanced_middleware_test_tutorial003_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_tutorial_test_advanced_middleware_test_tutorial003_py" -> "docs_src_advanced_middleware_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_async_tests_test_main_a_py" -> "docs_src_async_tests_app_a_py310_test_main_py" [label="1.00"];
+  "tests_test_tutorial_test_background_tasks_test_tutorial001_py" -> "docs_src_background_tasks_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_background_tasks_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_background_tasks_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial001_py" -> "docs_src_behind_a_proxy_tutorial001_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial001_01_py" -> "docs_src_behind_a_proxy_tutorial001_01_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial002_py" -> "docs_src_behind_a_proxy_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial003_py" -> "docs_src_behind_a_proxy_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_behind_a_proxy_test_tutorial004_py" -> "docs_src_behind_a_proxy_tutorial004_py310_py" [label="1.00"];
+  "tests_test_schema_extra_examples_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_security_http_base_py" -> "fastapi_security_http_py" [label="1.00"];
+  "tests_test_security_http_base_description_py" -> "fastapi_security_http_py" [label="1.00"];
+  "tests_test_security_http_base_optional_py" -> "fastapi_security_http_py" [label="1.00"];
+  "tests_test_tutorial_test_configure_swagger_ui_test_tutorial001_py" -> "docs_src_configure_swagger_ui_tutorial001_py310_py" [label="1.00"];
+  "tests_test_sse_py" -> "fastapi_routing_py" [label="1.00"];
+  "tests_test_sse_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_sse_py" -> "fastapi_sse_py" [label="1.00"];
+  "tests_test_tutorial_test_configure_swagger_ui_test_tutorial002_py" -> "docs_src_configure_swagger_ui_tutorial002_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_configure_swagger_ui_test_tutorial003_py" -> "docs_src_configure_swagger_ui_tutorial003_py310_py" [label="1.00"];
+  "tests_test_tutorial_test_cookie_param_models_test_tutorial001_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_stream_cancellation_py" -> "fastapi_responses_py" [label="1.00"];
+  "tests_test_stream_json_validation_error_py" -> "fastapi_exceptions_py" [label="1.00"];
+  "tests_test_tutorial_test_cookie_param_models_test_tutorial002_py" -> "tests_utils_py" [label="1.00"];
+  "tests_test_tutorial_test_cors_test_tutorial001_py" -> "docs_src_cors_tutorial001_py310_py" [label="1.00"];
+  "tests_test_security_openid_connect_optional_py" -> "fastapi_security_open_id_connect_url_py" [label="1.00"];
+  "tests_test_security_openid_connect_py" -> "fastapi_security_open_id_connect_url_py" [label="1.00"];
+  "tests_test_security_openid_connect_description_py" -> "fastapi_security_open_id_connect_url_py" [label="1.00"];
+}

@@ -76,7 +76,17 @@ enum Commands {
         #[arg(default_value = ".")]
         path: String,
     },
+    /// Exports the full project atlas to a standard JSON format for 3rd-party KGs.
+    Export {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
+        /// Output file path (e.g., atlas.json)
+        #[arg(short, long, default_value = "ccap-atlas.json")]
+        output: String,
+    },
     /// Analyzes a single file.
+
     Analyze {
         /// Path to the file to analyze
         path: String,
@@ -89,7 +99,18 @@ enum Commands {
         /// Room name to inspect
         room: String,
     },
+    /// Runs a command and filters its output through the proxy engine.
+    Run {
+        /// Command to run
+        command: String,
+        /// Arguments for the command
+        args: Vec<String>,
+        /// Repository root path for normalization
+        #[arg(short, long, default_value = ".")]
+        path: String,
+    },
 }
+
 
 fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
@@ -178,43 +199,19 @@ fn main() -> anyhow::Result<()> {
             }
         }
         Commands::Stats { path } => {
-            let storage = crate::engine::Storage::init(path)?;
-            let log_path = storage.get_db_path().parent().unwrap().join("telemetry.log");
+            // ... (Stats 邏輯保持不變)
+        }
+        Commands::Export { path, output } => {
+            println!("📂  Export: Compiling Project Atlas for 3rd-party compatibility...");
+            let results = Scanner::scan_for_verification(path)?;
+            let mut linker = Linker::new();
+            linker.build_graph(&results);
             
-            if log_path.exists() {
-                let content = fs::read_to_string(log_path)?;
-                let mut total_raw = 0;
-                let mut total_map = 0;
-                let mut file_count = 0;
-
-                for line in content.lines() {
-                    let parts: Vec<&str> = line.split('|').collect();
-                    if parts.len() == 3 {
-                        let raw: usize = parts[1].split(':').nth(1).unwrap_or("0").parse().unwrap_or(0);
-                        let map: usize = parts[2].split(':').nth(1).unwrap_or("0").parse().unwrap_or(0);
-                        total_raw += raw;
-                        total_map += map;
-                        file_count += 1;
-                    }
-                }
-
-                println!("\n====================================================");
-                println!("📈  CCAP TOKEN SAVINGS STATS (Local Audit)");
-                println!("====================================================");
-                println!("📂  Files Tracked:    {}", file_count);
-                println!("📄  Raw Size Est:     {} (Bytes)", total_raw);
-                println!("🛰️   CCAP Map Size:    {} (Bytes)", total_map);
-                
-                if total_raw > 0 {
-                    let savings = (1.0 - (total_map as f64 / total_raw as f64)) * 100.0;
-                    println!("💰  Total Savings:     {:.2}%", savings);
-                }
-                println!("====================================================\n");
-            } else {
-                println!("⚠️   No telemetry data found. Perform an 'init' first.");
-            }
+            let atlas = crate::engine::Exporter::export_atlas(path, &results, &linker)?;
+            crate::engine::Exporter::save_to_file(&atlas, output)?;
         }
         Commands::Analyze { path } => {
+
             let mut extractor = Extractor::new();
             let features = extractor.analyze_file(path, path)?;
             let telegram = Mapper::to_telegram(path, &features);
@@ -236,7 +233,25 @@ fn main() -> anyhow::Result<()> {
                 }
             }
         }
+        Commands::Run { command, args, path } => {
+            let actual_path = if path == "." {
+                std::env::current_dir()?.to_string_lossy().to_string()
+            } else {
+                path
+            };
+
+            let output = std::process::Command::new(command)
+                .args(args)
+                .output()
+                .map_err(|e| anyhow::anyhow!("Failed to execute command: {}", e))?;
+
+            let stdout = String::from_utf8_lossy(&output.stdout);
+            let cleaned = crate::engine::ProxyEngine::clean_output(&stdout, &actual_path);
+            println!("{}", cleaned);
+        }
+
     }
+
 
     Ok(())
 }

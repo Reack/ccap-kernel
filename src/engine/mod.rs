@@ -9,6 +9,8 @@ pub mod benchmark;
 pub mod verifier;
 pub mod patcher;
 pub mod evaluator;
+pub mod exporter;
+pub mod proxy;
 
 pub use extractor::Extractor;
 pub use mapper::Mapper;
@@ -21,3 +23,5 @@ pub use benchmark::Benchmark;
 pub use verifier::Verifier;
 pub use patcher::Patcher;
 pub use evaluator::Evaluator;
+pub use exporter::Exporter;
+pub use proxy::ProxyEngine;
