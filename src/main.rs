@@ -138,17 +138,19 @@ enum Commands {
         #[arg(short, long)]
         alias: String,
     },
-    /// Generates a semantic Wiki page for a given target.
+    /// Generates a semantic Wiki page for the project or a given target.
     Wiki {
         /// Repository root path
         #[arg(default_value = ".")]
         path: String,
-        /// Target file path to view
-        target: String,
+        /// Target file path to view (optional). If omitted, generates project index.
+        #[arg(short, long)]
+        target: Option<String>,
         /// Generate and open HTML view
         #[arg(short, long)]
         html: bool,
     },
+
 
     /// Runs the physical proofs verification suite (Chapter 14).
     Prove {
@@ -382,23 +384,38 @@ fn main() -> anyhow::Result<()> {
             let results = Scanner::scan_for_verification(path)?;
             let glossary = crate::engine::GlossaryEngine::load(path)?;
 
-            for (p, feat) in results {
-                if p == *target {
-                    let markdown = crate::engine::WikiProxy::generate_markdown(&p, &feat, &glossary);
-                    if *html {
-                        let html_content = crate::engine::WikiProxy::generate_html(&markdown);
-                        let tmp_path = std::env::temp_dir().join("ccap_wiki.html");
-                        fs::write(&tmp_path, html_content)?;
-                        println!("🌐  Wiki: Opening beautiful HTML view at {:?}", tmp_path);
-                        let _ = std::process::Command::new("cmd").args(["/c", "start", tmp_path.to_str().unwrap()]).spawn();
-                    } else {
-                        println!("{}", markdown);
+            let markdown = if let Some(t) = target {
+                let mut found = None;
+                for (p, feat) in &results {
+                    if p == t {
+                        found = Some(crate::engine::WikiProxy::generate_markdown(p, feat, &glossary));
+                        break;
                     }
+                }
+                if let Some(md) = found {
+                    md
+                } else {
+                    println!("❌  Target '{}' not found in map.", t);
                     return Ok(());
                 }
+            } else {
+                let mut linker = Linker::new();
+                linker.build_graph(&results);
+                crate::engine::WikiProxy::generate_project_index(path, &results, &linker, &glossary)
+            };
+
+            if *html {
+                let html_content = crate::engine::WikiProxy::generate_html(&markdown);
+                let tmp_path = std::env::temp_dir().join("ccap_wiki.html");
+                fs::write(&tmp_path, html_content)?;
+                println!("🌐  Wiki: Opening beautiful HTML view at {:?}", tmp_path);
+                let _ = std::process::Command::new("cmd").args(["/c", "start", tmp_path.to_str().unwrap()]).spawn();
+            } else {
+                println!("{}", markdown);
             }
-            println!("❌  Target '{}' not found in map.", target);
+            return Ok(());
         }
+
 
         Commands::Prove { path } => {
             let results = Scanner::scan_for_verification(path)?;

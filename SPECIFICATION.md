@@ -149,9 +149,10 @@ AI 始終在「低維拓樸空間」導航，僅在執行手術級修改時，�
 
 為解決與外部工具的協作以及 AI 修改行為的不可控性，CSK 實作標準數據出口與動態修改契約。
 
-### 11.1 標準數據出口 (SDE)
-*   **指令**: `ccap-kernel export --format <type>`。
-*   **輸出**: 100% 精準的結構化數據 (JSON/CSV)，包含所有 SCIP 符號、BOND 依賴與特徵張量。
+### 11.1 標準數據出口 (SDE) - NetworkX 相容
+*   **指令**: `ccap-kernel export --format json`。
+*   **格式**: 符合 **Node-Link JSON** 標準，可直接匯入 NetworkX, Cytoscape 或 D3.js。
+*   **內容**: 包含 SCIP 物理事實、BOND 依賴與特徵張量。
 
 ### 11.2 修改契約 (Edit Contract - The Safe-Vibe Protocol)
 為避免 Vibe Coding 導致的大規模架構坍塌，所有精確修改必須符合以下契約規範：
@@ -163,24 +164,24 @@ AI 始終在「低維拓樸空間」導航，僅在執行手術級修改時，�
 
 ## 第十二章：透明代理與語義守衛 (Transparent Proxy & Guard)
 
-為解決終極通訊中的雜訊與注意力分散問題，CSK 實作透明的 CLI 代理層。
-
-### 12.1 輸出乾乾淨淨 (Output Sanitization)
-*   **機制**: 攔截 AI 執行的 Shell 命令，自動對輸出進行去噪、去重與路徑歸一化。
-*   **效益**: 降低 30-60% 的動態通訊 Token 消耗，確保 AI 助手專注於核心業務邏輯而非冗長日誌。
+... (保持不變)
 
 ---
 
-## 第十三章：AI 原生 Wiki 與反向導航 (Agent-Native Wiki)
+## 第十三章：架構視覺化與語義別名 (Architectural Visualization)
 
-融合高熵電報的效率與 Wiki 式的 UX，建立專為 AI 助手設計的虛擬導航空間。
+融合物理保真度與人類語境，建立專為架構決策設計的視覺儀表板。
 
-### 13.1 語義反向代理 (Semantic Reverse Proxy)
-*   **虛擬路徑**: 建立虛擬路徑 `@wiki/`，將 AI 的檔案請求導向語義地圖。
-*   **動態 Wiki 生成**: 核心引擎根據譜分群結果，自動生成具備高熵標籤的 Markdown 摘要。
-*   **雙向連動**: Wiki 中的 SCIP 符號具備「可操作性」，AI 可直接透過 Wiki 頁面發起手術級修改。
+### 13.1 原型識別引擎 (Archetype Engine)
+*   **機制**: 在本地 0 Token 成本下，根據符號特徵（如 `Controller`, `SQL`, `Auth`）自動為語義分區標註「工程角色」。
+*   **智慧命名**: 將抽象的 `Cluster_0` 轉換為具備業務意義的名稱（如 `Security Gateway`）。
+
+### 13.2 虛擬導航與 Mermaid.js 繪圖
+*   **動態 Wiki**: 產出包含 **Mermaid.js** 腳本的 HTML 儀表板，提供互動式架構全景。
+*   **別名優先 (Alias-Driven)**: 繪圖引擎優先採用人類在 `Glossary` 中定義的別名，實現「物理事實 + 人類直覺」的完美呈現。
 
 ---
+
 
 ## 第十四章：物理證明與驗證公理 (Physical Proofs & Axioms)
 

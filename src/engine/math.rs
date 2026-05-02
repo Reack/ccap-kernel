@@ -48,11 +48,12 @@ impl MathEngine {
                 }
             }
 
-            let name = keywords.into_iter().take(5).collect::<Vec<_>>().join("_");
+            let name = crate::engine::archetype::ArchetypeEngine::infer_cluster_name(&keywords, i);
             clusters.push(Cluster {
-                name: if name.is_empty() { format!("cluster_{}", i) } else { name },
+                name,
                 members,
             });
+
         }
 
         Ok(clusters)
