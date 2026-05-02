@@ -18,9 +18,14 @@ pub struct ScipSymbol {
     pub id: String,
     pub name: String,
     pub line: usize,
-    pub range: (usize, usize), // (start_byte, end_byte) for surgical patching
+    pub range: (usize, usize),
 }
 
+#[derive(Debug, Serialize, Deserialize, Clone, Default)]
+pub struct Cluster {
+    pub name: String,
+    pub members: Vec<String>,
+}
 
 pub struct Extractor {
     parser: Parser,
@@ -50,7 +55,6 @@ impl Extractor {
             _ => return Err(anyhow::anyhow!("Unsupported language: .{}", extension)),
         };
 
-        // Normalize module path for SCIP
         let mod_path = rel_path.replace("\\", "/");
         let mod_path = mod_path.split('.').next().unwrap_or(&mod_path).to_string();
 
@@ -75,9 +79,7 @@ impl Extractor {
         let kind = node.kind();
         let mut current_symbol = None;
 
-        // --- UNIVERSAL SEMANTIC MAPPING ENGINE ---
         match (ext, kind) {
-            // 1. DATA / CLASS DEFINITIONS
             (_, "class_definition") | (_, "class_declaration") | (_, "struct_specifier") |
             ("rs", "struct_item") | ("rs", "enum_item") | ("go", "type_declaration") => {
                 f.data_density_score += 1.0;
@@ -85,23 +87,20 @@ impl Extractor {
                     current_symbol = Some(code[name_node.byte_range()].to_string());
                 }
             },
-
-            // 2. LOGIC / FUNCTION DEFINITIONS
-            (_, "function_definition") | (_, "function_declaration") | (_, "method_definition") |
             ("rs", "function_item") | ("go", "function_declaration") | ("cs", "method_declaration") => {
+                let name_node = node.child_by_field_name("name").unwrap_or(node);
+                current_symbol = Some(code[name_node.byte_range()].to_string());
+            }
+            (_, "function_definition") | (_, "function_declaration") | (_, "method_definition") => {
                 if let Some(name_node) = node.child_by_field_name("name") {
                     current_symbol = Some(code[name_node.byte_range()].to_string());
                 }
                 f.symbol_count += 1;
             },
-
-            // 3. CONTROL FLOW
             (_, "if_statement") | (_, "for_statement") | (_, "while_statement") | (_, "try_statement") |
             ("rs", "if_expression") | ("rs", "for_expression") | ("rs", "match_expression") => {
                 f.control_flow_score += 1.0;
             },
-
-            // 4. IMPORTS / REFERENCES (SCIP Normalization)
             ("py", "import_statement") | ("py", "import_from_statement") |
             ("rs", "use_declaration") | ("go", "import_declaration") | ("java", "import_declaration") => {
                 let mut cursor = node.walk();
@@ -125,9 +124,7 @@ impl Extractor {
                     f.references.push(format!("ccap . . {}#", name));
                 }
             },
-
-            // 5. I/O HEURISTICS
-            (_, "call") | (_, "call_expression") | ("rs", "call_expression") => {
+            (_, "call") | (_, "call_expression") => {
                 let text = &code[node.byte_range()].to_lowercase();
                 if text.contains("open") || text.contains("print") || text.contains("fetch") || 
                    text.contains("socket") || text.contains("http") || text.contains("io") {
@@ -137,7 +134,6 @@ impl Extractor {
             _ => {}
         }
 
-        // --- SCOPE & SCIP ID GENERATION ---
         if let Some(name) = current_symbol {
             let scip_id = format!("ccap . . {}#{}#", scope.join("#"), name);
             let range = node.byte_range();
@@ -148,7 +144,6 @@ impl Extractor {
                 line: node.start_position().row + 1,
                 range: (range.start, range.end),
             });
-
 
             if f.top_symbols.len() < 5 && !name.starts_with('_') {
                 f.top_symbols.push(name.clone());

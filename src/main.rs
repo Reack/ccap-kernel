@@ -2,7 +2,8 @@ use clap::{Parser, Subcommand};
 use std::fs;
 mod engine;
 
-use crate::engine::{Extractor, Mapper, Scanner, Benchmark, Linker, Patcher, Verifier};
+use crate::engine::{Extractor, Mapper, Scanner, Benchmark, Linker, Verifier};
+
 
 #[derive(Parser)]
 #[command(name = "ccap-kernel")]

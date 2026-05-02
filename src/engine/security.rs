@@ -37,7 +37,9 @@ impl SecurityEngine {
     }
 
     /// Decrypts data using AES-256-GCM.
+    #[allow(dead_code)]
     pub fn decrypt(&self, encrypted_data: &[u8]) -> anyhow::Result<Vec<u8>> {
+
         if encrypted_data.len() < 12 {
             return Err(anyhow::anyhow!("Invalid encrypted data: too short"));
         }

@@ -1,49 +1,45 @@
-use crate::engine::extractor::FileFeatures;
-use petgraph::graph::{DiGraph, NodeIndex};
+use std::collections::HashSet;
+use petgraph::graph::NodeIndex;
 use petgraph::Direction;
-use std::collections::{HashMap, HashSet};
+use crate::engine::extractor::FileFeatures;
+use petgraph::prelude::DiGraph;
+use serde::{Serialize, Deserialize};
 
-pub struct Linker {
-    graph: DiGraph<String, f32>,
-    nodes: HashMap<String, NodeIndex>,
-}
-
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct ImpactReport {
-    pub target: String,
     pub radius: usize,
     pub dependents: Vec<String>,
     pub risk_score: f32,
+}
+
+pub struct Linker {
+    graph: DiGraph<String, f32>,
+    path_to_idx: std::collections::HashMap<String, NodeIndex>,
 }
 
 impl Linker {
     pub fn new() -> Self {
         Self {
             graph: DiGraph::new(),
-            nodes: HashMap::new(),
+            path_to_idx: std::collections::HashMap::new(),
         }
     }
 
-    pub fn build_graph(&mut self, analysis_results: &[(String, FileFeatures)]) {
-        let mut export_index = HashMap::new();
-        for (path, feat) in analysis_results {
+    pub fn build_graph(&mut self, results: &[(String, FileFeatures)]) {
+        // 1. Add all nodes
+        for (path, _) in results {
             let idx = self.graph.add_node(path.clone());
-            self.nodes.insert(path.clone(), idx);
-
-            for export in &feat.exports {
-                export_index.insert(export.id.clone(), idx);
-            }
+            self.path_to_idx.insert(path.clone(), idx);
         }
 
-        for (path, feat) in analysis_results {
-            let source_idx = *self.nodes.get(path).unwrap();
-            for ref_id in &feat.references {
-                for (exp_id, &target_idx) in &export_index {
-                    if source_idx == target_idx { continue; }
-                    if exp_id == ref_id || exp_id.starts_with(ref_id) {
-                        if !self.graph.contains_edge(source_idx, target_idx) {
-                            self.graph.add_edge(source_idx, target_idx, 1.0);
-                        }
+        // 2. Add edges based on SCIP references
+        for (path, features) in results {
+            if let Some(&u) = self.path_to_idx.get(path) {
+                for ref_id in &features.references {
+                    // SCIP ID to module path mapping (heuristic)
+                    let target_mod = ref_id.split('#').nth(0).unwrap_or("").replace("ccap . . ", "");
+                    if let Some(&v) = self.path_to_idx.get(&target_mod) {
+                        self.graph.add_edge(u, v, 1.0);
                     }
                 }
             }
@@ -51,58 +47,50 @@ impl Linker {
     }
 
     pub fn calculate_impact(&self, target_path: &str) -> Option<ImpactReport> {
-        let start_node = self.nodes.get(target_path)?;
+        let root_idx = *self.path_to_idx.get(target_path)?;
         
-        let mut dependents = Vec::new();
-        let mut stack = vec![(*start_node, 0)];
-        let mut visited = HashSet::new();
-        visited.insert(*start_node);
+        let mut victims = HashSet::new();
+        let mut current_layer = vec![root_idx];
+        let mut radius = 0;
 
-        while let Some((curr, depth)) = stack.pop() {
-            if curr != *start_node {
-                dependents.push(self.graph[curr].clone());
-            }
-
-            for neighbor in self.graph.neighbors_directed(curr, Direction::Incoming) {
-                if !visited.contains(&neighbor) {
-                    visited.insert(neighbor);
-                    stack.push((neighbor, depth + 1));
+        // BFS to find all incoming dependencies (who depends on me?)
+        while !current_layer.is_empty() && radius < 5 {
+            let mut next_layer = Vec::new();
+            for &idx in &current_layer {
+                let mut neighbors = self.graph.neighbors_directed(idx, Direction::Incoming);
+                while let Some(neighbor) = neighbors.next() {
+                    if victims.insert(neighbor) {
+                        next_layer.push(neighbor);
+                    }
                 }
             }
+            if !next_layer.is_empty() { radius += 1; }
+            current_layer = next_layer;
         }
 
-        // Calculate max depth from the visited set (this logic is simplified for speed)
-        let max_depth = if !dependents.is_empty() { 3 } else { 0 }; // Placeholder for actual BFS depth
+        let dependents: Vec<String> = victims.iter()
+            .map(|&idx| self.graph[idx].clone())
+            .collect();
 
         Some(ImpactReport {
-            target: target_path.to_string(),
-            radius: max_depth,
+            radius,
             dependents,
-            risk_score: (base_risk_calculation(&self.graph, *start_node, &visited)).min(1.0),
+            risk_score: (radius as f32 / 5.0).min(1.0),
         })
     }
 
     pub fn export_edges(&self) -> Vec<(usize, usize, f32)> {
-        self.graph
-            .edge_indices()
+        self.graph.edge_indices()
             .map(|e| {
                 let (u, v) = self.graph.edge_endpoints(e).unwrap();
-                let weight = *self.graph.edge_weight(e).unwrap();
-                (u.index(), v.index(), weight)
+                (u.index(), v.index(), *self.graph.edge_weight(e).unwrap())
             })
             .collect()
     }
 
     pub fn get_node_paths(&self) -> Vec<String> {
-        let mut paths = vec![String::new(); self.graph.node_count()];
-        for idx in self.graph.node_indices() {
-            paths[idx.index()] = self.graph[idx].clone();
-        }
-        paths
+        (0..self.graph.node_count())
+            .map(|i| self.graph[NodeIndex::new(i)].clone())
+            .collect()
     }
-}
-
-fn base_risk_calculation(graph: &DiGraph<String, f32>, start: NodeIndex, visited: &HashSet<NodeIndex>) -> f32 {
-    let in_degree = graph.neighbors_directed(start, Direction::Incoming).count();
-    (in_degree as f32 * 0.4) + (visited.len() as f32 * 0.1)
 }

@@ -1,0 +1,1209 @@
+{
+  "project_name": "",
+  "nodes": [
+    {
+      "id": "src/engine/patcher.rs",
+      "features": {
+        "control_flow_score": 0.06666667,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.2,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Patcher",
+          "apply_patch"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/patcher#Patcher#",
+            "name": "Patcher",
+            "line": 5,
+            "range": [
+              81,
+              100
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/patcher#apply_patch#",
+            "name": "apply_patch",
+            "line": 9,
+            "range": [
+              198,
+              1524
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/security.rs",
+      "features": {
+        "control_flow_score": 0.13333334,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.4,
+        "symbol_count": 0,
+        "top_symbols": [
+          "SecurityEngine",
+          "new",
+          "encrypt",
+          "decrypt",
+          "obfuscate_symbol"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/security#SecurityEngine#",
+            "name": "SecurityEngine",
+            "line": 8,
+            "range": [
+              132,
+              182
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/security#new#",
+            "name": "new",
+            "line": 13,
+            "range": [
+              213,
+              476
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/security#encrypt#",
+            "name": "encrypt",
+            "line": 23,
+            "range": [
+              526,
+              1083
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/security#decrypt#",
+            "name": "decrypt",
+            "line": 41,
+            "range": [
+              1158,
+              1668
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/security#obfuscate_symbol#",
+            "name": "obfuscate_symbol",
+            "line": 56,
+            "range": [
+              1732,
+              2078
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/security#perturb_vector#",
+            "name": "perturb_vector",
+            "line": 66,
+            "range": [
+              2172,
+              2446
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/prover.rs",
+      "features": {
+        "control_flow_score": 0.13333334,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "CCAPProver",
+          "run_physical_proofs"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/prover#CCAPProver#",
+            "name": "CCAPProver",
+            "line": 3,
+            "range": [
+              75,
+              97
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/prover#run_physical_proofs#",
+            "name": "run_physical_proofs",
+            "line": 7,
+            "range": [
+              175,
+              1902
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/linker.rs",
+      "features": {
+        "control_flow_score": 0.53333336,
+        "data_density_score": 0.6666667,
+        "io_density_score": 0.4,
+        "symbol_count": 0,
+        "top_symbols": [
+          "ImpactReport",
+          "Linker",
+          "new",
+          "build_graph",
+          "calculate_impact"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/linker#ImpactReport#",
+            "name": "ImpactReport",
+            "line": 9,
+            "range": [
+              258,
+              370
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/linker#Linker#",
+            "name": "Linker",
+            "line": 15,
+            "range": [
+              374,
+              494
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/linker#new#",
+            "name": "new",
+            "line": 21,
+            "range": [
+              517,
+              669
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/linker#build_graph#",
+            "name": "build_graph",
+            "line": 28,
+            "range": [
+              677,
+              1521
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/linker#calculate_impact#",
+            "name": "calculate_impact",
+            "line": 49,
+            "range": [
+              1529,
+              2723
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/linker#export_edges#",
+            "name": "export_edges",
+            "line": 82,
+            "range": [
+              2731,
+              3039
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/linker#get_node_paths#",
+            "name": "get_node_paths",
+            "line": 91,
+            "range": [
+              3047,
+              3222
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/mapper.rs",
+      "features": {
+        "control_flow_score": 0.46666667,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.2,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Mapper",
+          "to_telegram",
+          "rank"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/mapper#Mapper#",
+            "name": "Mapper",
+            "line": 3,
+            "range": [
+              47,
+              65
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/mapper#to_telegram#",
+            "name": "to_telegram",
+            "line": 6,
+            "range": [
+              88,
+              1200
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/mapper#rank#",
+            "name": "rank",
+            "line": 40,
+            "range": [
+              1208,
+              1383
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/proxy.rs",
+      "features": {
+        "control_flow_score": 0.46666667,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "ProxyEngine",
+          "clean_output"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/proxy#ProxyEngine#",
+            "name": "ProxyEngine",
+            "line": 1,
+            "range": [
+              0,
+              23
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/proxy#clean_output#",
+            "name": "clean_output",
+            "line": 5,
+            "range": [
+              117,
+              1434
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/storage.rs",
+      "features": {
+        "control_flow_score": 0.26666668,
+        "data_density_score": 0.33333334,
+        "io_density_score": 1.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Storage",
+          "init",
+          "with_security",
+          "get_map_dir",
+          "save_map"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/storage#Storage#",
+            "name": "Storage",
+            "line": 6,
+            "range": [
+              140,
+              222
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/storage#init#",
+            "name": "init",
+            "line": 12,
+            "range": [
+              246,
+              845
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/storage#with_security#",
+            "name": "with_security",
+            "line": 31,
+            "range": [
+              853,
+              982
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/storage#get_map_dir#",
+            "name": "get_map_dir",
+            "line": 36,
+            "range": [
+              990,
+              1067
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/storage#save_map#",
+            "name": "save_map",
+            "line": 40,
+            "range": [
+              1075,
+              3301
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "scripts/bridge_to_graphviz.py",
+      "features": {
+        "control_flow_score": 0.26666668,
+        "data_density_score": 0.0,
+        "io_density_score": 1.0,
+        "symbol_count": 1,
+        "top_symbols": [
+          "convert_to_dot"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . scripts/bridge_to_graphviz#convert_to_dot#",
+            "name": "convert_to_dot",
+            "line": 4,
+            "range": [
+              27,
+              1444
+            ]
+          }
+        ],
+        "references": [
+          "ccap . . json#",
+          "ccap . . sys#"
+        ]
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/verifier.rs",
+      "features": {
+        "control_flow_score": 0.6666667,
+        "data_density_score": 0.6666667,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "VerificationReport",
+          "Verifier",
+          "verify_scip_ids",
+          "calculate_fidelity",
+          "verify_topological_accuracy"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/verifier#VerificationReport#",
+            "name": "VerificationReport",
+            "line": 6,
+            "range": [
+              125,
+              229
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/verifier#Verifier#",
+            "name": "Verifier",
+            "line": 11,
+            "range": [
+              233,
+              253
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/verifier#verify_scip_ids#",
+            "name": "verify_scip_ids",
+            "line": 15,
+            "range": [
+              332,
+              1031
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/verifier#calculate_fidelity#",
+            "name": "calculate_fidelity",
+            "line": 38,
+            "range": [
+              1122,
+              1921
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/verifier#verify_topological_accuracy#",
+            "name": "verify_topological_accuracy",
+            "line": 59,
+            "range": [
+              2014,
+              2568
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/wiki_proxy.rs",
+      "features": {
+        "control_flow_score": 0.06666667,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "WikiProxy",
+          "generate_page"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/wiki_proxy#WikiProxy#",
+            "name": "WikiProxy",
+            "line": 3,
+            "range": [
+              69,
+              90
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/wiki_proxy#generate_page#",
+            "name": "generate_page",
+            "line": 7,
+            "range": [
+              204,
+              1895
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/math.rs",
+      "features": {
+        "control_flow_score": 0.6,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "MathEngine",
+          "compute_fiedler_value",
+          "spectral_cluster"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/math#MathEngine#",
+            "name": "MathEngine",
+            "line": 5,
+            "range": [
+              109,
+              131
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/math#compute_fiedler_value#",
+            "name": "compute_fiedler_value",
+            "line": 11,
+            "range": [
+              266,
+              847
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/math#spectral_cluster#",
+            "name": "spectral_cluster",
+            "line": 28,
+            "range": [
+              938,
+              1941
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/mod.rs",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/scanner.rs",
+      "features": {
+        "control_flow_score": 0.4,
+        "data_density_score": 0.33333334,
+        "io_density_score": 1.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Scanner",
+          "scan_project",
+          "scan_for_verification"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/scanner#Scanner#",
+            "name": "Scanner",
+            "line": 10,
+            "range": [
+              242,
+              261
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/scanner#scan_project#",
+            "name": "scan_project",
+            "line": 13,
+            "range": [
+              285,
+              4363
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/scanner#scan_for_verification#",
+            "name": "scan_for_verification",
+            "line": 100,
+            "range": [
+              4371,
+              5885
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/benchmark.rs",
+      "features": {
+        "control_flow_score": 0.4,
+        "data_density_score": 0.33333334,
+        "io_density_score": 0.2,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Benchmark",
+          "run",
+          "results_to_slice"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/benchmark#Benchmark#",
+            "name": "Benchmark",
+            "line": 6,
+            "range": [
+              128,
+              149
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/benchmark#run#",
+            "name": "run",
+            "line": 9,
+            "range": [
+              175,
+              2938
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/benchmark#results_to_slice#",
+            "name": "results_to_slice",
+            "line": 67,
+            "range": [
+              2945,
+              3087
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/evaluator.rs",
+      "features": {
+        "control_flow_score": 0.33333334,
+        "data_density_score": 0.6666667,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Evaluator",
+          "AuditReport",
+          "perform_audit"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/evaluator#Evaluator#",
+            "name": "Evaluator",
+            "line": 3,
+            "range": [
+              30,
+              51
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/evaluator#AuditReport#",
+            "name": "AuditReport",
+            "line": 6,
+            "range": [
+              73,
+              439
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/evaluator#perform_audit#",
+            "name": "perform_audit",
+            "line": 17,
+            "range": [
+              552,
+              2140
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/contract.rs",
+      "features": {
+        "control_flow_score": 0.2,
+        "data_density_score": 0.6666667,
+        "io_density_score": 0.2,
+        "symbol_count": 0,
+        "top_symbols": [
+          "ModificationContract",
+          "ContractGuard",
+          "verify_modification"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/contract#ModificationContract#",
+            "name": "ModificationContract",
+            "line": 5,
+            "range": [
+              147,
+              267
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/contract#ContractGuard#",
+            "name": "ContractGuard",
+            "line": 11,
+            "range": [
+              271,
+              296
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/contract#verify_modification#",
+            "name": "verify_modification",
+            "line": 15,
+            "range": [
+              408,
+              1395
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-c-d06881ca15bbe711/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-c-sharp-ae30401bc6d8a990/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-cpp-9d8d5d74e1bf562c/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/delta.rs",
+      "features": {
+        "control_flow_score": 0.46666667,
+        "data_density_score": 0.6666667,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "PhysicalDelta",
+          "DeltaEngine",
+          "calculate_delta",
+          "print_telegram"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/delta#PhysicalDelta#",
+            "name": "PhysicalDelta",
+            "line": 5,
+            "range": [
+              136,
+              357
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/delta#DeltaEngine#",
+            "name": "DeltaEngine",
+            "line": 12,
+            "range": [
+              361,
+              384
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/delta#calculate_delta#",
+            "name": "calculate_delta",
+            "line": 16,
+            "range": [
+              493,
+              1855
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/delta#print_telegram#",
+            "name": "print_telegram",
+            "line": 51,
+            "range": [
+              1863,
+              2503
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-go-7d9397177634fe75/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/exporter.rs",
+      "features": {
+        "control_flow_score": 0.13333334,
+        "data_density_score": 1.0,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "AtlasExport",
+          "NodeExport",
+          "EdgeExport",
+          "Exporter",
+          "export_atlas"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/exporter#AtlasExport#",
+            "name": "AtlasExport",
+            "line": 8,
+            "range": [
+              191,
+              315
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/exporter#NodeExport#",
+            "name": "NodeExport",
+            "line": 15,
+            "range": [
+              361,
+              503
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/exporter#EdgeExport#",
+            "name": "EdgeExport",
+            "line": 22,
+            "range": [
+              549,
+              641
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/exporter#Exporter#",
+            "name": "Exporter",
+            "line": 28,
+            "range": [
+              645,
+              665
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/exporter#export_atlas#",
+            "name": "export_atlas",
+            "line": 32,
+            "range": [
+              755,
+              1900
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/exporter#save_to_file#",
+            "name": "save_to_file",
+            "line": 71,
+            "range": [
+              1908,
+              2186
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-java-7bed6356ec67061f/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-javascript-b3190c0d955f97c5/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-python-6332e6b5762d223a/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-rust-5eea7caf102c1335/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/glossary.rs",
+      "features": {
+        "control_flow_score": 0.06666667,
+        "data_density_score": 0.6666667,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Glossary",
+          "GlossaryEngine",
+          "load",
+          "save",
+          "set_alias"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/glossary#Glossary#",
+            "name": "Glossary",
+            "line": 6,
+            "range": [
+              137,
+              238
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/glossary#GlossaryEngine#",
+            "name": "GlossaryEngine",
+            "line": 10,
+            "range": [
+              242,
+              268
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/glossary#load#",
+            "name": "load",
+            "line": 13,
+            "range": [
+              299,
+              692
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/glossary#save#",
+            "name": "save",
+            "line": 24,
+            "range": [
+              700,
+              1039
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/glossary#set_alias#",
+            "name": "set_alias",
+            "line": 33,
+            "range": [
+              1047,
+              1387
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/tree-sitter-2ebe0bdec6e8a565/out/flag_check.c",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 1,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/serde-3f7b02e6a96549d7/out/private.rs",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "target/release/build/serde_core-9c794e0b06b7ac13/out/private.rs",
+      "features": {
+        "control_flow_score": 0.0,
+        "data_density_score": 0.0,
+        "io_density_score": 0.0,
+        "symbol_count": 0,
+        "top_symbols": [],
+        "exports": [],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/main.rs",
+      "features": {
+        "control_flow_score": 1.0,
+        "data_density_score": 0.6666667,
+        "io_density_score": 1.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "Cli",
+          "Commands",
+          "main"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/main#Cli#",
+            "name": "Cli",
+            "line": 11,
+            "range": [
+              289,
+              353
+            ]
+          },
+          {
+            "id": "ccap . . src/main#Commands#",
+            "name": "Commands",
+            "line": 17,
+            "range": [
+              377,
+              4369
+            ]
+          },
+          {
+            "id": "ccap . . src/main#main#",
+            "name": "main",
+            "line": 157,
+            "range": [
+              4371,
+              16490
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    },
+    {
+      "id": "src/engine/extractor.rs",
+      "features": {
+        "control_flow_score": 0.8666667,
+        "data_density_score": 1.0,
+        "io_density_score": 1.0,
+        "symbol_count": 0,
+        "top_symbols": [
+          "FileFeatures",
+          "ScipSymbol",
+          "Cluster",
+          "Extractor",
+          "new"
+        ],
+        "exports": [
+          {
+            "id": "ccap . . src/engine/extractor#FileFeatures#",
+            "name": "FileFeatures",
+            "line": 6,
+            "range": [
+              146,
+              408
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/extractor#ScipSymbol#",
+            "name": "ScipSymbol",
+            "line": 17,
+            "range": [
+              470,
+              594
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/extractor#Cluster#",
+            "name": "Cluster",
+            "line": 25,
+            "range": [
+              656,
+              733
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/extractor#Extractor#",
+            "name": "Extractor",
+            "line": 30,
+            "range": [
+              737,
+              783
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/extractor#new#",
+            "name": "new",
+            "line": 35,
+            "range": [
+              809,
+              878
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/extractor#analyze_file#",
+            "name": "analyze_file",
+            "line": 39,
+            "range": [
+              886,
+              2609
+            ]
+          },
+          {
+            "id": "ccap . . src/engine/extractor#traverse_node#",
+            "name": "traverse_node",
+            "line": 78,
+            "range": [
+              2617,
+              6984
+            ]
+          }
+        ],
+        "references": []
+      },
+      "inferred_role": "PENDING_INFERENCE"
+    }
+  ],
+  "edges": []
+}

@@ -37,11 +37,8 @@ impl Storage {
         self.root.join("maps")
     }
 
-    pub fn get_db_path(&self) -> PathBuf {
-        self.root.join("index.db")
-    }
-
     pub fn save_map(&self, rel_path: &str, telegram: &str, features: &FileFeatures) -> anyhow::Result<()> {
+
         let safe_path = rel_path.replace("\\", "/").replace(":", "_");
         let map_dir = self.get_map_dir().join(&safe_path);
         fs::create_dir_all(&map_dir)?;
