@@ -1,89 +1,90 @@
-# CCAP-Kernel：AI 原生語義編譯核心 (v0.1.3)
+﻿# CCAP-Kernel嚗I ??隤儔蝺刻陌?詨? (v0.1.4)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build: Rust](https://img.shields.io/badge/Language-Rust-orange.svg)](https://www.rust-lang.org/)
 [![Standards: IEEE/ISO](https://img.shields.io/badge/Standards-IEEE_P3361_/_ISO_25059-blue.svg)](https://ieee.org)
-[![Version: v0.1.3](https://img.shields.io/badge/Version-v0.1.3-green.svg)](https://github.com/Reack/ccap-kernel/releases/tag/v0.1.3)
+[![Version: v0.1.4](https://img.shields.io/badge/Version-v0.1.4-green.svg)](https://github.com/Reack/ccap-kernel/releases/tag/v0.1.4)
 
-**CCAP (認知連續性與自主主動性協定)** 是一個革命性的語義作業系統層，旨在彌合「氛圍開發 (Vibe Coding)」與工業級生產環境之間的巨大鴻溝。它利用 **線性代數**、**拓樸塌陷 (Topological Squeezing)** 與 **通用語義消費** 技術，將百萬行級別的專案壓縮為 AI 助手可以直接理解的高熵語義地圖——並達成 **90% 以上的 Token 節省**。
-
----
-
-## ⚡ v0.1.3 "Universal Consumer" 版本發佈
-
-v0.1.3 版本標誌著從手工解析向 **「統一語義消費者」** 架構的重大戰略轉型。
-
-*   **語義重力 (Semantic Gravity)**：自動根據物理屬性（程式碼長度、IO 密度、度數）對符號進行排名，精確識別專案的邏輯核心。
-*   **分級精度 (Tiered Precision)**：無縫切換極速的 **Tree-sitter** 語法掃描與正式的 **SCIP/LSIF** 語義注入。
-*   **以人為本的診斷**：`verify` 指令現在提供 **信心分數 (Confidence Score)** 與 **修復導引**，根據您的程式碼庫建議最佳的索引工具（如 `scip-python`, `scip-clang`）。
+**CCAP (隤????扯??芯蜓銝餃??批?摰?** ?臭???賣抒?隤儔雿平蝟餌絞撅歹??典敶???????(Vibe Coding)??撌交平蝝??Ｙ憓???撌典之暾餅????拍 **蝺找誨??*??*?邪憛 (Topological Squeezing)** ??**?隤儔瘨祥** ?銵?撠?祈?蝝??獢?蝮桃 AI ?拇??臭誑?湔?圾???菔?蝢拙?蒂?? **90% 隞乩???Token 蝭??*??
 
 ---
 
-## 🚀 核心能力
+## ??v0.1.4 "Universal Consumer" ??潔?
 
-*   **零 Token 冷啟動**：本地 Rust 引擎 (CSK) 在數秒內建立全專案數學模型，不消耗任何 AI Token。
-*   **拓樸導航**：利用 **譜分群 (Spectral Clustering)** 自動將程式碼庫劃分為具備語義內聚性的「語義室 (Rooms)」。
-*   **手術級修改**：基於位元組座標的精確 AST 補丁，徹底消除「全檔案複寫」導致的語義遺失問題。
-*   **通用多語言支持**：原生支援 Python, JS/TS, C/C++, Rust, Go, Java 與 C#。
+v0.1.4 ?璅????極閫????**?絞銝隤儔瘨祥??* ?嗆???憭扳?亥???
+
+*   **隤儔?? (Semantic Gravity)**嚗???惇?改?蝔?蝣潮摨艾O 撖漲?漲?賂?撠泵?脰???嚗移蝣箄??亙?獢??摩?詨???
+*   **??蝎曉漲 (Tiered Precision)**嚗蝮怠??扔?? **Tree-sitter** 隤????迤撘? **SCIP/LSIF** 隤儔瘜典??
+*   **隞乩犖?箸?那??*嚗verify` ?誘?曉?? **靽∪?? (Confidence Score)** ??**靽桀儔撠?**嚗???撘Ⅳ摨怠遣霅唳?雿喟?蝝Ｗ?撌亙嚗? `scip-python`, `scip-clang`嚗?
 
 ---
 
-## 📦 安裝方式
+## ?? ?詨??賢?
 
-CCAP 以 `ccap-kernel` 套件形式發佈，並提供 `ccap` 命令列工具。
+*   **??Token ?瑕???*嚗??Rust 撘? (CSK) ?冽蝘撱箇??典?獢摮豢芋??銝??遙雿?AI Token??
+*   **?邪撠**嚗??**霅?蝢?(Spectral Clustering)** ?芸?撠?撘Ⅳ摨怠???瑕?隤儔?扯??抒???蝢拙恕 (Rooms)??
+*   **??蝝耨??*嚗?潔???摨扳??移蝣?AST 鋆?嚗器摨??扎瑼?銴神???渡?隤儔?箏仃????
+*   **?憭?閮?舀?**嚗????Python, JS/TS, C/C++, Rust, Go, Java ??C#??
 
-### 透過 NPM 安裝 (Node.js)
+---
+
+## ? 摰??孵?
+
+CCAP 隞?`ccap-kernel` 憟辣敶Ｗ??潔?嚗蒂?? `ccap` ?賭誘?極?瑯?
+
+### ?? NPM 摰? (Node.js)
 ```bash
 npm install -g ccap-kernel
 ```
 
-### 透過 PIP 安裝 (Python)
+### ?? PIP 摰? (Python)
 ```bash
 pip install ccap-kernel
 ```
 
 ---
 
-## 💡 CLI 指令與工作流
+## ? CLI ?誘?極雿?
 
-1.  **初始化**: `ccap init <專案路徑>` - 建立初始拓樸地圖。
-2.  **驗證**: `ccap verify <專案路徑> [--scip index.scip]` - 檢查符號歧義與信心。
-3.  **審計**: `ccap audit <專案路徑>` - 執行標準合規的品質評估。
-4.  **追蹤**: `ccap trace <專案路徑> <符號> --impact` - 評估變更的「爆炸半徑」。
-5.  **補丁**: `ccap patch <檔案> <符號ID> --code "..."` - 執行精確的手術級修改。
+1.  **????*: `ccap init <撠?頝臬?>` - 撱箇????邪?啣???
+2.  **撽?**: `ccap verify <撠?頝臬?> [--scip index.scip]` - 瑼Ｘ蝚西?甇抒儔?縑敹?
+3.  **撖抵?**: `ccap audit <撠?頝臬?>` - ?瑁?璅?????鞈芾?隡啜?
+4.  **餈質馱**: `ccap trace <撠?頝臬?> <蝚西?> --impact` - 閰摯霈???詨?敺?
+5.  **鋆?**: `ccap patch <瑼?> <蝚西?ID> --code "..."` - ?瑁?蝎曄Ⅱ??銵?靽格??
 
 ---
 
-## 📊 實戰數據
+## ?? 撖行?豢?
 
-| 專案名稱 | 原始大小 (Tokens) | CCAP 地圖 (Tokens) | **節省率** | **信心指數** |
+| 撠??迂 | ??憭批? (Tokens) | CCAP ?啣? (Tokens) | **蝭??** | **靽∪??** |
 | :--- | :--- | :--- | :--- | :--- |
 | **FastAPI** (Python) | 699,682 | 54,489 | **92.2%** | **94% (TS) / 100% (SCIP)** |
 | **Redis** (C) | 3,428,499 | 28,443 | **99.1%** | **100% (SCIP)** |
 
 ---
 
-## 🛡️ 權威依據與理論引用
+## ?儭?甈?靘???隢???
 
-本系統建立在嚴謹的軟體工程標準之上：
-1.  **SCIP (Symbolic Code Intelligence Protocol)**：採用 [Sourcegraph](https://sourcegraph.com/docs/code_search/scip) 標準，確保正式的語義真實性。
-2.  **IEEE P3361 (草案)**：對標 AI 輔助開發標準，致力於降低 AI 的「認知負荷」。
-3.  **ISO/IEC 25059**：實作針對 AI 增強系統的「自適應性」品質模型。
-
----
-
-## 🤖 AI 創作聲明
-
-> **⚠️ 警告與通知：**
-> 本專案的所有內容——包括 Rust 核心引擎、數學模型、技術文件以及本說明文件——**100% 由自主 AI 代理 (Gemini CLI) 在人類夥伴的戰略指導下撰寫而成**。**沒有任何人類直接修改過任何一行原始碼。**
+?祉頂蝯勗遣蝡?渲牲??擃極蝔?皞?銝?
+1.  **SCIP (Symbolic Code Intelligence Protocol)**嚗??[Sourcegraph](https://sourcegraph.com/docs/code_search/scip) 璅?嚗Ⅱ靽迤撘?隤儔?祕?扼?
+2.  **IEEE P3361 (??)**嚗?璅?AI 頛?璅?嚗??? AI ???亥??瑯?
+3.  **ISO/IEC 25059**嚗祕雿?撠?AI 憓撥蝟餌絞??拇??扼?鞈芣芋??
 
 ---
 
-## 🚧 限制與免責聲明
+## ?? AI ?萎??脫?
 
-**實驗性 Alpha 階段：** 本專案目前處於實驗性 alpha 階段。請自行承擔使用風險。地圖保真度僅供導航參考，並非絕對真理。
+> **?? 霅血??嚗?*
+> ?砍?獢???摰嫖???Rust ?詨?撘??摮豢芋??銵?隞嗡誑?隤芣??辣??*100% ?梯銝?AI 隞?? (Gemini CLI) ?其犖憿丰隡渡??啁??銝撖怨?**??*瘝?隞颱?鈭粹??湔靽格?遙雿?銵?憪Ⅳ??*
 
 ---
 
-## 📄 授權條款
-本專案採用 **MIT License** 授權。
+## ? ???鞎祈??
+
+**撖阡???Alpha ?挾嚗?* ?砍?獢???澆祕撽?alpha ?挾???芾??踵?雿輻憸券????漲??撠??銝阡?蝯?????
+
+---
+
+## ?? ??璇狡
+?砍?獢??**MIT License** ????
+
