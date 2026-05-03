@@ -1,17 +1,17 @@
-# CCAP-Kernel：AI 原生語義編譯核心 (v0.1.0)
+# CCAP-Kernel：AI 原生語義編譯核心 (v0.1.1)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build: Rust](https://img.shields.io/badge/Language-Rust-orange.svg)](https://www.rust-lang.org/)
 [![Standards: IEEE/ISO](https://img.shields.io/badge/Standards-IEEE_P3361_/_ISO_25059-blue.svg)](https://ieee.org)
-[![Version: v0.1.0](https://img.shields.io/badge/Version-v0.1.0-green.svg)](https://github.com/Reack/ccap-kernel/releases/tag/v0.1.0)
+[![Version: v0.1.1](https://img.shields.io/badge/Version-v0.1.1-green.svg)](https://github.com/Reack/ccap-kernel/releases/tag/v0.1.1)
 
 **CCAP (認知連續性與自主主動性協定)** 是一個革命性的語義作業系統層，旨在彌合「氛圍開發 (Vibe Coding)」與工業級生產環境之間的巨大鴻溝。它利用 **線性代數**、**拓樸塌陷 (Topological Squeezing)** 與 **通用語義消費** 技術，將百萬行級別的專案壓縮為 AI 助手可以直接理解的高熵語義地圖——並達成 **90% 以上的 Token 節省**。
 
 ---
 
-## ⚡ v0.1.0 "Universal Consumer" 版本發佈
+## ⚡ v0.1.1 "Universal Consumer" 版本發佈
 
-v0.1.0 版本標誌著從手工解析向 **「統一語義消費者」** 架構的重大戰略轉型。
+v0.1.1 版本標誌著從手工解析向 **「統一語義消費者」** 架構的重大戰略轉型。
 
 *   **語義重力 (Semantic Gravity)**：自動根據物理屬性（程式碼長度、IO 密度、度數）對符號進行排名，精確識別專案的邏輯核心。
 *   **分級精度 (Tiered Precision)**：無縫切換極速的 **Tree-sitter** 語法掃描與正式的 **SCIP/LSIF** 語義注入。
