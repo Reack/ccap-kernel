@@ -117,13 +117,14 @@ impl WikiTemplate {
                 }})));
 
                 this.renderNetwork(nodes);
-                this.renderRoomDetail(room);
+                this.renderRoomCards([room], true); // true indicates specialized view
             }},
 
             showFile(fileMeta) {{
                 this.currentView = 'file';
                 levelLabel.innerText = "FILE: " + fileMeta.label.toUpperCase();
                 graphContainer.style.display = 'none';
+                introArea.style.display = 'none';
                 
                 let html = `<div class='detail-view'>`;
                 html += `<h2>📄 ${{fileMeta.label}}</h2>`;
@@ -148,31 +149,28 @@ impl WikiTemplate {
                     if (p.nodes.length > 0) {{
                         const node = nodes.get(p.nodes[0]);
                         if (node.type === 'room') this.showRoom(node.id);
-                        else if (node.type === 'file') this.showFile(node.meta);
+                        else if (node.type === 'file' || !node.type) this.showFile(node.meta);
                     }}
                 }});
             }},
 
-            renderRoomCards(rooms) {{
-                let html = "<h3>🏢 戰略分區索引</h3><div class='grid'>";
+            renderRoomCards(rooms, isDrillDown = false) {{
+                let html = isDrillDown ? "" : "<h3>🏢 戰略分區索引</h3>";
+                html += "<div class='grid'>";
                 rooms.forEach(r => {{
                     html += `<div class='card' onclick='CCAP.showRoom(${{r.id}})'>`;
                     html += `<h4>📦 ${{r.label}}</h4>`;
                     if (r.soul) html += `<p><strong>AI 靈魂</strong>: ${{r.soul}}</p>`;
                     html += `<div style='margin-top:15px'>${{r.keywords.map(k => `<span class='tag'>${{k}}</span>`).join("")}}</div>`;
+                    if (isDrillDown) {{
+                        html += `<hr style='margin:20px 0; border-color: #f1f5f9'/>`;
+                        html += `<h5>🚀 關鍵代表實體 (Top 30)：</h5><ul>`;
+                        r.members.forEach(m => html += `<li onclick='event.stopPropagation(); CCAP.showFile(${{JSON.stringify(m)}})' style='cursor:pointer; color: #AEB98F; text-decoration: underline;'>${{m.label}} ${{m.is_hub ? "<span class='hub-tag'>[HUB]</span>" : ""}}</li>`);
+                        html += `</ul>`;
+                    }}
                     html += `</div>`;
                 }});
                 html += "</div>";
-                contentArea.innerHTML = html;
-            }},
-
-            renderRoomDetail(room) {{
-                let html = `<div class='card' style='cursor:default; border-left: 10px solid #AEB98F; max-width: 100%;'>`;
-                html += `<h4>📍 當前區域：${{room.label}}</h4>`;
-                html += `<p>${{room.soul || "此區域尚未進行語義精修。"}}</p>`;
-                html += `<h5>🚀 分區代表實體 (Top 15)：</h5><ul>`;
-                room.members.forEach(m => html += `<li onclick='CCAP.showFile(${{JSON.stringify(m)}})' style='cursor:pointer; color: #AEB98F; text-decoration: underline;'>${{m.label}} ${{m.is_hub ? "<span class='hub-tag'>[HUB]</span>" : ""}}</li>`);
-                html += `</ul></div>`;
                 contentArea.innerHTML = html;
             }}
         }};
@@ -193,7 +191,6 @@ impl WikiTemplate {
 
     #[allow(dead_code)]
     pub fn render_single_page(markdown: &str) -> String {
-
         markdown.to_string()
     }
 }

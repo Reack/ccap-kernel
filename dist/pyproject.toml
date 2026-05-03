@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccap"
+version = "0.0.7"
+authors = [
+  { name="Reack", email="reack@example.com" },
+]
+description = "Industrial grade semantic compiler and architectural explorer."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Reack/ccap-kernel"
+"Bug Tracker" = "https://github.com/Reack/ccap-kernel/issues"
+
+[project.scripts]
+ccap = "ccap.cli:main"

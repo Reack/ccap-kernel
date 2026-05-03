@@ -1,0 +1,24 @@
+{
+  "name": "ccap",
+  "version": "0.0.7",
+  "description": "Industrial grade semantic compiler and architectural explorer.",
+  "bin": {
+    "ccap": "bin/ccap.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reack/ccap-kernel.git"
+  },
+  "keywords": [
+    "semantic",
+    "compiler",
+    "architecture",
+    "ai",
+    "token-saving"
+  ],
+  "author": "Reack",
+  "license": "MIT"
+}

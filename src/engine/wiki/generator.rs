@@ -2,10 +2,17 @@ use crate::engine::{extractor::FileFeatures, glossary::Glossary, Linker, MathEng
 use super::{ProjectWikiData, RoomData, MemberData};
 use std::collections::HashMap;
 use serde_json::json;
+use regex::Regex;
 
 pub struct WikiGenerator;
 
 impl WikiGenerator {
+    /// Cleans HTML tags from a string to prevent layout breaking and unwanted navigation.
+    fn sanitize_text(text: &str) -> String {
+        let re = Regex::new(r"<[^>]*>").unwrap();
+        re.replace_all(text, "").to_string()
+    }
+
     pub fn build_project_data(
         repo_root: &str,
         results: &[(String, FileFeatures)],
@@ -20,17 +27,21 @@ impl WikiGenerator {
             ..Default::default()
         };
 
+        // 1. Native Docs with Sanitization
         for name in &["README.md", "readme.md", "PROJECT_SUMMARY.md"] {
             let path = std::path::Path::new(repo_root).join(name);
             if let Ok(content) = std::fs::read_to_string(path) {
-                data.native_docs = Some(content.lines().take(8).collect::<Vec<_>>().join("\n"));
+                let raw_summary = content.lines().take(10).collect::<Vec<_>>().join(" ");
+                data.native_docs = Some(Self::sanitize_text(&raw_summary));
                 break;
             }
         }
 
+        // 2. Project Soul
         let soul_path = std::path::Path::new(repo_root).join(".ccap").join("project_soul.st");
         data.project_soul = std::fs::read_to_string(soul_path).ok();
 
+        // 3. Cluster Analysis
         let edges = linker.export_edges();
         let paths = linker.get_node_paths();
         let mut sym_data = HashMap::new();
@@ -92,7 +103,7 @@ impl WikiGenerator {
 
         if let Some(docs) = &data.native_docs {
             wiki.push_str("### 📖 專案原生文檔 (Native Documentation)\n");
-            wiki.push_str(&format!("> {}\n\n", docs.replace("\n", " ")));
+            wiki.push_str(&format!("> {}\n\n", docs));
         }
 
         if let Some(soul) = &data.project_soul {

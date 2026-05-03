@@ -1,0 +1,41 @@
+name: Release CCAP
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: Build for ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            artifact_name: ccap-kernel
+            asset_name: ccap-linux-x64
+          - os: windows-latest
+            artifact_name: ccap-kernel.exe
+            asset_name: ccap-windows-x64.exe
+          - os: macos-latest
+            artifact_name: ccap-kernel
+            asset_name: ccap-macos-x64
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Build release
+        run: cargo build --release --locked
+      - name: Prepare Assets
+        shell: bash
+        run: |
+          mv target/release/${{ matrix.artifact_name }} ${{ matrix.asset_name }}
+      - name: Upload Binaries
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ matrix.asset_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
