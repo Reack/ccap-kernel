@@ -13,7 +13,7 @@ pub mod exporter;
 pub mod proxy;
 pub mod contract;
 pub mod glossary;
-pub mod wiki_proxy;
+pub mod wiki;
 pub mod prover;
 pub mod delta;
 pub mod archetype;
@@ -27,13 +27,11 @@ pub use math::MathEngine;
 pub use benchmark::Benchmark;
 pub use verifier::Verifier;
 pub use patcher::Patcher;
-
 pub use evaluator::Evaluator;
 pub use exporter::Exporter;
 pub use proxy::ProxyEngine;
 pub use contract::ContractGuard;
 pub use glossary::GlossaryEngine;
-pub use wiki_proxy::WikiProxy;
+pub use wiki::WikiProxy;
 pub use prover::CCAPProver;
 pub use delta::DeltaEngine;
-

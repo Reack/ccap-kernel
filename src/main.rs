@@ -2,7 +2,7 @@ use clap::{Parser, Subcommand};
 use std::fs;
 mod engine;
 
-use crate::engine::{Extractor, Mapper, Scanner, Benchmark, Linker, Verifier};
+use crate::engine::{Mapper, Scanner, Benchmark, Linker, Verifier};
 
 
 #[derive(Parser)]
@@ -156,9 +156,6 @@ enum Commands {
         #[arg(long)]
         ai_enrich_all: bool,
     },
-
-
-
     /// Runs the physical proofs verification suite (Chapter 14).
     Prove {
         /// Repository root path
@@ -277,8 +274,8 @@ fn main() -> anyhow::Result<()> {
                 println!("====================================================\n");
             }
         }
-        Commands::Stats { path } => {
-            let storage = crate::engine::Storage::init(path)?;
+        Commands::Stats { path: _ } => {
+            let storage = crate::engine::Storage::init(".")?; // Default to current for stats
             let log_path = storage.get_map_dir().parent().unwrap().join("telemetry.log");
             
             if log_path.exists() {
@@ -322,7 +319,7 @@ fn main() -> anyhow::Result<()> {
             crate::engine::Exporter::save_to_file(&atlas, output)?;
         }
         Commands::Analyze { path } => {
-            let mut extractor = Extractor::new();
+            let mut extractor = crate::engine::Extractor::new();
             let features = extractor.analyze_file(path, path)?;
             let telegram = Mapper::to_telegram(path, &features);
             println!("{}", telegram);
@@ -397,6 +394,9 @@ fn main() -> anyhow::Result<()> {
                 return Ok(());
             }
 
+            let mut linker = Linker::new();
+            linker.build_graph(&results);
+
             let markdown = if let Some(t) = target {
                 let mut found = None;
                 for (p, feat) in &results {
@@ -415,15 +415,13 @@ fn main() -> anyhow::Result<()> {
                     return Ok(());
                 }
             } else {
-                let mut linker = Linker::new();
-                linker.build_graph(&results);
                 crate::engine::WikiProxy::generate_project_index(path, &results, &linker, &glossary)
             };
 
-
             if *html {
-                let html_content = crate::engine::WikiProxy::generate_html(&markdown);
+                let html_content = crate::engine::WikiProxy::generate_html_wiki(path, &results, &linker, &glossary)?;
                 let tmp_path = std::env::temp_dir().join("ccap_wiki.html");
+
                 fs::write(&tmp_path, html_content)?;
                 println!("🌐  Wiki: Opening beautiful HTML view at {:?}", tmp_path);
                 let _ = std::process::Command::new("cmd").args(["/c", "start", tmp_path.to_str().unwrap()]).spawn();
@@ -432,8 +430,6 @@ fn main() -> anyhow::Result<()> {
             }
             return Ok(());
         }
-
-
         Commands::Prove { path } => {
             let results = Scanner::scan_for_verification(path)?;
             crate::engine::CCAPProver::run_physical_proofs(path, &results)?;
