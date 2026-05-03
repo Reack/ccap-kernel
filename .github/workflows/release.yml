@@ -28,7 +28,7 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
       - name: Build release
-        run: cargo build --release --locked
+        run: cargo build --release
       - name: Prepare Assets
         shell: bash
         run: |
