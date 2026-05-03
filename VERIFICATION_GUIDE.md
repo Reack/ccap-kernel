@@ -1,41 +1,55 @@
-# CCAP V0.0.7 終極驗證指南 (Verification Guide)
+# CCAP-Kernel Formal Verification Guide
 
-本指南旨在引導使用者（或代理 AI）如何完整驗證 **CCAP (Cognitive Continuity and Autonomous Proactivity Protocol)** 的核心效能與物理保真度。
+This guide describes how to verify the topological accuracy and semantic uniqueness of a project map using the `ccap-kernel verify` tool.
 
----
+## 1. Fast Grammar Verification (保底層)
 
-## 🚀 核心驗證矩陣 (V0.0.7)
+The default verification uses **Tree-sitter** for a zero-config, ultra-fast scan.
 
-### 1. 物理冷啟動與拓樸生成
-*   **指令**: `ccap-kernel init <project_path>`
-*   **驗證點**: 是否在 5 秒內完成百萬行級別的掃描，並在 `.ccap/maps/` 產出 `root.st.aaak`。
+```bash
+ccap-kernel verify <project_path>
+```
 
-### 2. 120x Token 節省率審計
-*   **指令**: `ccap-kernel stats <project_path>`
-*   **驗證點**: 觀察物理位元組節省率。預期在大型 C/Python 專案中達到 90% 以上的 Token 減免。
-
-### 3. 三層階層式互動 Wiki
-*   **指令**: `ccap-kernel wiki <project_path> --html`
-*   **驗證動作**:
-    *   **Level 1**: 點擊琥珀綠戰略大球。
-    *   **Level 2**: 進入區域網格，點擊檔案小球。
-    *   **Level 3**: 檢視檔案內部的 SCIP 符號座標與複雜度。
-    *   **返回**: 點擊左上角「← 返回專案總覽」確保導航狀態正確回歸。
-
-### 4. 物理證明套件 (Three Axioms)
-*   **指令**: `ccap-kernel prove <project_path>`
-*   **驗證點**: 是否通過「代幣位移」、「同構正確性」與「認知熵減」三大公理測試。
-
-### 5. 手術級 Patch 與差異電報
-*   **指令**: `ccap-kernel patch <path> <file> <scip_id> --code "<new_code>"`
-*   **驗證點**: 觀察是否產出 **[Δ] VECTOR** 偏移報告與符號增減清單。
+### Understanding the Report
+*   **Semantic Confidence**: A percentage representing how unique your symbols are. Grammar scanning typically achieves **90-95%** on large Python/JS projects.
+*   **Symbol Ambiguities**: Lists symbols that have duplicate IDs. This happens when the parser cannot distinguish between siblings or inner classes.
+*   **Algebraic Connectivity**: Measures how well-connected your project graph is. Values > 0 are healthy.
 
 ---
 
-## 🛡️ 專家級安全性驗證 (Red-Team)
+## 2. Formal Semantic Verification (精確層)
 
-1.  **零執行測試**: 對包含惡意指令的檔案執行 `init`，確認 `security_leak.txt` 不會被建立。
-2.  **加密秘密性**: 啟用 `--key` 後，確認 `.enc` 檔案內容為不可讀之二進位噪音。
+To achieve **100% confidence** and eliminate all ambiguities, you must inject a formal semantic index (SCIP).
+
+### Step 1: Generate a SCIP index
+Use the recommended tool for your language:
+*   **Python**: `pip install scip-python && scip-python index`
+*   **C/C++**: Use `scip-clang`
+*   **Go**: `scip-go`
+
+### Step 2: Inject and Verify
+```bash
+ccap-kernel verify <project_path> --scip index.scip
+```
 
 ---
-**[GUIDE END - VERSION v0.0.7]**
+
+## 3. Tiered Precision Repair Guide
+
+If your verification fails (IDs FAILED), follow these human-centric suggestions:
+
+| Extension | Recommendation | Reason |
+| :--- | :--- | :--- |
+| `.py` | Install `scip-python` | Resolves complex decorator and inner class nesting. |
+| `.ts/.js` | Install `scip-typescript` | Resolves cross-file exports and type aliases. |
+| `.cpp/.c` | Install `scip-clang` | Resolves macros and template overloading. |
+
+---
+
+## 4. 0-Token Navigation Test (0-Token 盲測)
+
+To truly verify the "0-Token" promise:
+1.  Initialize your project: `ccap-kernel init .`
+2.  Provide ONLY the `.ccap/maps/root.st.aaak` file to an AI agent.
+3.  Ask: *"Where is the core initialization logic for the database?"*
+4.  Success: If the AI identifies the correct high-gravity symbol without reading any `.rs` or `.py` files.
