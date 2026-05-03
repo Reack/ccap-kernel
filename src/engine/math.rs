@@ -32,11 +32,9 @@ impl MathEngine {
         let n = paths.len();
         let mut clusters = Vec::new();
         
-        // 1. Sort paths to group similar directories
         let mut sorted_paths = paths.to_vec();
         sorted_paths.sort();
 
-        // 2. Linear partition into k groups (better than modulo)
         let chunk_size = (n / k).max(1);
         for i in 0..k {
             let start = i * chunk_size;
@@ -56,5 +54,39 @@ impl MathEngine {
         }
 
         Ok(clusters)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_fiedler_empty() {
+        assert_eq!(MathEngine::compute_fiedler_value(0, &[]), 1.0);
+    }
+
+    #[test]
+    fn test_fiedler_line_graph() {
+        // 0 -- 1 -- 2
+        let edges = vec![(0, 1, 1.0), (1, 2, 1.0)];
+        let val = MathEngine::compute_fiedler_value(3, &edges);
+        assert!(val > 0.0);
+        assert!(val < 1.0);
+    }
+
+    #[test]
+    fn test_clustering_partition() {
+        let paths = vec![
+            "a/b.py".to_string(), 
+            "a/c.py".to_string(), 
+            "x/y.py".to_string(), 
+            "x/z.py".to_string()
+        ];
+        let sym_data = HashMap::new();
+        let clusters = MathEngine::spectral_cluster(&paths, &[], 2, &sym_data).unwrap();
+        assert_eq!(clusters.len(), 2);
+        assert_eq!(clusters[0].members.len(), 2);
+        assert_eq!(clusters[1].members.len(), 2);
     }
 }

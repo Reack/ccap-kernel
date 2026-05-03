@@ -11,7 +11,7 @@ impl Benchmark {
         println!("📂  Target Project: {}", root);
         
         let analysis_results = Scanner::scan_for_verification(root)?;
-        let v_report = Verifier::verify_scip_ids(&results_to_slice(&analysis_results));
+        let v_report = Verifier::verify_scip_ids(root, &results_to_slice(&analysis_results));
         
         let mut linker = Linker::new();
         linker.build_graph(&analysis_results);
@@ -58,6 +58,14 @@ impl Benchmark {
         println!("🎯  Topological Accuracy:    {:.2}%", accuracy * 100.0);
         println!("🧮  Algebraic Connectivity:  {:.4}", fidelity);
         println!("✅  SCIP Status:            {}", if v_report.scip_parity_passed { "PASSED" } else { "FAILED" });
+        if !v_report.scip_parity_passed {
+            if !v_report.format_passed {
+                println!("    ❌ Error: Invalid SCIP ID Format detected.");
+            }
+            if v_report.symbol_collisions > 0 {
+                println!("    ❌ Error: {} Symbol Collisions detected.", v_report.symbol_collisions);
+            }
+        }
         println!("====================================================\n");
 
         Ok(())

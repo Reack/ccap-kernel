@@ -58,3 +58,48 @@ impl WikiProxy {
         Ok(WikiTemplate::render_project_wiki(&data))
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_project_data_serialization() {
+        let data = ProjectWikiData {
+            project_name: "TestProject".to_string(),
+            total_files: 1,
+            rooms: vec![RoomData {
+                id: 0,
+                label: "Core".to_string(),
+                value: 1,
+                keywords: vec!["logic".to_string()],
+                soul: "Brain".to_string(),
+                members: vec![MemberData {
+                    path: "src/main.rs".to_string(),
+                    label: "main".to_string(),
+                    is_hub: true,
+                    complexity: 0.5,
+                }],
+            }],
+            ..Default::default()
+        };
+
+        let json = serde_json::to_string(&data).unwrap();
+        assert!(json.contains("TestProject"));
+        assert!(json.contains("Core"));
+        assert!(json.contains("src/main.rs"));
+    }
+
+    #[test]
+    fn test_html_rendering_basics() {
+        let data = ProjectWikiData {
+            project_name: "MockProject".to_string(),
+            ..Default::default()
+        };
+        let html = WikiTemplate::render_project_wiki(&data);
+        assert!(html.contains("MockProject"));
+        assert!(html.contains("<!DOCTYPE html>"));
+        assert!(html.contains("vis-network"));
+        assert!(html.contains("AEB98F")); // Our signature color
+    }
+}

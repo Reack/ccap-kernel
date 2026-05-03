@@ -17,6 +17,7 @@ pub mod wiki;
 pub mod prover;
 pub mod delta;
 pub mod archetype;
+pub mod scip;
 
 pub use extractor::Extractor;
 pub use mapper::Mapper;
@@ -35,3 +36,4 @@ pub use glossary::GlossaryEngine;
 pub use wiki::WikiProxy;
 pub use prover::CCAPProver;
 pub use delta::DeltaEngine;
+pub use scip::ScipConsumer;

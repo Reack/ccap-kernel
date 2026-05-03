@@ -1,8 +1,7 @@
 use clap::{Parser, Subcommand};
 use std::fs;
-mod engine;
 
-use crate::engine::{Mapper, Scanner, Benchmark, Linker, Verifier};
+use ccap_kernel::engine::{Mapper, Scanner, Benchmark, Linker, Verifier};
 
 
 #[derive(Parser)]
@@ -38,6 +37,9 @@ enum Commands {
         /// Repository root path
         #[arg(default_value = ".")]
         path: String,
+        /// External SCIP index path (optional)
+        #[arg(long)]
+        scip: Option<String>,
     },
     /// Traces dependencies or calculates modification impact.
     Trace {
@@ -147,7 +149,7 @@ enum Commands {
         #[arg(short, long)]
         target: Option<String>,
         /// Generate and open HTML view
-        #[arg(short, long)]
+        #[arg(long)]
         html: bool,
         /// Generate a high-entropy prompt for AI enrichment (Chapter 15)
         #[arg(long)]
@@ -174,24 +176,49 @@ fn main() -> anyhow::Result<()> {
         Commands::Benchmark { path } => {
             Benchmark::run(path)?;
         }
-        Commands::Verify { path } => {
+        Commands::Verify { path, scip } => {
             println!("🔍  Verification: Initiating Formal Parity Check for: {}", path);
-            let results = Scanner::scan_for_verification(path)?;
+            let mut results = Scanner::scan_for_verification(path)?;
+
+            if let Some(s) = scip {
+                println!("🧬  SCIP Injection: Using external index from: {}", s);
+                ccap_kernel::engine::ScipConsumer::inject_semantics(&s, &mut results)?;
+            }
+
             let mut linker = Linker::new();
             linker.build_graph(&results);
             let edges = linker.export_edges();
             let n = results.len();
             
-            let report = Verifier::verify_scip_ids(&results);
+            let report = Verifier::verify_scip_ids(path, &results);
             let fidelity = Verifier::calculate_fidelity(n, &edges);
             let accuracy = Verifier::verify_topological_accuracy(&linker, &results);
 
             println!("\n====================================================");
             println!("🛡️   CCAP FORMAL VERIFICATION REPORT");
             println!("====================================================");
-            println!("✅  SCIP Format Consistency: {}", if report.scip_parity_passed { "PASSED" } else { "FAILED" });
-            println!("🛑  Symbol Collisions Found: {}", report.symbol_collisions);
-            println!("🧮  Algebraic Connectivity:  {:.4}", fidelity);
+            println!("📊  Semantic Confidence:     {:.1}%", report.confidence_score * 100.0);
+            println!("⚖️   SCIP Syntax Format:      {}", if report.format_passed { "PASSED" } else { "FAILED" });
+            println!("🆔  Symbol Uniqueness:       {}", if report.symbol_collisions == 0 { "PASSED" } else { "FAILED" });
+            
+            if report.symbol_collisions > 0 {
+                println!("🛑  Symbol Ambiguities:      {}", report.symbol_collisions);
+                for detail in report.collision_details.iter().take(5) {
+                    println!("    ⚠️   {}", detail);
+                }
+                if report.symbol_collisions > 5 {
+                    println!("    ... and {} more ambiguities.", report.symbol_collisions - 5);
+                }
+
+                println!("\n💡  SEMANTIC REPAIR GUIDE:");
+                println!("    Topological ambiguities detected. For professional surgical precision,");
+                println!("    please provide a language-specific SCIP index:");
+                for tool in &report.recommended_tools {
+                    println!("    🛠️   {}", tool);
+                }
+            }
+
+            println!("\n🧮  Algebraic Connectivity:  {:.4}", fidelity);
             println!("🎯  Topological Accuracy:    {:.2}%", accuracy * 100.0);
             println!("====================================================\n");
         }
@@ -226,7 +253,7 @@ fn main() -> anyhow::Result<()> {
             for (p, feat) in results {
                 if p == norm_file {
                     if let Some(sym) = feat.exports.iter().find(|s| s.id == *symbol_id) {
-                        crate::engine::Patcher::apply_patch(path, file, sym, code)?;
+                        ccap_kernel::engine::Patcher::apply_patch(path, file, sym, code)?;
                         return Ok(());
                     }
                 }
@@ -239,7 +266,7 @@ fn main() -> anyhow::Result<()> {
             let mut linker = Linker::new();
             linker.build_graph(&results);
             
-            let report = crate::engine::Evaluator::perform_audit(&linker, results.len());
+            let report = ccap_kernel::engine::Evaluator::perform_audit(&linker, results.len());
 
             println!("\n====================================================");
             println!("🏛️   CCAP SCIENTIFIC AUDIT REPORT");
@@ -274,8 +301,8 @@ fn main() -> anyhow::Result<()> {
                 println!("====================================================\n");
             }
         }
-        Commands::Stats { path: _ } => {
-            let storage = crate::engine::Storage::init(".")?; // Default to current for stats
+        Commands::Stats { path } => {
+            let storage = ccap_kernel::engine::Storage::init(path)?;
             let log_path = storage.get_map_dir().parent().unwrap().join("telemetry.log");
             
             if log_path.exists() {
@@ -315,17 +342,17 @@ fn main() -> anyhow::Result<()> {
             let mut linker = Linker::new();
             linker.build_graph(&results);
             
-            let atlas = crate::engine::Exporter::export_atlas(path, &results, &linker)?;
-            crate::engine::Exporter::save_to_file(&atlas, output)?;
+            let atlas = ccap_kernel::engine::Exporter::export_atlas(path, &results, &linker)?;
+            ccap_kernel::engine::Exporter::save_to_file(&atlas, output)?;
         }
         Commands::Analyze { path } => {
-            let mut extractor = crate::engine::Extractor::new();
+            let mut extractor = ccap_kernel::engine::Extractor::new();
             let features = extractor.analyze_file(path, path)?;
             let telegram = Mapper::to_telegram(path, &features);
             println!("{}", telegram);
         }
         Commands::InspectRoom { path, room } => {
-            let storage = crate::engine::Storage::init(path)?;
+            let storage = ccap_kernel::engine::Storage::init(path)?;
             let registry_path = storage.get_map_dir().join("room_registry.json");
             let registry_json = fs::read_to_string(registry_path)?;
             let registry: std::collections::HashMap<String, Vec<String>> = serde_json::from_str(&registry_json)?;
@@ -354,20 +381,20 @@ fn main() -> anyhow::Result<()> {
                 .map_err(|e| anyhow::anyhow!("Failed to execute command: {}", e))?;
 
             let stdout = String::from_utf8_lossy(&output.stdout);
-            let cleaned = crate::engine::ProxyEngine::clean_output(&stdout, &actual_path);
+            let cleaned = ccap_kernel::engine::ProxyEngine::clean_output(&stdout, &actual_path);
             println!("{}", cleaned);
         }
         Commands::Contract { path, target, code } => {
             println!("📑  Contract: Initiating Shadow Execution for mutation on: {}", target);
             let results = Scanner::scan_for_verification(path)?;
 
-            let contract = crate::engine::contract::ModificationContract {
+            let contract = ccap_kernel::engine::contract::ModificationContract {
                 target_id: target.clone(),
                 action: "PATCH".to_string(),
                 code_snippet: code.clone(),
             };
 
-            match crate::engine::ContractGuard::verify_modification(&contract, &results) {
+            match ccap_kernel::engine::ContractGuard::verify_modification(&contract, &results) {
                 Ok(shadow_fidelity) => {
                     println!("\n--- [CONTRACT VERIFICATION RESULT] ---");
                     println!("✅  Integrity Check: PASSED");
@@ -382,14 +409,14 @@ fn main() -> anyhow::Result<()> {
             }
         }
         Commands::Glossary { path, id, alias } => {
-            crate::engine::GlossaryEngine::set_alias(path, id, alias)?;
+            ccap_kernel::engine::GlossaryEngine::set_alias(path, id, alias)?;
         }
         Commands::Wiki { path, target, html, ai_enrich, ai_enrich_all } => {
             let results = Scanner::scan_for_verification(path)?;
-            let glossary = crate::engine::GlossaryEngine::load(path)?;
+            let glossary = ccap_kernel::engine::GlossaryEngine::load(path)?;
 
             if *ai_enrich_all {
-                let package = crate::engine::WikiProxy::generate_global_ai_package(&results);
+                let package = ccap_kernel::engine::WikiProxy::generate_global_ai_package(&results);
                 println!("{}", package);
                 return Ok(());
             }
@@ -402,11 +429,11 @@ fn main() -> anyhow::Result<()> {
                 for (p, feat) in &results {
                     if p == t {
                         if *ai_enrich {
-                            let prompt = crate::engine::WikiProxy::generate_ai_enrich_prompt(p, feat);
+                            let prompt = ccap_kernel::engine::WikiProxy::generate_ai_enrich_prompt(p, feat);
                             println!("{}", prompt);
                             return Ok(());
                         }
-                        found = Some(crate::engine::WikiProxy::generate_markdown(p, feat, &glossary));
+                        found = Some(ccap_kernel::engine::WikiProxy::generate_markdown(p, feat, &glossary));
                         break;
                     }
                 }
@@ -415,11 +442,11 @@ fn main() -> anyhow::Result<()> {
                     return Ok(());
                 }
             } else {
-                crate::engine::WikiProxy::generate_project_index(path, &results, &linker, &glossary)
+                ccap_kernel::engine::WikiProxy::generate_project_index(path, &results, &linker, &glossary)
             };
 
             if *html {
-                let html_content = crate::engine::WikiProxy::generate_html_wiki(path, &results, &linker, &glossary)?;
+                let html_content = ccap_kernel::engine::WikiProxy::generate_html_wiki(path, &results, &linker, &glossary)?;
                 let tmp_path = std::env::temp_dir().join("ccap_wiki.html");
 
                 fs::write(&tmp_path, html_content)?;
@@ -432,7 +459,7 @@ fn main() -> anyhow::Result<()> {
         }
         Commands::Prove { path } => {
             let results = Scanner::scan_for_verification(path)?;
-            crate::engine::CCAPProver::run_physical_proofs(path, &results)?;
+            ccap_kernel::engine::CCAPProver::run_physical_proofs(path, &results)?;
         }
     }
 

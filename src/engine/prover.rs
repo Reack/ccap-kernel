@@ -22,7 +22,7 @@ impl CCAPProver {
         println!("✅  Axiom 14.1 (Token Displacement): PASSED | Ratio: {:.2}x", displacement_ratio);
 
         // 2. Axiom 14.2: Isomorphic Correctness
-        let v_report = Verifier::verify_scip_ids(results);
+        let v_report = Verifier::verify_scip_ids(_root, results);
         if v_report.scip_parity_passed {
             println!("✅  Axiom 14.2 (Isomorphic Correctness): PASSED | SCIP Parity Verified.");
         } else {

@@ -31,7 +31,7 @@ impl Patcher {
         let new_features = extractor.analyze_file(abs_path.to_str().unwrap(), file_rel_path)?;
 
         // 4. Report Deterministic Delta
-        let delta = crate::engine::DeltaEngine::calculate_delta(&old_features, &new_features);
+        let delta = crate::engine::DeltaEngine::calculate_delta(&old_features.exports, &new_features.exports);
         crate::engine::DeltaEngine::print_telegram(&delta);
         
         println!("🩹  Surgical Patch applied to: {} @ {}", file_rel_path, symbol.id);

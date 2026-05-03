@@ -1,4 +1,4 @@
-# CCAP-Kernel：AI 原生語義編譯核心
+# CCAP-Kernel：AI 原生語義編譯核心 (v0.0.7)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build: Rust](https://img.shields.io/badge/Language-Rust-orange.svg)](https://www.rust-lang.org/)
@@ -16,6 +16,41 @@
 *   **風險審計**: 在進行任何破壞性更動前，自動執行「爆炸半徑」預演與 Token 預算評估。
 *   **全語言支持**: 原生支援 Python, JS/TS, C/C++, Rust, Go, Java 與 C#。
 
+---
+
+## 🚀 安裝與快速開始 (Installation & Quick Start)
+
+CCAP 支援透過 `npm` 或 `pip` 進行安裝。系統會自動根據您的作業系統下載對應的 Rust 高效能核心。
+
+### 透過 NPM 安裝 (Node.js)
+```bash
+npm install -g ccap
+```
+
+### 透過 PIP 安裝 (Python)
+```bash
+pip install ccap
+```
+
+### 快速開始指令 (CLI Usage)
+1.  **初始化**: `ccap init <專案路徑>`
+2.  **品質審計**: `ccap audit <專案路徑>`
+3.  **風險預演**: `ccap trace <專案路徑> <符號> --impact`
+4.  **地圖分析**: `ccap stats <專案路徑>`
+
+---
+
+## 💡 零 Token 核心工作流 (The Zero-Token Workflow)
+
+這是 CCAP 的精髓：**「本地運算、語義傳輸、手術修改」**。請依照以下步驟操作，可節省 90% 以上的 Token。
+
+1.  **本地初始化 (0 Token)**: 在專案根目錄執行 `ccap init .`。產出 `.ccap/maps/root.st.aaak`。
+2.  **冷啟動導航**: 當啟動新的 AI 對話時，請讓 AI 讀取 `root.st.aaak` 而非原始碼。
+3.  **風險預檢**: 在讓 AI 修改前，執行 `ccap trace . <Symbol> --impact` 評估爆炸半徑。
+4.  **手術級修改**: 讓 AI 僅回傳修改片段，並執行 `ccap patch <file> <scip_id> --code "..."` 進行精確替換。
+
+---
+
 ## 📊 實戰數據 (Real-world Benchmarks)
 
 | 專案名稱 | 原始大小 (Tokens) | CCAP 地圖 (Tokens) | **節省率** | **準確度** |
@@ -31,16 +66,6 @@
 1.  **SCIP (Source Code Indexing Protocol)**: 採用 [Sourcegraph](https://sourcegraph.com/docs/code_search/scip) 標準，確保 100% 準確的符號連結。
 2.  **IEEE P3361 (草案)**: 對標最新的 AI 輔助開發標準，致力於大幅降低 AI 的「認知負荷 (Cognitive Load)」。
 3.  **ISO/IEC 25059**: 實作針對 AI 增強系統的「自適應性 (Adaptability)」品質模型。
-4.  **Hassan 變更熵**: 利用香農熵 (Shannon Entropy) 預測易出錯的架構漂移 (ICSE 2009)。
-
----
-
-## 🚀 快速開始 (Quick Start)
-
-1.  **編譯**: `cargo build --release`
-2.  **初始化專案**: `ccap-kernel init <專案路徑>`
-3.  **品質審計**: `ccap-kernel audit <專案路徑>`
-4.  **風險預演**: `ccap-kernel trace <專案路徑> <符號名> --impact`
 
 ---
 
@@ -49,8 +74,20 @@
 > **⚠️ 警告與通知：**
 > 本專案的所有內容——包括 Rust 核心引擎、數學模型、技術規格書以及本說明文件——**100% 由自主 AI 代理 (Gemini CLI) 在人類夥伴的戰略指導下撰寫而成**。
 > 
-> **沒有任何人類直接修改過任何一行程式碼。**
-> 雖然系統已通過形式化驗證與全矩陣回歸測試，但在關鍵環境中使用時，請保持對「純 LLM 產出系統」應有的審慎態度。
+> **沒有任何人類直接修改過任何一行程式碼過。**
+
+---
+
+## 🚧 目前限制與免責聲明 (Limitations & Disclaimer)
+
+**實驗性 Alpha 階段:** 本專案目前處於實驗性 alpha 階段。請注意以下事項：
+
+1.  **壓力測試有限**: 雖然已在 FastAPI 和 Redis 等儲存庫上進行驗證，但本系統尚未針對所有可能的代碼庫配置進行詳盡的壓力測試。
+2.  **地圖保真度**: 我們無法保證所有邊緣情況下的地圖準確度達到 100%。生成的語義室和關係應作為導航指南，而非絕對真理。
+3.  **無人工審核**: **沒有任何人類直接修改或審核過此代碼以確保生產安全。** 在關鍵環境中使用時，請自行承擔風險。
+
+---
 
 ## 📄 授權條款
 本專案採用 **MIT License** 授權。
+

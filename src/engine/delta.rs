@@ -1,61 +1,67 @@
-use crate::engine::extractor::FileFeatures;
 use serde::{Serialize, Deserialize};
+use crate::engine::extractor::ScipSymbol;
+use std::collections::HashSet;
 
-#[derive(Debug, Serialize, Deserialize, Default)]
-pub struct PhysicalDelta {
+#[derive(Serialize, Deserialize, Debug)]
+pub struct DeltaReport {
     pub lost_symbols: Vec<String>,
     pub gained_symbols: Vec<String>,
-    pub link_shift: Vec<String>, // "target: +1" or "target: -1"
-    pub vector_shift: [f32; 3], // [ΔC, ΔD, ΔI]
+    pub link_shift: f32,
+    pub vector_shift: String,
 }
 
 pub struct DeltaEngine;
 
 impl DeltaEngine {
-    /// Calculates the deterministic physical difference between two snapshots.
-    pub fn calculate_delta(old: &FileFeatures, new: &FileFeatures) -> PhysicalDelta {
-        let mut delta = PhysicalDelta::default();
+    pub fn calculate_delta(old_symbols: &[ScipSymbol], new_symbols: &[ScipSymbol]) -> DeltaReport {
+        let old_set: HashSet<_> = old_symbols.iter().map(|s| &s.id).collect();
+        let new_set: HashSet<_> = new_symbols.iter().map(|s| &s.id).collect();
 
-        // 1. Symbol G/L (Based on SCIP IDs)
-        let old_ids: std::collections::HashSet<_> = old.exports.iter().map(|s| &s.id).collect();
-        let new_ids: std::collections::HashSet<_> = new.exports.iter().map(|s| &s.id).collect();
+        let lost: Vec<_> = old_set.difference(&new_set).map(|s| (*s).clone()).collect();
+        let gained: Vec<_> = new_set.difference(&old_set).map(|s| (*s).clone()).collect();
 
-        for id in old_ids.difference(&new_ids) {
-            delta.lost_symbols.push(id.to_string());
+        let shift = if old_symbols.is_empty() { 0.0 } else { (lost.len() + gained.len()) as f32 / old_symbols.len() as f32 };
+
+        DeltaReport {
+            lost_symbols: lost,
+            gained_symbols: gained,
+            link_shift: shift,
+            vector_shift: if shift > 0.5 { "CRITICAL" } else if shift > 0.1 { "MODERATE" } else { "STABLE" }.to_string(),
         }
-        for id in new_ids.difference(&old_ids) {
-            delta.gained_symbols.push(id.to_string());
-        }
-
-        // 2. Link Momentum (Coupling Delta)
-        let old_refs: std::collections::HashSet<_> = old.references.iter().collect();
-        let new_refs: std::collections::HashSet<_> = new.references.iter().collect();
-
-        for r in old_refs.difference(&new_refs) {
-            delta.link_shift.push(format!("{}: -1", r));
-        }
-        for r in new_refs.difference(&old_refs) {
-            delta.link_shift.push(format!("{}: +1", r));
-        }
-
-        // 3. Feature Vector Shift
-        delta.vector_shift = [
-            new.control_flow_score - old.control_flow_score,
-            new.data_density_score - old.data_density_score,
-            new.io_density_score - old.io_density_score,
-        ];
-
-        delta
     }
 
-    pub fn print_telegram(delta: &PhysicalDelta) {
-        println!("\n📊  CCAP PHYSICAL DELTA TELEGRAM");
-        println!("----------------------------------------------------");
-        for s in &delta.lost_symbols { println!("  [-] LOST:   {}", s); }
-        for s in &delta.gained_symbols { println!("  [+] GAINED: {}", s); }
-        for l in &delta.link_shift { println!("  [~] BOND:   {}", l); }
-        println!("  [Δ] VECTOR: [C:{:+.2}, D:{:+.2}, I:{:+.2}]", 
-            delta.vector_shift[0], delta.vector_shift[1], delta.vector_shift[2]);
-        println!("----------------------------------------------------\n");
+    pub fn print_telegram(report: &DeltaReport) {
+        println!("📡  [Δ] VECTOR: {}", report.vector_shift);
+        if !report.lost_symbols.is_empty() {
+            println!("    [-] LOST: {:?}", report.lost_symbols);
+        }
+        if !report.gained_symbols.is_empty() {
+            println!("    [+] GAINED: {:?}", report.gained_symbols);
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::engine::extractor::ScipSymbol;
+
+    #[test]
+    fn test_delta_stable() {
+        let syms = vec![ScipSymbol { id: "a".to_string(), name: "a".to_string(), line: 1, range: (0, 10) }];
+        let report = DeltaEngine::calculate_delta(&syms, &syms);
+        assert_eq!(report.lost_symbols.len(), 0);
+        assert_eq!(report.gained_symbols.len(), 0);
+        assert_eq!(report.vector_shift, "STABLE");
+    }
+
+    #[test]
+    fn test_delta_critical() {
+        let old_syms = vec![ScipSymbol { id: "a".to_string(), name: "a".to_string(), line: 1, range: (0, 10) }];
+        let new_syms = vec![ScipSymbol { id: "b".to_string(), name: "b".to_string(), line: 1, range: (0, 10) }];
+        let report = DeltaEngine::calculate_delta(&old_syms, &new_syms);
+        assert_eq!(report.lost_symbols[0], "a");
+        assert_eq!(report.gained_symbols[0], "b");
+        assert_eq!(report.vector_shift, "CRITICAL");
     }
 }

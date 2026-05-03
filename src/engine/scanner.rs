@@ -21,13 +21,16 @@ impl Scanner {
         println!("🚀  CSK: Starting Hierarchical Semantic Compilation...");
         
         let extensions = ["py", "js", "jsx", "ts", "tsx", "c", "h", "cpp", "hpp", "cc", "hh", "rs", "go", "java", "cs"];
+        let noise = [".git", "target", "node_modules", ".ccap", "__pycache__", "dist", "build", ".venv", ".vscode", ".idea"];
+        
         let files: Vec<_> = WalkDir::new(root)
             .into_iter()
             .filter_map(|e| e.ok())
             .filter(|e| {
                 let path = e.path();
-                !path.to_string_lossy().contains(".ccap") &&
+                let path_str = path.to_string_lossy();
                 path.is_file() && 
+                !noise.iter().any(|n| path_str.contains(n)) &&
                 extensions.iter().any(|ext| path.extension().map_or(false, |e| e == *ext))
             })
             .collect();
@@ -99,13 +102,16 @@ impl Scanner {
 
     pub fn scan_for_verification(root: &str) -> anyhow::Result<Vec<(String, crate::engine::extractor::FileFeatures)>> {
         let extensions = ["py", "js", "jsx", "ts", "tsx", "c", "h", "cpp", "hpp", "cc", "hh", "rs", "go", "java", "cs"];
+        let noise = [".git", "target", "node_modules", ".ccap", "__pycache__", "dist", "build", ".venv", ".vscode", ".idea"];
+        
         let files: Vec<_> = WalkDir::new(root)
             .into_iter()
             .filter_map(|e| e.ok())
             .filter(|e| {
                 let path = e.path();
-                !path.to_string_lossy().contains(".ccap") &&
+                let path_str = path.to_string_lossy();
                 path.is_file() && 
+                !noise.iter().any(|n| path_str.contains(n)) &&
                 extensions.iter().any(|ext| path.extension().map_or(false, |e| e == *ext))
             })
             .collect();

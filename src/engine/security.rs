@@ -71,3 +71,36 @@ impl SecurityEngine {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_encryption_decryption() {
+        let engine = SecurityEngine::new("secret_key");
+        let data = b"Hello CCAP World!";
+        let encrypted = engine.encrypt(data).expect("Encryption failed");
+        let decrypted = engine.decrypt(&encrypted).expect("Decryption failed");
+        assert_eq!(data, decrypted.as_slice());
+    }
+
+    #[test]
+    fn test_obfuscate_symbol() {
+        let name = "my_private_function";
+        let obfuscated = SecurityEngine::obfuscate_symbol(name);
+        assert!(obfuscated.starts_with("sym_"));
+        assert_eq!(obfuscated.len(), 12); // "sym_" (4) + 8 hex chars (4 bytes * 2)
+    }
+
+    #[test]
+    fn test_perturb_vector() {
+        let mut vec = vec![0.5, 0.5, 0.5];
+        let original = vec.clone();
+        SecurityEngine::perturb_vector(&mut vec, 0.1);
+        for i in 0..vec.len() {
+            assert!((vec[i] - original[i]).abs() <= 0.1);
+            assert!(vec[i] >= 0.0 && vec[i] <= 1.0);
+        }
+    }
+}

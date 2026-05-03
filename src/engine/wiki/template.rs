@@ -6,6 +6,16 @@ impl WikiTemplate {
     pub fn render_project_wiki(data: &ProjectWikiData) -> String {
         let room_json = serde_json::to_string(data).unwrap_or_else(|_| "{}".to_string());
 
+        let mut mermaid_script = String::from("graph TD\n");
+        for room in &data.rooms {
+            let label = room.label.replace('"', "'");
+            mermaid_script.push_str(&format!("    R{}[\"{}\"]\n", room.id, label));
+        }
+        // Basic linear connection for topology visualization if no explicit bonds
+        for i in 0..data.rooms.len().saturating_sub(1) {
+            mermaid_script.push_str(&format!("    R{} --> R{}\n", data.rooms[i].id, data.rooms[i+1].id));
+        }
+
         format!(r#"
 <!DOCTYPE html>
 <html>
@@ -13,6 +23,10 @@ impl WikiTemplate {
     <meta charset="utf-8">
     <title>CCAP Architectural OS</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.9/standalone/umd/vis-network.min.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({{ startOnLoad: true, theme: 'forest' }});
+    </script>
     <style>
         body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #f1f5f9; color: #1e293b; padding: 40px; margin: 0; }}
         #container {{ background: white; padding: 50px; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); max-width: 1200px; margin: auto; border-top: 15px solid #AEB98F; position: relative; min-height: 90vh; box-sizing: border-box; }}
@@ -45,6 +59,10 @@ impl WikiTemplate {
         
         <div id="intro-area">{}</div>
         
+        <div id="mermaid-topology" class="mermaid" style="text-align: center; margin-bottom: 50px;">
+            {}
+        </div>
+
         <div id="graph-container">
             <h3 id="graphTitle">🏗️ 互動式戰略導航 (Hierarchical Map)</h3>
             <div id="mynetwork"></div>
@@ -186,6 +204,7 @@ impl WikiTemplate {
             data.native_docs.as_ref().map(|d| format!("<blockquote>{}</blockquote>", d)).unwrap_or_default(),
             data.project_soul.as_ref().map(|s| format!("<p><strong>AI 專案靈魂</strong>: {}</p>", s)).unwrap_or_default()
         ),
+        mermaid_script,
         room_json)
     }
 
