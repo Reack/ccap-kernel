@@ -1,2 +1,0 @@
-[console_scripts]
-ccap = ccap.cli:main

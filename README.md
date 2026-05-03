@@ -1,17 +1,17 @@
-# CCAP-Kernel: The AI-Native Semantic Compiler (v0.1.1)
+# CCAP-Kernel: The AI-Native Semantic Compiler (v0.1.2)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build: Rust](https://img.shields.io/badge/Language-Rust-orange.svg)](https://www.rust-lang.org/)
 [![Standards: IEEE/ISO](https://img.shields.io/badge/Standards-IEEE_P3361_/_ISO_25059-blue.svg)](https://ieee.org)
-[![Version: v0.1.1](https://img.shields.io/badge/Version-v0.1.1-green.svg)](https://github.com/Reack/ccap-kernel/releases/tag/v0.1.1)
+[![Version: v0.1.2](https://img.shields.io/badge/Version-v0.1.2-green.svg)](https://github.com/Reack/ccap-kernel/releases/tag/v0.1.2)
 
 **CCAP (Cognitive Continuity and Autonomous Proactivity Protocol)** is a revolutionary semantic operating system layer designed to bridge the gap between "Vibe Coding" and industrial-grade production. It utilizes **Linear Algebra**, **Topological Squeezing**, and **Universal Semantic Consumption** to compress million-line codebases into high-entropy semantic maps that AI agents can understand directly—with **90%+ token savings**.
 
 ---
 
-## ⚡ v0.1.1 "Universal Consumer" Release
+## ⚡ v0.1.2 "Universal Consumer" Release
 
-The v0.1.1 release marks a major strategic shift from manual parsing to a **Unified Semantic Consumer** architecture.
+The v0.1.2 release marks a major strategic shift from manual parsing to a **Unified Semantic Consumer** architecture.
 
 *   **Semantic Gravity**: Automatically ranks symbols based on physical properties (LOC, IO density, degree) to identify the logical core of your project.
 *   **Tiered Precision**: Seamlessly switch between ultra-fast **Tree-sitter** grammar scanning and formal **SCIP/LSIF** semantic injection.
