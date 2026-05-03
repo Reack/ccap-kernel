@@ -30,16 +30,16 @@ v0.1.0 版本標誌著從手工解析向 **「統一語義消費者」** 架構�
 
 ## 📦 安裝方式
 
-CCAP 支援透過 `npm` 或 `pip` 進行安裝。系統會自動根據您的作業系統下載對應的 Rust 高效能核心。
+CCAP 以 `ccap-kernel` 套件形式發佈，並提供 `ccap` 命令列工具。
 
 ### 透過 NPM 安裝 (Node.js)
 ```bash
-npm install -g ccap
+npm install -g ccap-kernel
 ```
 
 ### 透過 PIP 安裝 (Python)
 ```bash
-pip install ccap
+pip install ccap-kernel
 ```
 
 ---

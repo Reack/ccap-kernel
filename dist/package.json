@@ -1,5 +1,5 @@
 {
-  "name": "ccap",
+  "name": "ccap-kernel",
   "version": "0.1.0",
   "description": "Industrial grade semantic compiler and architectural explorer.",
   "bin": {

@@ -30,16 +30,16 @@ The v0.1.0 release marks a major strategic shift from manual parsing to a **Unif
 
 ## 📦 Installation
 
-CCAP is distributed as the `ccap-kernel` package, providing the `ccap` command-line tool.
+CCAP can be installed via `npm` or `pip`. The system automatically downloads the high-performance Rust core for your platform.
 
 ### Install via NPM (Node.js)
 ```bash
-npm install -g ccap-kernel
+npm install -g ccap
 ```
 
 ### Install via PIP (Python)
 ```bash
-pip install ccap-kernel
+pip install ccap
 ```
 
 ---
