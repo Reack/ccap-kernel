@@ -1,10 +1,10 @@
-﻿[build-system]
+[build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ccap-kernel"
-version = "0.1.3"
+version = "0.1.5"
 authors = [
   { name="Reack", email="reack@example.com" },
 ]
@@ -23,4 +23,3 @@ classifiers = [
 
 [project.scripts]
 ccap = "ccap.cli:main"
-

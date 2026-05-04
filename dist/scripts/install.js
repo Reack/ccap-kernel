@@ -3,7 +3,7 @@ const path = require('path');
 const https = require('https');
 const { execSync } = require('child_process');
 
-const version = "0.1.2";
+const version = "0.1.4";
 const repo = "Reack/ccap-kernel";
 
 const platform = process.platform;
