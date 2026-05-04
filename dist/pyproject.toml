@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ccap-kernel"
-version = "0.1.5"
+version = "0.1.6"
 authors = [
   { name="Reack", email="reack@example.com" },
 ]

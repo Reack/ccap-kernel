@@ -1,6 +1,6 @@
 {
   "name": "ccap-kernel",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Industrial grade semantic compiler and architectural explorer.",
   "bin": {
     "ccap": "bin/ccap.js"
