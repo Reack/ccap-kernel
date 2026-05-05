@@ -18,18 +18,16 @@ impl Evaluator {
         let edges = linker.export_edges();
         
         // --- 1. IEEE P3361: Cognitive Load Calculation ---
-        // Formula: 1.0 - (Topological Density / Entropy Factor)
         // High density = High noise = High cognitive load.
         let density = if node_count > 0 {
             (edges.len() as f32) / (node_count as f32).powi(2)
         } else {
             0.0
         };
-        let cognitive_index = (1.0 - density * 10.0).clamp(0.0, 1.0);
+        // v0.2.0 Calibration: Increase sensitivity for micro-scale architectures
+        let cognitive_index = (1.0 - density * 50.0).clamp(0.0, 1.0);
 
         // --- 2. ISO 25059: Adaptability / Stability ---
-        // Measures 'Ripple Effect' avg. 
-        // Lower ripple = Higher adaptability for Vibe Coding.
         let mut total_radius = 0;
         let mut samples = 0;
         let paths = linker.get_node_paths();
@@ -40,7 +38,8 @@ impl Evaluator {
             }
         }
         let ripple_avg = if samples > 0 { total_radius as f32 / samples as f32 } else { 0.0 };
-        let adaptability = (1.0 - (ripple_avg / 5.0)).clamp(0.0, 1.0);
+        // v0.2.0 Calibration: 3.0 radius threshold for stability warnings
+        let adaptability = (1.0 - (ripple_avg / 3.0)).clamp(0.0, 1.0);
 
         // --- 3. Structural Debt ---
         // For MVP, we use unconnected components or known bad patterns

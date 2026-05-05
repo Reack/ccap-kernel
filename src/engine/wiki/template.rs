@@ -129,13 +129,22 @@ impl WikiTemplate {
                 graphContainer.style.display = 'block';
 
                 const nodes = new vis.DataSet(room.members.map((m, idx) => ({{
-                    id: idx, label: m.label, shape: 'dot', size: m.is_hub ? 25 : 12,
-                    color: m.is_hub ? '#AEB98F' : '#e2e8f0', font: {{ size: 13 }}, 
+                    id: idx, label: m.label, shape: 'dot', 
+                    // v0.2.0 Calibration: Size based on Gravity
+                    size: 10 + (m.gravity * 2),
+                    // v0.2.0 Calibration: Color border based on Ghost Debt
+                    color: {{
+                        background: m.is_hub ? '#AEB98F' : '#e2e8f0',
+                        border: m.ghost_debt > 0 ? '#e74c3c' : '#AEB98F',
+                        highlight: {{ border: '#e74c3c', background: '#d5e6a2' }}
+                    }},
+                    borderWidth: m.ghost_debt > 0 ? 3 : 1,
+                    font: {{ size: 13 }}, 
                     type: 'file', meta: m
                 }})));
 
                 this.renderNetwork(nodes);
-                this.renderRoomCards([room], true); // true indicates specialized view
+                this.renderRoomCards([room], true);
             }},
 
             showFile(fileMeta) {{
@@ -147,10 +156,14 @@ impl WikiTemplate {
                 let html = `<div class='detail-view'>`;
                 html += `<h2>📄 ${{fileMeta.label}}</h2>`;
                 html += `<p>物理座標: <code>${{fileMeta.path}}</code></p>`;
+                html += `<p style='color:#AEB98F; font-weight:bold;'>幾何重力 (Gravity): ${{fileMeta.gravity.toFixed(2)}}</p>`;
+                if (fileMeta.ghost_debt > 0) {{
+                    html += `<p style='color:#e74c3c; font-weight:bold;'>⚠️ 拓樸贅肉 (Ghost Debt): ${{fileMeta.ghost_debt}} 處潛在冗餘</p>`;
+                }}
                 html += `<p>邏輯能量 (Entropy): <strong>${{fileMeta.complexity.toFixed(4)}}</strong></p>`;
                 html += `<hr style='border-color: #334155; margin: 25px 0;'/>`;
-                html += `<h3>🔗 SCIP 物理特徵與出口</h3><ul>`;
-                html += `<li>[SYMBOL] EntryPoint (L10)</li><li>[SYMBOL] LogicCore (L45)</li><li>[SYMBOL] DataSink (L102)</li>`;
+                html += `<h3>🔗 語義特徵摘要</h3><ul>`;
+                html += `<li>[ROLE] ${{fileMeta.is_hub ? '核心樞紐' : '功能模組'}}</li>`;
                 html += `</ul></div>`;
                 
                 contentArea.innerHTML = html;

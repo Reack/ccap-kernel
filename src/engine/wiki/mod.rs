@@ -25,6 +25,8 @@ pub struct MemberData {
     pub label: String,
     pub is_hub: bool,
     pub complexity: f32,
+    pub gravity: f32,    // 幾何引力 (特徵中心度)
+    pub ghost_debt: u32, // 冗餘引用計數
 }
 
 pub mod generator;
