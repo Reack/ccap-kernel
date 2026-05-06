@@ -20,7 +20,7 @@ impl Benchmark {
         println!("🚀  Scientific Benchmark: Initiating Multi-Model Assessment for: {}", path);
         
         let results = crate::engine::Scanner::scan_for_verification(path)?;
-        let report = Self::run_mdl_audit(&results);
+        let report = Self::run_mdl_audit(path, &results);
 
         println!("\n====================================================");
         println!("📊  CCAP MULTI-MODEL BENCHMARK (v0.2.0)");
@@ -47,14 +47,16 @@ impl Benchmark {
         println!("{:<16} | {:<14.0} | {:<11.0} | {:.2}%", label, raw, map, savings);
     }
 
-    pub fn run_mdl_audit(results: &[(String, FileFeatures)]) -> BenchmarkReport {
+    pub fn run_mdl_audit(base_path: &str, results: &[(String, FileFeatures)]) -> BenchmarkReport {
         let mut source_text = String::new();
         let mut map_text_openai = String::new();
         let mut map_text_claude = String::new();
         let mut map_text_gemini = String::new();
 
         for (path, feat) in results {
-            if let Ok(code) = std::fs::read_to_string(path) {
+            // 正確拼接基礎路徑以讀取檔案內容
+            let full_path = std::path::Path::new(base_path).join(path);
+            if let Ok(code) = std::fs::read_to_string(full_path) {
                 source_text.push_str(&code);
                 source_text.push('\n');
             }
