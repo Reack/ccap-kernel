@@ -47,11 +47,23 @@ Unlike traditional AI tools that redundantly read and rewrite entire files, CCAP
 
 ---
 
-## 🚀 Core Capabilities
+## 🚀 Core Capabilities: The Four Geometric Pillars
 
-*   **Spectral Navigation**: Locate the gravity well (CORE) and boundary (ENTRY) of any system using Eigendecomposition.
-*   **Model Flavoring**: On-demand formatting (`--flavor [openai|claude|gemini]`) to provide AIs with their preferred semantic shapes (e.g., XML scaffolding).
-*   **Reasoning Persistence**: Minimize context window pressure to maintain reasoning consistency in long-tail development tasks.
+### 1. Geometric Gravity Navigation
+*   **Center of Mass Identification**: Leverages Eigendecomposition of the spectral matrix to automatically locate **Logic Hubs (CORE)** and **System Boundaries (ENTRY)**.
+*   **Semantic Rooms**: Uses spectral clustering to partition messy folder structures into physically cohesive "Semantic Rooms," allowing AI to understand module boundaries instantly.
+
+### 2. Path Aegis & Topological Parity
+*   **Agnostic Linking**: A robust path normalization engine that eliminates Windows/Linux character variances and case sensitivity, ensuring 100% isomorphic maps across operating systems.
+*   **Formal Fidelity**: Built-in verifier quantifies the **Algebraic Connectivity** between the map and source code, ensuring zero semantic drift.
+
+### 3. Ghost Link & Dead-Debt Sensing
+*   **Redundancy Quantification**: Detects **Ghost Links**—nodes with static references but zero geometric gravity—pinpointing architectural debt that confuses AI reasoning.
+*   **Structural Health Alerts**: Monitors system entropy to provide early warning before architectural complexity reaches a critical "Collapse Point."
+
+### 4. Multi-Model Flavor Adaptation
+*   **On-Demand Shaping**: Features an optional **Flavor Formatter**. Provides XML scaffolding for Claude, high-contrast visual segmentation for Gemini, and high-entropy minimalism for OpenAI.
+*   **Scientific Budgeting**: Integrated token evaluators empower developers to make data-driven decisions between "Context Resolution" and "Token Cost."
 
 ---
 

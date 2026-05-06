@@ -47,11 +47,23 @@ v0.2.0 標誌著從工程工具向 **「精密科學儀器」** 的全面轉型�
 
 ---
 
-## 🚀 核心能力
+## 🚀 核心能力：四大幾何支柱
 
-*   **譜空間導航**：利用特徵值分解 (Eigendecomposition) 定位系統的重力中心 (CORE) 與邊界 (ENTRY)。
-*   **模型風味適配 (Flavoring)**：支援 `--flavor [openai|claude|gemini]`，為不同 AI 提供其偏好的語義格式（如 XML 嵌套）。
-*   **認知持久性 (Persistence)**：大幅降低 Context Window 壓力，使 AI 在長程任務中保持推理一致性。
+### 1. 幾何引力導航 (Geometric Gravity Navigation)
+*   **重力中心識別**: 利用譜矩陣之特徵值分解 (Eigendecomposition)，自動定位程式碼庫中的 **核心邏輯樞紐 (CORE)** 與 **系統邊界 (ENTRY)**。
+*   **內聚性室 (Semantic Rooms)**: 基於譜分群演算法，自動將雜亂的檔案夾結構劃分為具備物理一致性的語義室，幫助 AI 快速理解模組邊界。
+
+### 2. 路徑神盾與拓樸一致性 (Path Aegis & Topological Parity)
+*   **平台無關鏈結**: 全新的路徑正規化引擎，徹底消除 Windows/Linux 字元差異與大小寫歧義，確保在不同作業系統下產出的語義地圖 100% 同構。
+*   **形式化保真度**: 內建校驗器可量化地圖與原始碼之間的 **代數連通性 (Algebraic Connectivity)**，確保地圖不失真。
+
+### 3. 譜之影偵測 (Ghost Link & Dead-Debt Sensing)
+*   **架構贅肉量化**: 自動識別「有靜態引用但無幾何引力」的 **譜之影 (Ghost Links)**，精確指出那些 AI 難以理解且無實質作用的冗餘依賴。
+*   **結構債務預警**: 透過譜熵 (Spectral Entropy) 監控系統的混亂度，在架構崩潰前發出早期警報。
+
+### 4. 跨模型風味自適應 (Multi-Model Flavor Adaptation)
+*   **按需語義塑造**: 提供可選的 **Flavor Formatter**。針對 Claude 提供 XML 嵌套增強，針對 Gemini 提供強視覺邊界，針對 OpenAI 提供高熵極簡。
+*   **科學預算控制**: 內建精確的 Token 評測儀，讓開發者在「解析精度」與「Token 成本」之間做出基於數據的理性決策。
 
 ---
 
