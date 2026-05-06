@@ -36,6 +36,17 @@ Proof that spectral features are "Model-Neutral" physical invariants.
 
 ---
 
+## 🎯 Surgical Workflow: From Global Navigation to Precision Lock-on
+
+Unlike traditional AI tools that redundantly read and rewrite entire files, CCAP advocates a **"Progressive Precision"** workflow to ensure every token is spent strategically:
+
+1.  **Global Navigation**: The AI first ingests the Semantic Map (only 1.8% of source size) to gain a topological understanding of the entire system.
+2.  **Progressive Lock-on**: Based on geometric gravity and symbol features, the AI rapidly identifies the specific "Semantic Room" or symbol needing attention—bypassing irrelevant files.
+3.  **Minimalist Read**: The AI requests only the specific code fragment for the target symbol, minimizing context window consumption.
+4.  **Surgical Patching**: Using the `ccap patch` command, the system updates only the specific character coordinates. This eliminates "Whole File Rewrites" and prevents semantic loss or redundant billing.
+
+---
+
 ## 🚀 Core Capabilities
 
 *   **Spectral Navigation**: Locate the gravity well (CORE) and boundary (ENTRY) of any system using Eigendecomposition.
