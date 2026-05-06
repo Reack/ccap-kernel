@@ -1,6 +1,6 @@
 [package]
 name = "ccap-kernel"
-version = "0.2.0-dev"
+version = "0.2.0"
 edition = "2021"
 description = "Industrial grade semantic compiler for 1M+ line codebases."
 
