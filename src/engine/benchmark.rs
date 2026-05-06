@@ -49,24 +49,34 @@ impl Benchmark {
 
     pub fn run_mdl_audit(results: &[(String, FileFeatures)]) -> BenchmarkReport {
         let mut source_text = String::new();
-        let mut map_text = String::new();
+        let mut map_text_openai = String::new();
+        let mut map_text_claude = String::new();
+        let mut map_text_gemini = String::new();
 
         for (path, feat) in results {
             if let Ok(code) = std::fs::read_to_string(path) {
                 source_text.push_str(&code);
                 source_text.push('\n');
             }
-            map_text.push_str(&Mapper::to_telegram(path, feat));
-            map_text.push('\n');
+            
+            // 針對不同模型產出不同風味的電報
+            map_text_openai.push_str(&Mapper::to_flavor_telegram(path, feat, &crate::engine::mapper::Flavor::OpenAI));
+            map_text_openai.push('\n');
+
+            map_text_claude.push_str(&Mapper::to_flavor_telegram(path, feat, &crate::engine::mapper::Flavor::Claude));
+            map_text_claude.push('\n');
+
+            map_text_gemini.push_str(&Mapper::to_flavor_telegram(path, feat, &crate::engine::mapper::Flavor::Gemini));
+            map_text_gemini.push('\n');
         }
 
         BenchmarkReport {
             source_vol_openai: Self::count_openai(&source_text) as f32,
-            map_vol_openai: Self::count_openai(&map_text) as f32,
+            map_vol_openai: Self::count_openai(&map_text_openai) as f32,
             source_vol_claude: Self::count_claude(&source_text) as f32,
-            map_vol_claude: Self::count_claude(&map_text) as f32,
+            map_vol_claude: Self::count_claude(&map_text_claude) as f32,
             source_vol_gemini: Self::count_gemini(&source_text) as f32,
-            map_vol_gemini: Self::count_gemini(&map_text) as f32,
+            map_vol_gemini: Self::count_gemini(&map_text_gemini) as f32,
             decision_fidelity_score: 0.98,
         }
     }
