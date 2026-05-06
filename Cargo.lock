@@ -206,6 +206,7 @@ dependencies = [
  "env_logger",
  "log",
  "nalgebra",
+ "once_cell",
  "pathdiff",
  "petgraph",
  "rand",

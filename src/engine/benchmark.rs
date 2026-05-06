@@ -93,7 +93,18 @@ impl Benchmark {
     }
 
     fn count_gemini(text: &str) -> usize {
-        (Self::count_openai(text) as f32 * 1.12) as usize
+        use once_cell::sync::Lazy;
+        use tokenizers::Tokenizer;
+        use std::str::FromStr;
+
+        static GEMINI_TOKENIZER_STR: &str = include_str!("assets/gemini_tokenizer.json");
+        static TOKENIZER: Lazy<Tokenizer> = Lazy::new(|| {
+            Tokenizer::from_str(GEMINI_TOKENIZER_STR).expect("Failed to parse embedded Gemini tokenizer JSON")
+        });
+
+        TOKENIZER.encode(text, true)
+            .map(|encoding| encoding.get_ids().len())
+            .unwrap_or(0)
     }
 
     pub fn print_latex_table(report: &BenchmarkReport) {

@@ -42,7 +42,7 @@ clap = { version = "4.0", features = ["derive"] } # CLI arguments
 anyhow = "1.0" # Error handling
 regex = "1.10" # String pattern matching
 walkdir = "2.3" # Efficient file scanning
-
+once_cell = "1.18" # Lazy initialization
 pathdiff = "0.2" # Relative path calculation
 tiktoken-rs = "0.5" # Precise token counting
 claude-tokenizer = "0.2" # Anthropic/Claude support
