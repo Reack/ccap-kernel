@@ -3,19 +3,26 @@ const path = require('path');
 const https = require('https');
 const { execSync } = require('child_process');
 
-const version = "0.1.4";
+const version = "0.2.0";
 const repo = "Reack/ccap-kernel";
 
 const platform = process.platform;
 const arch = process.arch;
 
 let binName = '';
-if (platform === 'win32' && arch === 'x64') {
-    binName = 'ccap-windows-x64.exe';
-} else if (platform === 'darwin' && arch === 'x64') {
-    binName = 'ccap-macos-x64';
-} else if (platform === 'linux' && arch === 'x64') {
-    binName = 'ccap-linux-x64';
+
+if (platform === 'win32') {
+    if (arch === 'x64') binName = 'ccap-windows-x64.exe';
+    else if (arch === 'ia32') binName = 'ccap-windows-x86.exe';
+    else if (arch === 'arm64') binName = 'ccap-windows-arm64.exe';
+} else if (platform === 'darwin') {
+    if (arch === 'x64') binName = 'ccap-macos-x64';
+    else if (arch === 'arm64') binName = 'ccap-macos-arm64';
+} else if (platform === 'linux') {
+    if (arch === 'x64') binName = 'ccap-linux-x64';
+    else if (arch === 'ia32') binName = 'ccap-linux-x86';
+    else if (arch === 'arm64') binName = 'ccap-linux-arm64';
+    else if (arch === 'arm') binName = 'ccap-linux-arm32';
 }
 
 if (!binName) {
