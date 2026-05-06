@@ -11,7 +11,7 @@
 
 ## 🔬 v0.2.0 "Scientific Station" Release
 
-v0.2.0 marks the evolution from an engineering tool to a **"Precision Scientific Instrument."** Backed by rigorous spectral geometry research, this version validates the core hypothesis of "Architecture as Physics."
+v0.2.0 marks the evolution from an engineering tool to a **"Precision Scientific Instrument."** Rooted in Information Theory and Spectral Geometry principles, this version validates the core hypothesis of "Architecture as Physics."
 
 *   **Multi-Model Budgeter**: Built-in tokenizer simulation for OpenAI, Claude, and Gemini to quantify precise savings across platforms.
 *   **Path-Agnostic Linker**: A robust cross-platform normalization engine ensuring 100% isomorphic maps across Windows and Linux.
@@ -55,7 +55,7 @@ Proof that spectral features are "Model-Neutral" physical invariants.
 
 ## 🛡️ Theoretical Foundations
 
-Core logic is derived from the 2026 research paper **"Software Structural Geometry: Empirical Evidence on Cross-Language Semantic Isomorphism and Cognitive Efficiency"** and aligns with:
+Core logic is built upon rigorous information science standards and aligns with the following principles:
 1.  **MDL Principle (Rissanen, 1978)**: The informational basis of shortest data description.
 2.  **Halstead Science (1977)**: Industry-standard for code entropy and complexity.
 3.  **IEEE P3361**: Standard for AI Explainability and cognitive load.
