@@ -32,7 +32,7 @@ v0.2.0 標誌著從工程工具向 **「精密科學儀器」** 的全面轉型�
 證實譜特徵是「模型中立」的物理不變量。
 
 ![Model Parity](docs/assets/model_parity.png)
-*在 GPT-4o, Claude 3.5 與 Gemini 1.5 下均展現了穩定且優異的壓縮性能。*
+*在不同官方分詞器規格 (OpenAI, Claude, Gemini) 下均展現了穩定且優異的壓縮性能。*
 
 ---
 

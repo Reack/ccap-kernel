@@ -32,7 +32,7 @@ Measured via **Halstead Software Science**, CCAP achieves extreme semantic disti
 Proof that spectral features are "Model-Neutral" physical invariants.
 
 ![Model Parity](docs/assets/model_parity.png)
-*Stable and superior compression performance observed across GPT-4o, Claude 3.5, and Gemini 1.5.*
+*Stable compression performance observed across different official tokenizer specifications (OpenAI, Claude, Gemini).*
 
 ---
 
