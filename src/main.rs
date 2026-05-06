@@ -26,12 +26,6 @@ enum Commands {
         #[arg(short, long)]
         key: Option<String>,
     },
-    /// Runs a token efficiency benchmark.
-    Benchmark {
-        /// Repository root path
-        #[arg(default_value = ".")]
-        path: String,
-    },
     /// Verifies the correctness and parity.
     Verify {
         /// Repository root path
@@ -43,11 +37,11 @@ enum Commands {
     },
     /// Traces dependencies or calculates modification impact.
     Trace {
+        /// Symbol or file path to trace
+        target: String,
         /// Repository root path
         #[arg(default_value = ".")]
         path: String,
-        /// Symbol or file path to trace
-        target: String,
         /// Calculate the impact (blast radius)
         #[arg(short, long)]
         impact: bool,
@@ -67,6 +61,15 @@ enum Commands {
     },
     /// Performs a scientific quality audit based on ISO 25010.
     Audit {
+        /// Repository root path
+        #[arg(default_value = ".")]
+        path: String,
+        /// External atlas JSON path to audit instead of local path
+        #[arg(long)]
+        from_json: Option<String>,
+    },
+    /// Performs a scientific benchmark of information density (MDL).
+    Benchmark {
         /// Repository root path
         #[arg(default_value = ".")]
         path: String,
@@ -260,13 +263,53 @@ fn main() -> anyhow::Result<()> {
             }
             println!("❌  Symbol ID not found for patching.");
         }
-        Commands::Audit { path } => {
+        Commands::Audit { path, from_json } => {
             println!("🔬  Audit: Initiating Standards-Compliant Quality Assessment for: {}", path);
-            let results = Scanner::scan_for_verification(path)?;
+            
+            let (results, n) = if let Some(json_path) = from_json {
+                println!("📂  JSON Audit: Loading external atlas from: {}", json_path);
+                let json_data = fs::read_to_string(json_path)?;
+                let atlas: serde_json::Value = serde_json::from_str(&json_data)?;
+                
+                let mut mock_results = Vec::new();
+                if let Some(nodes) = atlas.get("nodes").and_then(|n| n.as_array()) {
+                    for node in nodes {
+                        if let Some(id) = node.get("id").and_then(|i| i.as_str()) {
+                            let mut feat = ccap_kernel::engine::extractor::FileFeatures::default();
+                            if let Some(exports) = node.get("features").and_then(|f| f.get("exports")).and_then(|e| e.as_array()) {
+                                for exp in exports {
+                                    if let Some(s_id) = exp.get("id").and_then(|s| s.as_str()) {
+                                        feat.exports.push(ccap_kernel::engine::extractor::ScipSymbol {
+                                            id: s_id.to_string(),
+                                            name: exp.get("name").and_then(|n| n.as_str()).unwrap_or("").to_string(),
+                                            ..Default::default()
+                                        });
+                                    }
+                                }
+                            }
+                            if let Some(refs) = node.get("features").and_then(|f| f.get("references")).and_then(|r| r.as_array()) {
+                                for r in refs {
+                                    if let Some(r_str) = r.as_str() {
+                                        let linker_friendly = if !r_str.contains("ccap . . ") { format!("ccap . . {}", r_str) } else { r_str.to_string() };
+                                        feat.references.push(linker_friendly);
+                                    }
+                                }
+                            }
+                            mock_results.push((id.to_string(), feat));
+                        }
+                    }
+                }
+                let count = mock_results.len();
+                (mock_results, count)
+            } else {
+                let r = Scanner::scan_for_verification(path)?;
+                let count = r.len();
+                (r, count)
+            };
+
             let mut linker = Linker::new();
             linker.build_graph(&results);
-            
-            let report = ccap_kernel::engine::Evaluator::perform_audit(&linker, results.len());
+            let report = ccap_kernel::engine::Evaluator::perform_audit(&linker, n);
 
             println!("\n====================================================");
             println!("🏛️   CCAP SCIENTIFIC AUDIT REPORT");
