@@ -44,12 +44,29 @@ v0.2.0 標誌著從工程工具向 **「精密科學儀器」** 的全面轉型�
 
 ---
 
-## 💡 CLI 指令與工作流
+## 💡 CLI 指令集與語義生命週期
 
-1.  **基準測試**: `ccap benchmark <路徑>` - 執行 MDL 資訊密度評測並輸出 LaTeX 表格。
-2.  **統計對比**: `ccap stats --compare` - 獲得跨模型的 Token 節省預估。
-3.  **Wiki 生成**: `ccap wiki --html [--flavor claude]` - 產出具備引力地圖的互動式文檔。
-4.  **審計診斷**: `ccap audit <路徑>` - 基於校準後的 IEEE/ISO 標準執行品質評估。
+### 1. 語義地圖構建 (Infrastructure)
+*   `ccap init <路徑>`: 建立初始譜幾何地圖，掃描全專案拓樸。
+*   `ccap verify <路徑> [--scip index.scip]`: 執行形式化校驗，確保語義信心與符號唯一性。
+*   `ccap glossary --id <ID> --alias <別名>`: 管理語義辭典，為複雜符號定義人類可讀的別名。
+
+### 2. 科學實證套件 (Scientific Suite)
+*   `ccap benchmark <路徑>`: 執行 **MDL 資訊密度評測**，並輸出用於學術報告的 LaTeX 表格。
+*   `ccap stats --compare`: 獲得針對 OpenAI, Claude, Gemini 的精確 Token 節省對比。
+*   `ccap audit <路徑>`: 基於 IEEE/ISO 標準執行校準後的架構品質審計。
+*   `ccap prove <路徑>`: 執行 **物理證明 (Physical Proofs)**，驗證系統是否存在邏輯矛盾。
+
+### 3. 風險防護與行動 (Action & Guard)
+*   `ccap quote --target <符號>`: 報價該變更所需的 Token 成本與財務風險預估。
+*   `ccap trace <符號> --impact`: 追蹤特定符號的幾何引力，計算變更的「爆炸半徑」。
+*   `ccap contract <符號ID> --code "..."`: 執行 **影子執行合約**，在真正修改前驗證語義完整性。
+*   `ccap patch <檔案> <符號ID> --code "..."`: 執行精確到字元座標的 **語義手術級補丁**。
+
+### 4. 知識分發與導航 (Knowledge & Export)
+*   `ccap wiki --html [--flavor claude]`: 產出具備動態引力地圖的互動式文檔。
+*   `ccap analyze <檔案> [--flavor gemini]`: 單個檔案的高熵電報分析。
+*   `ccap export --output atlas.json`: 將譜地圖導出為標準 JSON，支持 NetworkX 等第三方圖分析。
 
 ---
 

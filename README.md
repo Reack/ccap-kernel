@@ -44,12 +44,29 @@ Proof that spectral features are "Model-Neutral" physical invariants.
 
 ---
 
-## 💡 CLI Commands & Workflow
+## 💡 CLI Command Suite & Semantic Lifecycle
 
-1.  **Benchmark**: `ccap benchmark <path>` - Runs MDL assessment and exports LaTeX tables.
-2.  **Compare Stats**: `ccap stats --compare` - Get cross-model token savings estimates.
-3.  **Wiki Generation**: `ccap wiki --html [--flavor claude]` - Produces interactive docs with gravitational mapping.
-4.  **Scientific Audit**: `ccap audit <path>` - Quality assessment based on calibrated IEEE/ISO standards.
+### 1. Semantic Mapping (Infrastructure)
+*   `ccap init <path>`: Build the initial spectral map and scan the full project topology.
+*   `ccap verify <path> [--scip index.scip]`: Formal verification of symbol uniqueness and confidence.
+*   `ccap glossary --id <ID> --alias <alias>`: Manage the semantic dictionary with human-readable aliases.
+
+### 2. Scientific Tools (Scientific Suite)
+*   `ccap benchmark <path>`: Perform **MDL Information Density Audit** and export LaTeX tables.
+*   `ccap stats --compare`: Precise token savings comparison for OpenAI, Claude, and Gemini.
+*   `ccap audit <path>`: Calibrated architectural quality audit based on IEEE/ISO standards.
+*   `ccap prove <path>`: Execute **Physical Proofs** to detect logical contradictions in the structure.
+
+### 3. Protection & Action (Action & Guard)
+*   `ccap quote --target <symbol>`: Estimate token cost and financial risk for a specific modification.
+*   `ccap trace <symbol> --impact`: Trace geometric gravity and calculate the "Blast Radius" of changes.
+*   `ccap contract <symbolID> --code "..."`: Execute **Shadow Modification Contracts** to verify integrity before patching.
+*   `ccap patch <file> <symbolID> --code "..."`: Apply precise, coordinate-based **Semantic Surgical Patches**.
+
+### 4. Knowledge Distribution (Knowledge & Export)
+*   `ccap wiki --html [--flavor claude]`: Generate interactive documentation with dynamic gravity maps.
+*   `ccap analyze <file> [--flavor gemini]`: High-entropy telegram analysis for a single file.
+*   `ccap export --output atlas.json`: Export the map to standard JSON for 3rd-party graph analysis (NetworkX).
 
 ---
 
