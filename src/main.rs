@@ -87,6 +87,9 @@ enum Commands {
         /// Repository root path
         #[arg(default_value = ".")]
         path: String,
+        /// Compare savings across different AI models
+        #[arg(short, long)]
+        compare: bool,
     },
     /// Exports the full project atlas to a standard JSON format for 3rd-party KGs.
     Export {
@@ -96,11 +99,17 @@ enum Commands {
         /// Output file path (e.g., atlas.json)
         #[arg(short, long, default_value = "ccap-atlas.json")]
         output: String,
+        /// Target AI flavor (openai, claude, gemini)
+        #[arg(long, default_value = "openai")]
+        flavor: String,
     },
     /// Analyzes a single file.
     Analyze {
         /// Path to the file to analyze
         path: String,
+        /// Target AI flavor (openai, claude, gemini)
+        #[arg(long, default_value = "openai")]
+        flavor: String,
     },
     /// Inspects the contents of a specific semantic room.
     InspectRoom {
@@ -109,6 +118,9 @@ enum Commands {
         path: String,
         /// Room name to inspect
         room: String,
+        /// Target AI flavor (openai, claude, gemini)
+        #[arg(long, default_value = "openai")]
+        flavor: String,
     },
     /// Runs a command and filters its output through the proxy engine.
     Run {
@@ -154,6 +166,9 @@ enum Commands {
         /// Generate and open HTML view
         #[arg(long)]
         html: bool,
+        /// Target AI flavor (openai, claude, gemini)
+        #[arg(long, default_value = "openai")]
+        flavor: String,
         /// Generate a high-entropy prompt for AI enrichment (Chapter 15)
         #[arg(long)]
         ai_enrich: bool,
@@ -344,7 +359,13 @@ fn main() -> anyhow::Result<()> {
                 println!("====================================================\n");
             }
         }
-        Commands::Stats { path } => {
+        Commands::Stats { path, compare } => {
+            if *compare {
+                // 如果指定了 --compare，則調用 Benchmark 引擎執行跨模型評測
+                Benchmark::run(path)?;
+                return Ok(());
+            }
+
             let storage = ccap_kernel::engine::Storage::init(path)?;
             let log_path = storage.get_map_dir().parent().unwrap().join("telemetry.log");
             
@@ -379,26 +400,40 @@ fn main() -> anyhow::Result<()> {
                 println!("====================================================\n");
             }
         }
-        Commands::Export { path, output } => {
+        Commands::Export { path, output, flavor: _ } => {
             println!("📂  Export: Compiling Project Atlas for 3rd-party compatibility...");
             let results = Scanner::scan_for_verification(path)?;
             let mut linker = Linker::new();
             linker.build_graph(&results);
             
+            // 目前 Export 格式不包含 Telegram，但保留 flavor 參數以供未來擴充
             let atlas = ccap_kernel::engine::Exporter::export_atlas(path, &results, &linker)?;
             ccap_kernel::engine::Exporter::save_to_file(&atlas, output)?;
         }
-        Commands::Analyze { path } => {
+        Commands::Analyze { path, flavor } => {
             let mut extractor = ccap_kernel::engine::Extractor::new();
             let features = extractor.analyze_file(path, path)?;
-            let telegram = Mapper::to_telegram(path, &features);
+            
+            let ai_flavor = match flavor.to_lowercase().as_str() {
+                "claude" => ccap_kernel::engine::mapper::Flavor::Claude,
+                "gemini" => ccap_kernel::engine::mapper::Flavor::Gemini,
+                _ => ccap_kernel::engine::mapper::Flavor::OpenAI,
+            };
+
+            let telegram = Mapper::to_flavor_telegram(path, &features, &ai_flavor);
             println!("{}", telegram);
         }
-        Commands::InspectRoom { path, room } => {
+        Commands::InspectRoom { path, room, flavor } => {
             let storage = ccap_kernel::engine::Storage::init(path)?;
             let registry_path = storage.get_map_dir().join("room_registry.json");
             let registry_json = fs::read_to_string(registry_path)?;
             let registry: std::collections::HashMap<String, Vec<String>> = serde_json::from_str(&registry_json)?;
+
+            let _ai_flavor = match flavor.to_lowercase().as_str() {
+                "claude" => ccap_kernel::engine::mapper::Flavor::Claude,
+                "gemini" => ccap_kernel::engine::mapper::Flavor::Gemini,
+                _ => ccap_kernel::engine::mapper::Flavor::OpenAI,
+            };
 
             if let Some(members) = registry.get(room) {
                 println!("🏠  Room: [{}] | Total Files: {}", room, members.len());
@@ -406,6 +441,9 @@ fn main() -> anyhow::Result<()> {
                     let safe_member = member.replace("\\", "/").replace(":", "_");
                     let map_path = storage.get_map_dir().join(safe_member).join("_MAP.md");
                     if let Ok(telegram) = fs::read_to_string(map_path) {
+                        // 這裡可以選擇是否要在運行時轉換風味，
+                        // 但目前 _MAP.md 存儲的是原始數據。
+                        // 為了簡單起見，我們先直接顯示。
                         println!("  {}", telegram);
                     }
                 }
@@ -454,12 +492,19 @@ fn main() -> anyhow::Result<()> {
         Commands::Glossary { path, id, alias } => {
             ccap_kernel::engine::GlossaryEngine::set_alias(path, id, alias)?;
         }
-        Commands::Wiki { path, target, html, ai_enrich, ai_enrich_all } => {
+        Commands::Wiki { path, target, html, flavor, ai_enrich, ai_enrich_all } => {
             let results = Scanner::scan_for_verification(path)?;
             let glossary = ccap_kernel::engine::GlossaryEngine::load(path)?;
 
+            // 解析 Flavor
+            let ai_flavor = match flavor.to_lowercase().as_str() {
+                "claude" => ccap_kernel::engine::mapper::Flavor::Claude,
+                "gemini" => ccap_kernel::engine::mapper::Flavor::Gemini,
+                _ => ccap_kernel::engine::mapper::Flavor::OpenAI,
+            };
+
             if *ai_enrich_all {
-                let package = ccap_kernel::engine::WikiProxy::generate_global_ai_package(&results);
+                let package = ccap_kernel::engine::WikiProxy::generate_global_ai_package(&results, &ai_flavor);
                 println!("{}", package);
                 return Ok(());
             }
@@ -472,11 +517,11 @@ fn main() -> anyhow::Result<()> {
                 for (p, feat) in &results {
                     if p == t {
                         if *ai_enrich {
-                            let prompt = ccap_kernel::engine::WikiProxy::generate_ai_enrich_prompt(p, feat);
+                            let prompt = ccap_kernel::engine::WikiProxy::generate_ai_enrich_prompt(p, feat, &ai_flavor);
                             println!("{}", prompt);
                             return Ok(());
                         }
-                        found = Some(ccap_kernel::engine::WikiProxy::generate_markdown(p, feat, &glossary));
+                        found = Some(ccap_kernel::engine::WikiProxy::generate_markdown(p, feat, &glossary, &ai_flavor));
                         break;
                     }
                 }

@@ -1,4 +1,4 @@
-use crate::engine::{extractor::FileFeatures, glossary::Glossary, Linker, MathEngine, Mapper};
+use crate::engine::{extractor::FileFeatures, glossary::Glossary, Linker, MathEngine, Mapper, mapper::Flavor};
 use super::{ProjectWikiData, RoomData, MemberData};
 use std::collections::HashMap;
 use serde_json::json;
@@ -140,7 +140,7 @@ impl WikiGenerator {
         wiki
     }
 
-    pub fn generate_markdown(target_path: &str, features: &FileFeatures, glossary: &Glossary) -> String {
+    pub fn generate_markdown(target_path: &str, features: &FileFeatures, glossary: &Glossary, flavor: &Flavor) -> String {
         let mut wiki = String::new();
         let title = glossary.aliases.get(target_path).unwrap_or(&target_path.to_string()).clone();
         
@@ -154,10 +154,9 @@ impl WikiGenerator {
         wiki.push_str("\n### ⚖️ 幾何指標 (Spectral Metrics)\n");
         wiki.push_str(&format!("*   **邏輯複雜度**: `{:.2}`\n", features.control_flow_score));
         
-        // 這裡暫時無法從 features 拿到 gravity，我們使用 symbol_count 作為啟發式替代
-        // 在 build_project_data 中已經有了完整的 gravity 數據，這裡如果是 Wiki 靜態頁，
-        // 我們應考慮未來將 Linker 狀態傳入。
-        
+        wiki.push_str("\n### 🛰️ 語義電報 (Semantic Telegram)\n");
+        wiki.push_str(&format!("```\n{}\n```\n", Mapper::to_flavor_telegram(target_path, features, flavor)));
+
         wiki.push_str("\n### 🔗 SCIP Exports\n");
         for sym in &features.exports {
             wiki.push_str(&format!("*   `{}` (L{})\n", sym.name, sym.line));
@@ -167,14 +166,14 @@ impl WikiGenerator {
         wiki
     }
 
-    pub fn generate_ai_enrich_prompt(target_path: &str, features: &FileFeatures) -> String {
-        let telegram = Mapper::to_telegram(target_path, features);
+    pub fn generate_ai_enrich_prompt(target_path: &str, features: &FileFeatures, flavor: &Flavor) -> String {
+        let telegram = Mapper::to_flavor_telegram(target_path, features, flavor);
         format!("[CCAP AEP] TARGET: {}\nTELEGRAM: {}\nTASK: Professional summary.", target_path, telegram)
     }
 
-    pub fn generate_global_ai_package(results: &[(String, FileFeatures)]) -> String {
+    pub fn generate_global_ai_package(results: &[(String, FileFeatures)], flavor: &Flavor) -> String {
         let mut p = String::from("[CCAP GLOBAL SYNTHESIS]\n");
-        for (path, feat) in results { p.push_str(&format!("{}\n", Mapper::to_telegram(path, feat))); }
+        for (path, feat) in results { p.push_str(&format!("{}\n", Mapper::to_flavor_telegram(path, feat, flavor))); }
         p
     }
 }

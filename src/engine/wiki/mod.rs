@@ -32,27 +32,27 @@ pub struct MemberData {
 pub mod generator;
 pub mod template;
 
-use crate::engine::{extractor::FileFeatures as InternalFeatures, glossary::Glossary, Linker};
+use crate::engine::{extractor::FileFeatures as InternalFeatures, glossary::Glossary, Linker, mapper::Flavor};
 pub use generator::WikiGenerator;
 pub use template::WikiTemplate;
 
 pub struct WikiProxy;
 
 impl WikiProxy {
-    pub fn generate_markdown(target_path: &str, features: &InternalFeatures, glossary: &Glossary) -> String {
-        WikiGenerator::generate_markdown(target_path, features, glossary)
+    pub fn generate_markdown(target_path: &str, features: &InternalFeatures, glossary: &Glossary, flavor: &Flavor) -> String {
+        WikiGenerator::generate_markdown(target_path, features, glossary, flavor)
     }
 
     pub fn generate_project_index(repo_root: &str, results: &[(String, InternalFeatures)], linker: &Linker, glossary: &Glossary) -> String {
         WikiGenerator::generate_project_index(repo_root, results, linker, glossary)
     }
 
-    pub fn generate_ai_enrich_prompt(target_path: &str, features: &InternalFeatures) -> String {
-        WikiGenerator::generate_ai_enrich_prompt(target_path, features)
+    pub fn generate_ai_enrich_prompt(target_path: &str, features: &InternalFeatures, flavor: &Flavor) -> String {
+        WikiGenerator::generate_ai_enrich_prompt(target_path, features, flavor)
     }
 
-    pub fn generate_global_ai_package(results: &[(String, InternalFeatures)]) -> String {
-        WikiGenerator::generate_global_ai_package(results)
+    pub fn generate_global_ai_package(results: &[(String, InternalFeatures)], flavor: &Flavor) -> String {
+        WikiGenerator::generate_global_ai_package(results, flavor)
     }
 
     pub fn generate_html_wiki(repo_root: &str, results: &[(String, InternalFeatures)], linker: &Linker, glossary: &Glossary) -> anyhow::Result<String> {
