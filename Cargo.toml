@@ -45,6 +45,8 @@ walkdir = "2.3" # Efficient file scanning
 
 pathdiff = "0.2" # Relative path calculation
 tiktoken-rs = "0.5" # Precise token counting
+claude-tokenizer = "0.2" # Anthropic/Claude support
+tokenizers = { version = "0.20", default-features = false, features = ["fancy-regex"] } # Pure Rust Tokenization
 log = "0.4"
 
 
